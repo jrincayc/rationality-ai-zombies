@@ -45,7 +45,7 @@
 \begin{document}
 \clearpage\setcounter{page}{1}\pagestyle{Standard}
 {
-\   [Warning: Image ignored] % Unhandled or unsupported graphics:
+%\   [Warning: Image ignored] % Unhandled or unsupported graphics:
 %\includegraphics[width=10.4165in,height=15.1772in]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img1}
   }
 
@@ -41367,11 +41367,14 @@ to solve this problem?}
 \ \ \ Similarly, to find the chance that a woman with positive
 mammography has breast cancer, we computed:}
 
-{\centering
-\ \ \  
-\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img225.jpg}
- 
-\par}
+\begin{equation*}
+  \frac{P(\mathrm{positive}|\mathrm{cancer})\times P(\mathrm{cancer})}
+       {\left(\begin{array}{rcl}
+           P(\mathrm{positive}|\mathrm{cancer}) & \times & P(\mathrm{cancer}) \\
+           +\, P(\mathrm{positive}|\lnot \mathrm{cancer}) & \times & P(\lnot \mathrm{cancer}) \\
+         \end{array}
+         \right)}
+\end{equation*}
 
 
 \bigskip
@@ -41379,11 +41382,10 @@ mammography has breast cancer, we computed:}
 {
 \ \ \ which is}
 
-{\centering
-\ \ \  
-\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img226.jpg}
- 
-\par}
+\begin{equation*}
+  \frac{P(\mathrm{positive},\mathrm{cancer})}
+  {P(\mathrm{positive},\mathrm{cancer}) + P(\mathrm{positive},\lnot\mathrm{cancer})}
+\end{equation*}
 
 
 \bigskip
@@ -41422,11 +41424,10 @@ mammography has breast cancer, we computed:}
 
 \bigskip
 
-{\centering
-\ \ \  
-\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img228.jpg}
- 
-\par}
+\begin{equation*}
+  P(A|X) = \frac{P(X|A) \times P(A)}
+  {P(X|A) \times P(A) + P(X|\lnot A)\times P(\lnot A)} .
+\end{equation*}
 
 
 \bigskip
@@ -41611,11 +41612,11 @@ Bayes's Theorem. Hence the Bayesian revolution.}
 \ \ \ Having introduced Bayes's Theorem explicitly, we
 can explicitly discuss its components.}
 
-{\centering
-\ \ \  
-\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img229.jpg}
- 
-\par}
+\begin{equation*}
+  P(A|X) = \frac{P(X|A) \times P(A)}
+  {P(X|A) \times P(A) + P(X|\lnot A)\times P(\lnot A)}
+\end{equation*}
+
 
 
 \bigskip
@@ -41712,11 +41713,14 @@ property being investigated, the thing you want to know about.}
 \ \ \ The right side of Bayes's Theorem is derived from
 the left side through these steps:}
 
-{\centering
-\ \ \  
-\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img230.jpg}
- 
-\par}
+\begin{align*}
+  P(A|X) &= P(A|X) \\
+  P(A|X) &= \frac{P(X,A)}{P(X)} \\
+  P(A|X) &= \frac{P(X,A)}{P(X,A)+P(X,\lnot A)} \\
+  P(A|X) &= \frac{P(X|A) \times P(A)}
+  {P(X|A) \times P(A) + P(X|\lnot A) \times P(\lnot A)}.
+\end{align*}
+
 
 
 \bigskip
