@@ -57267,11 +57267,11 @@ probability if the collapse hypothesis is true. Which in turn implies
 that the posterior odds for decoherence and collapse will become
 different from the prior odds:}
 
-{\centering
-\ \ \  
-\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img306.jpg}
- 
-\par}
+\begin{align*}
+  \frac{P(B|A_d)}{P(B|A_c)} &\neq 1 \textrm{implies} \\
+  \frac{P(A_d|B)}{P(A_c|B)} &= \frac{P(B|A_d)}{P(B|A_c)} \times \frac{P(A_d)}{P(A_c)} \\
+  \frac{P(A_d|B)}{P(A_c|B)} &\neq \frac{P(A_d)}{P(A_c)} .
+\end{align*}
 
 
 \bigskip
@@ -64828,11 +64828,14 @@ P(winner), where P(winner) is the amount of play money you bet on the
 winning color on that round. If we wrote down the function for the
 expected payoff given that Payoff rule, it would be:}
 
-{\centering
-\ \ \  
-\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img336.jpg}
- 
-\par}
+%putting \mathrm{Payoff} in causes lualatex to run out of memory
+\begin{equation*}
+  \mathrm{Expectation}(\mathrm{Payof}\mathrm{f}) = \sum_{colors} P(\mathrm{color})\times F(\mathrm{color}).
+\end{equation*}
+%\begin{equation*}
+%  \mathrm{Expectation}(\mathrm{Payoff} = \sum_{colors} P(\mathrm{color})\times F(\mathrm{color}) .
+%\end{equation*}
+
 
 
 \bigskip
@@ -64909,11 +64912,13 @@ each case and weighting it by the frequency of that case, is an
 \textit{expectation}. Thus, to compute our \textit{expected payoff} we
 would calculate:}
 
-{\centering
-\ \ \  
-\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img337.jpg}
- 
-\par}
+
+\begin{equation*}
+  \mathrm{Expectation}(\mathrm{Payof}\mathrm{f}) = \sum_{colors} P(\mathrm{color}) F(\mathrm{color})
+\end{equation*}
+%\begin{equation*}
+%  \mathrm{Expectation}(\mathrm{Payoff} = \sum_{colors} P(\mathrm{color}) F(\mathrm{color})
+%\end{equation*}
 
 
 \bigskip
@@ -65170,11 +65175,9 @@ P(red), P(blue), P(green), then your \textit{expected score} is:}
 
 \bigskip
 
-{\centering
-\ \ \  
-\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img338.jpg}
- 
-\par}
+\begin{equation*}
+  \mathrm{Expectation}(\mathrm{Score}) = \sum_{colors}P(\mathrm{color})\times\log(P(\mathrm{color})).
+\end{equation*}
 
 
 \bigskip
@@ -68558,11 +68561,10 @@ belief.'' But atoms are not evidential, justifying,
 meaningful, likely, propositional, or true; they are just atoms. Only
 things like}
 
-{\centering
-\ \ \  
-\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img348.jpg}
- 
-\par}
+\begin{equation*}
+  \frac{P(H|E)}{P(\lnot H|E)} = \frac{P(E|H)}{P(E|\lnot H)} \times
+  \frac{P(H)}{P(\lnot H)}
+\end{equation*}
 
 
 \bigskip
