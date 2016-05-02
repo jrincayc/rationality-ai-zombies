@@ -16,9 +16,17 @@
 
 \renewcommand\thechapter{\Alph{chapter}}
 
+\newcounter{mysection}
+\renewcommand\thesection{\arabic{mysection}}
+
+\newcommand{\mysection}[1]{
+  \stepcounter{mysection}
+  \section{#1}
+}
+
 \newcommand\textsubscript[1]{\ensuremath{{}_{\text{#1}}}}
 % Outline numbering
-\setcounter{secnumdepth}{0}
+%\setcounter{secnumdepth}{0}
 % Page layout (geometry)
 \setlength\voffset{-1in}
 \setlength\hoffset{-1in}
@@ -63,7 +71,6 @@
 \ \ \textbf{Rationality}
 \par}
 
-\section[]{\rmfamily }
 
 \bigskip
 
@@ -71,7 +78,6 @@
 \ \ \textbf{From AI to Zombies}
 \par}
 
-\subsection[]{\rmfamily }
 {\centering
 \ \ \ ~
 \par}
@@ -1610,21 +1616,7 @@ Curiosity-Stopper\newline
 
 \chapter{Predictably Wrong}
 
-
-\clearpage\subsection[\ 1 What Do I Mean By
-``Rationality''?]{\textrm{\ }\textrm{1}\newline
-\textrm{ What Do I Mean By
-``Rationality''?}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{What Do I Mean By ``Rationality''?}
 
 {
 \ \ \ I mean:}
@@ -1935,25 +1927,7 @@ wiki.lesswrong.com/wiki/RAZ\_Glossary.}
 Boxes,'' \textit{Slate} (2002),
 http://www.slate.com/articles/arts/egghead/2002/02/thinkinginside\%5C\_the\%5C\_boxes.single.html.}
 
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 2 Feeling
-Rational]{\textrm{\ }\textrm{2}\newline
-\textrm{ Feeling Rational}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Feeling Rational} 
 
 {
 \ \ \ A popular belief about
@@ -2062,28 +2036,7 @@ now, that it is rational to feel.}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 3 Why Truth? And
-.~.~.]{\textrm{\ }\textrm{3}\newline
-\textrm{ Why Truth? And .~.~.}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Why Truth? And .~.~.} 
 
 {
 \ \ \ Some of the comments on \textit{Overcoming Bias} have touched on
@@ -2229,28 +2182,7 @@ overcoming a certain class of obstacles, the biases .~.~.}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 4 .~.~. What's a Bias,
-Again?]{\textrm{\ }\textrm{4}\newline
-\textrm{ .~.~. What's a Bias, Again?}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{.~.~. What's a Bias, Again?}
 
 {
 \ \ \ A \textit{bias} is a certain kind of obstacle to our goal of
@@ -2400,27 +2332,7 @@ call them ``biases'' or not.}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 5 Availability]{\textrm{\ }\textrm{5}\newline
-\textrm{ Availability}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Availability}
 
 {
 \ \ \ The \textit{availability heuristic} is judging the frequency or
@@ -2538,25 +2450,7 @@ Failure,'' \textit{Journal of Risk and Uncertainty} 7
 Environment as Hazard}, 1st ed. (New York: Oxford University Press,
 1978).}
 
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 6 Burdensome
-Details]{\textrm{\ }\textrm{6}\newline
-\textrm{ Burdensome Details}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Burdensome Details}
 
 {
 \ \ \ Merely corroborative detail, intended to give artistic
@@ -2762,25 +2656,7 @@ Under Uncertainty: Heuristics and Biases}, ed. Daniel Kahneman, Paul
 Slovic, and Amos Tversky (New York: Cambridge University Press, 1982),
 84--98.}
 
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 7 Planning
-Fallacy]{\textrm{\ }\textrm{7}\newline
-\textrm{ Planning Fallacy}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Planning Fallacy}
 
 {
 \ \ \ The Denver International Airport opened 16 months late, at a cost
@@ -2980,25 +2856,7 @@ Planning Fallacy.''}
 {
 \ \ \ 6. Ibid.}
 
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 8 Illusion of Transparency: Why No One
-Understands You]{\textrm{\ }\textrm{8}\newline
-\textrm{ Illusion of Transparency: Why No One Understands You}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Illusion of Transparency: Why No One Understands You}
 
 {
 \ \ \ In hindsight bias, people who know the outcome of a situation
@@ -3138,25 +2996,7 @@ Effectiveness,'' \textit{Psychological Science} 13 (3
 \ \ \ 7. Keysar and Barr, ``Self-Anchoring in
 Conversation.''}
 
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 9 Expecting Short Inferential
-Distances]{\textrm{\ }\textrm{9}\newline
-\textrm{ Expecting Short Inferential Distances}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Expecting Short Inferential Distances}
 
 {
 \ \ \ \textit{Homo sapiens}'s environment of
@@ -3290,28 +3130,7 @@ I've got some sad news for you .~.~.}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 10 The Lens That Sees Its Own
-Flaws]{\textrm{\ }\textrm{10}\newline
-\textrm{ The Lens That Sees Its Own Flaws}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{The Lens That Sees Its Own Flaws}
 
 {
 \ \ \ Light leaves the Sun and strikes your shoelaces and bounces off;
@@ -3443,19 +3262,7 @@ Press, 2004), 459--491.}
 
 \chapter{Fake Beliefs}
 
-\clearpage\subsection[\ 11 Making Beliefs Pay Rent (in Anticipated
-Experiences)]{\textrm{\ }\textrm{11}\newline
-\textrm{ Making Beliefs Pay Rent (in Anticipated Experiences)}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Making Beliefs Pay Rent (in Anticipated Experiences)}
 
 {
 \ \ \ Thus begins the ancient parable: }
@@ -3599,28 +3406,7 @@ future anticipations. If a belief turns deadbeat, evict it.}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 12 A Fable of Science and
-Politics]{\textrm{\ }\textrm{12}\newline
-\textrm{ A Fable of Science and Politics}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{A Fable of Science and Politics}
 
 {
 \ \ \ In the time of the Roman Empire, civic life was divided between
@@ -3824,25 +3610,7 @@ vol. 1 (Harvard University Press, 1914).}
 \ \ \ 2. Edward Gibbon, \textit{The History of the Decline and Fall of
 the Roman Empire}, vol. 4 (J. \& J. Harper, 1829).}
 
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 13 Belief in
-Belief]{\textrm{\ }\textrm{13}\newline
-\textrm{ Belief in Belief}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Belief in Belief}
 
 {
 \ \ \ Carl Sagan once told a parable of someone who comes to us and
@@ -4043,24 +3811,7 @@ belief in belief have become unsynchronized.}
 \ \ \ 1. Daniel C. Dennett, \textit{Breaking the Spell: Religion as a
 Natural Phenomenon} (Penguin, 2006).}
 
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 14 Bayesian Judo]{\textrm{\ }\textrm{14}\newline
-\textrm{ Bayesian Judo}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Bayesian Judo}
 
 {
 \ \ \ You can have some fun with people whose anticipations get out of
@@ -4145,28 +3896,7 @@ said.}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 15 Pretending to be
-Wise]{\textrm{\ }\textrm{15}\newline
-\textrm{ Pretending to be Wise}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Pretending to be Wise}
 
 {
 \ \ \ The hottest place in Hell is reserved for those who in time of
@@ -4369,25 +4099,7 @@ are not importantly different from up there.}
 \ \ \ 1. Paulo Freire, \textit{The Politics of Education: Culture,
 Power, and Liberation} (Greenwood Publishing Group, 1985), 122.}
 
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 16 Religion's Claim to be
-Non{}-Disprovable]{\textrm{\ }\textrm{16}\newline
-\textrm{ Religion's Claim to be Non-Disprovable}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Religion's Claim to be Non{}-Disprovable}
 
 {
 \ \ \ The earliest account I know of a scientific experiment is,
@@ -4571,28 +4283,7 @@ and scribble yourself a Get Out of Jail Free card.}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 17 Professing and
-Cheering]{\textrm{\ }\textrm{17}\newline
-\textrm{ Professing and Cheering}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Professing and Cheering}
 
 {
 \ \ \ I once attended a panel on the topic, ``Are
@@ -4703,28 +4394,7 @@ sound more plausible, it would have been like putting on clothes.}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 18 Belief as
-Attire]{\textrm{\ }\textrm{18}\newline
-\textrm{ Belief as Attire}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Belief as Attire}
 
 {
 \ \ \ I have so far distinguished between belief as
@@ -4795,28 +4465,7 @@ be spoken with the full passion of belonging to that tribe.}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 19 Applause
-Lights]{\textrm{\ }\textrm{19}\newline
-\textrm{ Applause Lights}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Applause Lights}
 
 {
 \ \ \ At the Singularity Summit 2007, one of the speakers called for
@@ -4962,19 +4611,7 @@ issues before, not after, it is too late to do anything about them
 
 \chapter{Noticing Confusion}
 
-\clearpage\subsection[\ 20 Focus Your
-Uncertainty]{\textrm{\ }\textrm{20}\newline
-\textrm{ Focus Your Uncertainty}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Focus Your Uncertainty}
 
 {
 \ \ \ Will bond yields go up, or down, or remain the same? If
@@ -5109,28 +4746,7 @@ be like?}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 21 What Is
-Evidence?]{\textrm{\ }\textrm{21}\newline
-\textrm{ What Is Evidence?}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{What Is Evidence?}
 
 {
 \ \ \ The sentence ``snow is white''
@@ -5298,28 +4914,7 @@ the same thing, or it should be.}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 22 Scientific Evidence, Legal Evidence, Rational
-Evidence]{\textrm{\ }\textrm{22}\newline
-\textrm{ Scientific Evidence, Legal Evidence, Rational Evidence}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Scientific Evidence, Legal Evidence, Rational Evidence}
 
 {
 \ \ \ Suppose that your good friend, the police commissioner, tells you
@@ -5462,28 +5057,9 @@ be better served by the dictum that only open knowledge counts as
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
+\mysection{How Much Evidence Does It Take?}
 
 
-\bigskip
-
-\clearpage\subsection[\ 23 How Much Evidence Does It
-Take?]{\textrm{\ }\textrm{23}\newline
-\textrm{ How Much Evidence Does It Take?}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
 
 {
 \ \ \ Previously, I defined \textit{evidence} as ``an
@@ -5633,28 +5209,7 @@ the further you want to go, the more fuel you need.}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 24 Einstein's
-Arrogance]{\textrm{\ }\textrm{24}\newline
-\textrm{ Einstein's Arrogance}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Einstein's Arrogance}
 
 {
 \ \ \ In 1919, Sir Arthur Eddington led expeditions to Brazil and to the
@@ -5774,28 +5329,7 @@ vast space of possibilities.}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 25 Occam's
-Razor]{\textrm{\ }\textrm{25}\newline
-\textrm{ Occam's Razor}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Occam's Razor}
 
 {
 \ \ \ The more complex an explanation is, the more evidence you need
@@ -5998,28 +5532,7 @@ I'll get to that soon enough.~.~.}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 26 Your Strength as a
-Rationalist]{\textrm{\ }\textrm{26}\newline
-\textrm{ Your Strength as a Rationalist}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Your Strength as a Rationalist}
 
 {
 \ \ \ The following happened to me in an IRC chatroom, long enough ago
@@ -6125,25 +5638,7 @@ of a wailing alarm siren and a glowing neon sign reading:}
 Read,'' \textit{Journal of Personality and Social
 Psychology} 65 (2 1993): 221--233, doi:10.1037/0022-3514.65.2.221.}
 
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 27 Absence of Evidence Is Evidence of
-Absence]{\textrm{\ }\textrm{27}\newline
-\textrm{ Absence of Evidence }\textrm{Is}\textrm{ Evidence of Absence}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Absence of Evidence Is Evidence of Absence}
 
 {
 \ \ \ From Robyn Dawes's \textit{Rational Choice in an
@@ -6261,25 +5756,7 @@ and no eyes.}
 1st ed., ed. Jerome Kagan (San Diego, CA: Harcourt Brace Jovanovich,
 1988), 250-251.}
 
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 28 Conservation of Expected
-Evidence]{\textrm{\ }\textrm{28}\newline
-\textrm{ Conservation of Expected Evidence}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Conservation of Expected Evidence}
 
 {
 \ \ \ Friedrich Spee von Langenfeld, a priest who heard the confessions
@@ -6403,28 +5880,7 @@ evidence to come in.}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 29 Hindsight Devalues
-Science]{\textrm{\ }\textrm{29}\newline
-\textrm{ Hindsight Devalues Science}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Hindsight Devalues Science}
 
 {
 \ \ \ This essay is closely based on an excerpt from
@@ -6571,19 +6027,7 @@ University, 1983).}
 
 \chapter{Mysterious Answers}
 
-\clearpage\subsection[\ 30 Fake
-Explanations]{\textrm{\ }\textrm{30}\newline
-\textrm{ Fake Explanations}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Fake Explanations}
 
 {
 \ \ \ Once upon a time, there was an instructor who taught physics
@@ -6698,25 +6142,7 @@ conduction.'' Taken from Joachim Verhagen,
 http://web.archive.org/web/20060424082937/http://www.nvon.nl/scheik/best/diversen/scijokes/scijokes.txt,
 archived version, October 27, 2001.}
 
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 31 Guessing the Teacher's
-Password]{\textrm{\ }\textrm{31}\newline
-\textrm{ Guessing the Teacher's Password}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Guessing the Teacher's Password}
 
 {
 \ \ \ When I was young, I read popular physics books such as Richard
@@ -6894,28 +6320,7 @@ whole human species for thousands of years.}}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 32 Science as
-Attire]{\textrm{\ }\textrm{32}\newline
-\textrm{ Science as Attire}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Science as Attire}
 
 {
 \ \ \ The preview for the \textit{X-Men} movie has a voice-over saying:
@@ -7013,28 +6418,7 @@ probably passwords or attire.}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 33 Fake
-Causality]{\textrm{\ }\textrm{33}\newline
-\textrm{ Fake Causality}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Fake Causality}
 
 {
 \ \ \ Phlogiston was the eighteenth century's answer to
@@ -7261,25 +6645,7 @@ of sending a pure forward message.}
 Systems: Networks of Plausible Inference} (San Mateo, CA: Morgan
 Kaufmann, 1988).}
 
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 34 Semantic
-Stopsigns]{\textrm{\ }\textrm{34}\newline
-\textrm{ Semantic Stopsigns}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Semantic Stopsigns}
 
 {
 \ \ \ \textit{And the child asked:}}
@@ -7452,28 +6818,7 @@ is \textit{failure to consider the obvious next question.}}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 35 Mysterious Answers to Mysterious
-Questions]{\textrm{\ }\textrm{35}\newline
-\textrm{ Mysterious Answers to Mysterious Questions}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Mysterious Answers to Mysterious Questions}
 
 {
 \ \ \ Imagine looking at your hand, and knowing nothing of cells,
@@ -7653,25 +6998,7 @@ inexplicability that it had at the start.}
 \ \ \ 1. Silvanus Phillips Thompson, \textit{The Life of Lord Kelvin}
 (American Mathematical Society, 2005).}
 
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 36 The Futility of
-Emergence]{\textrm{\ }\textrm{36}\newline
-\textrm{ The Futility of Emergence}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{The Futility of Emergence}
 
 {
 \ \ \ The failures of phlogiston and vitalism are historical hindsight.
@@ -7827,28 +7154,7 @@ humans, and human psychology is still human psychology.}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 37 Say Not
-``Complexity'']{\textrm{\ }\textrm{37}\newline
-\textrm{ Say Not ``Complexity''}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Say Not ``Complexity''}
 
 {
 \ \ \ Once upon a time .~.~. }
@@ -8026,28 +7332,7 @@ placeholder, a reminder of work you will have to do later.}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 38 Positive Bias: Look into the
-Dark]{\textrm{\ }\textrm{38}\newline
-\textrm{ Positive Bias: Look into the Dark}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Positive Bias: Look into the Dark}
 
 {
 \ \ \ I am teaching a class, and I write upon the blackboard three
@@ -8211,25 +7496,7 @@ Eliminate Hypotheses in a Conceptual Task,''
 \textit{Quarterly Journal of Experimental Psychology} 12, no. 3 (1960):
 129--140, doi:10.1080/17470216008416717.}
 
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 39 Lawful
-Uncertainty]{\textrm{\ }\textrm{39}\newline
-\textrm{ Lawful Uncertainty}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Lawful Uncertainty}
 
 {
 \ \ \ In \textit{Rational Choice in an Uncertain World}, Robyn Dawes
@@ -8417,25 +7684,7 @@ versus Reward in Binary Choices,'' \textit{Journal of
 Experimental Psychology} 71, no. 5 (1966): 680--683,
 doi:10.1037/h0023123.}
 
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 40 My Wild and Reckless
-Youth]{\textrm{\ }\textrm{40}\newline
-\textrm{ My Wild and Reckless Youth}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{My Wild and Reckless Youth}
 
 {
 \ \ \ It is said that parents do all the things they tell their children
@@ -8582,28 +7831,7 @@ interesting new mistakes.}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 41 Failing to Learn from
-History]{\textrm{\ }\textrm{41}\newline
-\textrm{ Failing to Learn from History}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Failing to Learn from History}
 
 {
 \ \ \ Once upon a time, in my wild and reckless youth, when I knew not
@@ -8673,28 +7901,7 @@ said to myself: \textit{No way am I falling for that again.}}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 42 Making History
-Available]{\textrm{\ }\textrm{42}\newline
-\textrm{ Making History Available}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Making History Available}
 
 {
 \ \ \ There is a habit of thought which I call the \textit{logical
@@ -8844,25 +8051,7 @@ Potentially Affecting Judgment of Global Risks,'' in
 \textit{Global Catastrophic Risks}, ed. Nick Bostrom and Milan M.
 \'Cirkovi\'c (New York: Oxford University Press, 2008), 91--119.}
 
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 43
-Explain/Worship/Ignore?]{\textrm{\ }\textrm{43}\newline
-\textrm{ Explain/Worship/Ignore?}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Explain/Worship/Ignore?}
 
 {
 \ \ \ As our tribe wanders through the grasslands, searching for fruit
@@ -8952,30 +8141,7 @@ tomorrow, than you have hit Ignore.}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 44
-``Science'' as
-Curiosity{}-Stopper]{\textrm{\ }\textrm{44}\newline
-\textrm{ ``Science'' as
-Curiosity-Stopper}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{``Science'' as Curiosity{}-Stopper}
 
 {
 \ \ \ Imagine that I, in full view of live television cameras, raised my
@@ -9133,28 +8299,7 @@ elephant in your living room.}
 \ \ \ *
 \par}
 
-
-\bigskip
-
-
-\bigskip
-
-
-\bigskip
-
-\clearpage\subsection[\ 45 Truly Part of
-You]{\textrm{\ }\textrm{45}\newline
-\textrm{ Truly Part of You}}
-\subsection[]{\rmfamily\bfseries }
-\subsection[]{\rmfamily }
-{\centering
-\ \ \  
-%\includegraphics[scale=0.25]{Rationality20From20AI20to20Zombies2020Eliezer20Yudkowsky-img100.jpg}
- 
-\par}
-
-
-\bigskip
+\mysection{Truly Part of You}
 
 {
 \ \ \ A classic paper by Drew McDermott, ``Artificial
