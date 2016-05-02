@@ -1,0 +1,3 @@
+
+rationality_from_ai_to_zombies.pdf : rationality_from_ai_to_zombies.tex
+	lualatex rationality_from_ai_to_zombies.tex
