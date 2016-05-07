@@ -24,8 +24,15 @@
   \section{#1}
 }
 
+%Section with no number
 \newcommand{\mysectionnn}[1]{
   \section*{#1}
+  \addcontentsline{toc}{section}{#1}
+}
+
+%Section with no number and short title
+\newcommand{\mysectiontwo}[2]{
+  \section*{#2}
   \addcontentsline{toc}{section}{#1}
 }
 
@@ -769,7 +776,7 @@ than nothing.}
  February 2015
 \par}
 
-\mysectionnn{Biases: An Introduction by Rob Bensinger}
+\mysectiontwo{Biases: An Introduction}{Biases: An Introduction\newline by Rob Bensinger}
 
 {
 \ \ \ It's not a secret. For some reason, though, it
@@ -9924,7 +9931,7 @@ Laws\newline
  130. The Ritual\newline
  }
 
-\mysectionnn{Rationality: An Introduction by Rob Bensinger}
+\mysectiontwo{Rationality: An Introduction}{Rationality: An Introduction\newline by Rob Bensinger}
 
 {
 \ \ \ What should I believe?}
@@ -24212,7 +24219,7 @@ Definition''\newline
  Interlude: An Intuitive Explanation of Bayes's Theorem
 }
 
-\mysectionnn{Minds: An Introduction by Rob Bensinger}
+\mysectiontwo{Minds: An Introduction}{Minds: An Introduction\newline by Rob Bensinger}
 
 {
 \ \ \ You're a mind, and that puts you in a pretty
