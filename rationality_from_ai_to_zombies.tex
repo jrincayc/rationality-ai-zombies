@@ -3,6 +3,7 @@
 % see http://writer2latex.sourceforge.net for more info
 \documentclass[letterpaper]{book}
 %\usepackage[latin1]{inputenc}
+%\usepackage{bigfoot}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
 \usepackage{amsmath}
@@ -22,18 +23,21 @@
 \newcommand{\mysection}[1]{
   \stepcounter{mysection}
   \section{#1}
+  \setcounter{footnote}{0}
 }
 
 %Section with no number
 \newcommand{\mysectionnn}[1]{
   \section*{#1}
   \addcontentsline{toc}{section}{#1}
+  \setcounter{footnote}{0}
 }
 
 %Section with no number and short title
 \newcommand{\mysectiontwo}[2]{
   \section*{#2}
   \addcontentsline{toc}{section}{#1}
+  \setcounter{footnote}{0}
 }
 
 %Used for graphics
@@ -49,6 +53,20 @@
 {\centering
  *
 \par}
+}
+
+%comma in a superscript
+\newcommand{\supercomma}{\textsuperscript{,}}
+
+%move the footnote counter back
+\newcommand{\footback}[1]{\addtocounter{footnote}{-#1}}
+
+%move the footnote counter +1
+\newcommand{\footnext}{\addtocounter{footnote}{1}}
+
+%\DeclareNewFootnote{A}
+%\DeclareNewFootnote{B}[alph]
+\newcommand{\comment}[1]{
 }
 
 %\newcommand\textsubscript[1]{\ensuremath{{}_{\text{#1}}}}
@@ -407,7 +425,20 @@ individuals or groups ``biased,'' we
 do it to chastise them for being unfair or partial. \textit{Cognitive}
 bias is a different beast altogether. Cognitive biases are a basic part
 of how humans in general think, not the sort of defect we could blame
-on a terrible upbringing or a rotten personality.\textsuperscript{1}}
+on a terrible upbringing or a rotten personality.\footnote{The idea of personal bias, media bias, etc. resembles
+statistical bias in that it's an \textit{error}. Other
+ways of generalizing the idea of
+``bias'' focus instead on its
+association with nonrandomness. In machine learning, for example, an
+\textit{inductive} bias is just the set of assumptions a learner uses
+to derive predictions from a data set. Here, the learner is
+``biased'' in the sense that
+it's pointed in a specific direction; but since that
+direction might be \textit{truth}, it isn't a bad thing
+for an agent to have an inductive bias. It's valuable
+and necessary. This distinguishes inductive
+``bias'' quite clearly from the
+other kinds of bias.\comment{1}}}
 
 {
  A cognitive bias is a systematic way that your innate patterns of
@@ -449,7 +480,11 @@ emotions, ``rationally'' refuses to
 rely on intuitions or impulses, and is easily dumbfounded and
 outmaneuvered upon encountering an erratic or
 ``irrational''
-opponent.\textsuperscript{2}}
+opponent.\footnote{A sad coincidence: Leonard Nimoy, the actor who played Spock,
+passed away just a few days before the release of this book. Though we
+cite his character as a classic example of fake
+``Hollywood rationality,'' we mean
+no disrespect to Nimoy's memory.\comment{2}}}
 
 {
  There's a completely different notion of
@@ -473,7 +508,13 @@ decisions.}
 overthink things. When selecting a poster to put on their wall, or
 predicting the outcome of a basketball game, experimental subjects have
 been found to perform \textit{worse} if they carefully analyzed their
-reasons.\textsuperscript{3,4} There are some problems where conscious
+reasons.\footnote{Timothy D. Wilson et al., ``Introspecting
+About Reasons Can Reduce Post-choice Satisfaction,''
+\textit{Personality and Social Psychology Bulletin} 19 (1993):
+331--331.\comment{3}}\supercomma\footnote{Jamin Brett Halberstadt and Gary M. Levine,
+``Effects of Reasons Analysis on the Accuracy of
+Predicting Basketball Games,'' \textit{Journal of
+Applied Social Psychology} 29, no. 3 (1999): 517--530.\comment{4}} There are some problems where conscious
 deliberation serves us better, and others where snap judgments serve us
 better.}
 
@@ -482,7 +523,11 @@ better.}
 brain's ``System 1''
 processes (fast, implicit, associative, automatic cognition) from its
 ``System 2'' processes (slow,
-explicit, intellectual, controlled cognition).\textsuperscript{5} The
+explicit, intellectual, controlled cognition).\footnote{Keith E. Stanovich and Richard F. West,
+``Individual Differences in Reasoning: Implications
+for the Rationality Debate?,'' \textit{Behavioral and
+Brain Sciences} 23, no. 5 (2000): 645--665,
+http://journals.cambridge.org/abstract\_S0140525X00003435.\comment{5}} The
 \textit{stereotype} is for rationalists to rely entirely on System 2,
 disregarding their feelings and impulses. Looking past the stereotype,
 someone who is actually being rational---actually achieving their
@@ -495,7 +540,11 @@ they're reliable.}
 guide to ``when should I trust System
 1?'' Our untrained intuitions don't
 tell us when we ought to stop relying on them. Being biased and being
-unbiased \textit{feel} the same.\textsuperscript{6}}
+unbiased \textit{feel} the same.\footnote{Timothy D. Wilson, David B. Centerbar, and Nancy Brekke,
+``Mental Contamination and the Debiasing
+Problem,'' in \textit{Heuristics and Biases: The
+Psychology of Intuitive Judgment}, ed. Thomas Gilovich, Dale Griffin,
+and Daniel Kahneman (Cambridge University Press, 2002).\comment{6}}}
 
 {
  On the other hand, as behavioral economist Dan Ariely notes:
@@ -525,7 +574,11 @@ This can lead to biases like the \textit{conjunction fallacy}. Tversky
 and Kahneman found that experimental subjects considered it less likely
 that a strong tennis player would ``lose the first
 set'' than that he would ``lose the
-first set but win the match.''\textsuperscript{7}
+first set but win the match.''\footnote{Amos Tversky and Daniel Kahneman,
+``Extensional Versus Intuitive Reasoning: The
+Conjunction Fallacy in Probability Judgment,''
+\textit{Psychological Review} 90, no. 4 (1983): 293--315,
+doi:10.1037/0033-295X.90.4.293.\comment{7}}
 Making a comeback seems more \textit{typical} of a strong player, so we
 overestimate the probability of this complicated-but-sensible-sounding
 narrative compared to the probability of a strictly simpler scenario.}
@@ -535,13 +588,16 @@ narrative compared to the probability of a strictly simpler scenario.}
 \textit{base rate neglect}, where we ground our judgments in how
 intuitively ``normal'' a combination
 of attributes is, neglecting how common each attribute is in the
-population at large.\textsuperscript{8} Is it more likely that Steve is
+population at large.\footnote{Richards J. Heuer, \textit{Psychology of Intelligence Analysis}
+(Center for the Study of Intelligence, Central Intelligence Agency,
+1999).\comment{8}} Is it more likely that Steve is
 a shy librarian, or that he's a shy salesperson? Most
 people answer this kind of question by thinking about whether
 ``shy'' matches their stereotypes of
 those professions. They fail to take into consideration how much more
 common salespeople are than librarians---seventy-five times as common,
-in the United States.\textsuperscript{9}}
+in the United States.\footnote{Wayne Weiten, \textit{Psychology: Themes and Variations,
+Briefer Version, Eighth Edition} (Cengage Learning, 2010).\comment{9}}}
 
 {
  Other examples of biases include \textit{duration neglect}
@@ -550,7 +606,58 @@ in the United States.\textsuperscript{9}}
 you've spent resources on in the past, when you should
 be cutting your losses and moving on), and \textit{confirmation bias}
 (giving more weight to evidence that confirms what we already
-believe).\textsuperscript{10,11}}
+believe).\footnote{Raymond S. Nickerson, ``Confirmation Bias: A
+Ubiquitous Phenomenon in Many Guises,''
+\textit{Review of General Psychology} 2, no. 2 (1998): 175.\comment{10}}\supercomma\footnote{\textit{Probability neglect} is another cognitive bias. In the
+months and years following the September 11 attacks, many people chose
+to drive long distances rather than fly. Hijacking
+wasn't \textit{likely}, but it now felt like it was on
+the table; the mere possibility of hijacking hugely impacted decisions.
+By relying on black-and-white reasoning (cars and planes are either
+``safe'' or
+``unsafe,'' full stop), people
+actually put themselves in much more danger. Where they should have
+weighed the probability of dying on a cross-country car trip against
+the probability of dying on a cross-country flight---the former is
+hundreds of times more likely---they instead relied on their general
+feeling of worry and anxiety (the affect heuristic). We can see the
+same pattern of behavior in children who, hearing arguments for and
+against the safety of seat belts, hop back and forth between thinking
+seat belts are a completely good idea or a completely bad one, instead
+of trying to compare the strengths of the pro and con
+considerations.\footnotemark%
+
+ Some more examples of biases are: the \textit{peak/end rule}
+(evaluating remembered events based on their most intense moment, and
+how they ended); \textit{anchoring} (basing decisions on recently
+encountered information, even when it's
+irrelevant)\footnotemark and \textit{self-anchoring} (using
+yourself as a model for others' likely characteristics,
+without giving enough thought to ways you're
+atypical);\footnotemark and \textit{status quo bias}
+(excessively favoring what's normal and expected over
+what's new and different).\footnotemark\comment{11}}
+\footback{3}
+\footnotetext{Cass R. Sunstein, ``Probability Neglect:
+Emotions, Worst Cases, and Law,'' \textit{Yale Law
+Journal} (2002): 61--107.\comment{21}}
+\footnext
+\footnotetext{Dan Ariely, \textit{Predictably Irrational: The Hidden Forces
+That Shape Our Decisions} (HarperCollins, 2008).\comment{22}}
+}
+\footnext
+\footnotetext{Boaz Keysar and Dale J. Barr,
+``Self-Anchoring in Conversation: Why Language Users
+Do Not Do What They
+`Should,''' in
+\textit{Heuristics and Biases: The Psychology of Intuitive Judgment},
+ed. Thomas Gilovich, Dale Griffin, and Daniel Kahneman (New York:
+Cambridge University Press, 2002), 150--166, doi:10.2277/0521796792.\comment{23}}
+\footnext
+\footnotetext{Scott Eidelman and Christian S. Crandall,
+``Bias in Favor of the Status Quo,''
+\textit{Social and Personality Psychology Compass} 6, no. 3 (2012):
+270--281.\comment{24}}
 
 {
  Knowing about a bias, however, is rarely enough to protect you
@@ -563,17 +670,66 @@ quality exhibited the very bias they had predicted, relative to a
 control group. When asked \textit{afterward}, however, the very same
 subjects claimed that their assessments of the paintings had been
 objective and unaffected by the bias---in all
-groups!\textsuperscript{12,13}}
+groups!\footnote{Katherine Hansen et al., ``People Claim
+Objectivity After Knowingly Using Biased
+Strategies,'' \textit{Personality and Social
+Psychology Bulletin} 40, no. 6 (2014): 691--699.\comment{12}}\supercomma\footnote{Similarly, Pronin writes of gender bias blindness:
+
+ In one study, participants considered a male and a female
+candidate for a police-chief job and then assessed whether being
+``streetwise'' or
+``formally educated'' was more
+important for the job. The result was that participants favored
+whichever background they were told the male candidate possessed (e.g.,
+if told he was ``streetwise,'' they
+viewed that as more important). Participants were completely blind to
+this gender bias; indeed, the more objective they believed they had
+been, the more bias they actually showed.\footnotemark
+
+ Even when we know about biases, Pronin notes, we remain
+``naive realists'' about our own
+beliefs. We reliably fall back into treating our beliefs as
+distortion-free representations of how things actually
+are.\footnotemark\comment{13}}
+\footback{1}
+\footnotetext{Eric Luis Uhlmann and Geoffrey L. Cohen,
+```I think it, therefore
+it's true': Effects of Self-perceived
+Objectivity on Hiring Discrimination,''
+\textit{Organizational Behavior and Human Decision Processes} 104, no.
+2 (2007): 207--223.\comment{25}}%
+\footnext
+\footnotetext{Emily Pronin, ``How We See Ourselves and How
+We See Others,'' \textit{Science} 320 (2008):
+1177--1180,
+http://psych.princeton.edu/psychology/research/pronin/pubs/2008\%20Self\%20and\%20Other.pdf.\comment{26}}
+
+}
 
 {
  We're especially loathe to think of our views as
 inaccurate compared to the views of others. Even when we correctly
 identify others' biases, we have a special \textit{bias
-blind spot} when it comes to our own flaws.\textsuperscript{14} We fail
+blind spot} when it comes to our own flaws.\footnote{In a survey of 76 people waiting in airports, individuals
+rated themselves much less susceptible to cognitive biases on average
+than a typical person in the airport. In particular, people think of
+themselves as unusually unbiased when the bias is socially undesirable
+or has difficult-to-notice consequences.\footnotemark Other
+studies find that people with personal ties to an issue see those ties
+as enhancing their insight and objectivity; but when they see
+\textit{other people} exhibiting the \textit{same} ties, they infer
+that those people are overly attached and biased.\comment{14}}\footnotetext{Emily Pronin, Daniel Y. Lin, and Lee Ross,
+``The Bias Blind Spot: Perceptions of Bias in Self
+versus Others,'' \textit{Personality and Social
+Psychology Bulletin} 28, no. 3 (2002): 369--381.\comment{27}} We fail
 to detect any ``biased-feeling
 thoughts'' when we introspect, and so draw the
 conclusion that we must just be more objective than everyone
-else.\textsuperscript{15}}
+else.\footnote{Joyce Ehrlinger, Thomas Gilovich, and Lee Ross,
+``Peering Into the Bias Blind Spot:
+People's Assessments of Bias in Themselves and
+Others,'' \textit{Personality and Social Psychology
+Bulletin} 31, no. 5 (2005): 680--692.\comment{15}}}
 
 {
  Studying biases can in fact make you \textit{more} vulnerable to
@@ -581,7 +737,12 @@ overconfidence and confirmation bias, as you come to see the influence
 of cognitive biases all around you---in everyone but yourself. And the
 bias blind spot, unlike many biases, is \textit{especially severe}
 among people who are \textit{especially intelligent, thoughtful, and
-open-minded}.\textsuperscript{16,17}}
+open-minded}.\footnote{Richard F. West, Russell J. Meserve, and Keith E. Stanovich,
+``Cognitive Sophistication Does Not Attenuate the Bias
+Blind Spot,'' \textit{Journal of Personality and
+Social Psychology} 103, no. 3 (2012): 506.\comment{16}}\supercomma\footnote{\ldots Not to be confused with people who think
+they're unusually intelligent, thoughtful, etc. because
+of the illusory superiority bias.\comment{17}}}
 
 {
  This is cause for concern.}
@@ -591,7 +752,10 @@ open-minded}.\textsuperscript{16,17}}
 It's known that we can reduce base rate neglect by
 thinking of probabilities as frequencies of objects or events. We can
 minimize duration neglect by directing more attention to duration and
-depicting it graphically.\textsuperscript{18} People vary in how
+depicting it graphically.\footnote{Michael J. Liersch and Craig R. M. McKenzie,
+``Duration Neglect by Numbers and Its Elimination by
+Graphs,'' \textit{Organizational Behavior and Human
+Decision Processes} 108, no. 2 (2009): 303--314.\comment{18}} People vary in how
 strongly they exhibit different biases, so there should be a host of
 yet-unknown ways to influence how biased we are.}
 
@@ -619,7 +783,9 @@ the situational content or being an expert in a particular domain. It
 requires that one fully understand the underlying rationale of the
 respective bias, is able to spot it in the particular setting, and also
 has the appropriate tools at hand to counteract the
-bias.\textsuperscript{19}}
+bias.\footnote{Sebastian Serfas, \textit{Cognitive Biases in the Capital
+Investment Context: Theoretical Considerations and Empirical
+Experiments on Violations of Normative Rationality} (Springer, 2010).\comment{19}}}
 
 {
  The goal of this book is to lay the groundwork for creating
@@ -809,7 +975,8 @@ will begin.}
  There is a passage in the \textit{Zhuangzi}, a proto-Daoist
 philosophical text, that says: ``The fish trap exists
 because of the fish; once you've gotten the fish, you
-can forget the trap.''\textsuperscript{20}}
+can forget the trap.''\footnote{Zhuangzi and Burton Watson, \textit{The Complete Works of
+Zhuangzi} (Columbia University Press, 1968).\comment{20}}}
 
 {
  I invite you to explore this book in that spirit. Use it like
@@ -836,224 +1003,6 @@ book to ensure its readability and consistency.}
 
 
 \bigskip
-
-{
- 1. The idea of personal bias, media bias, etc. resembles
-statistical bias in that it's an \textit{error}. Other
-ways of generalizing the idea of
-``bias'' focus instead on its
-association with nonrandomness. In machine learning, for example, an
-\textit{inductive} bias is just the set of assumptions a learner uses
-to derive predictions from a data set. Here, the learner is
-``biased'' in the sense that
-it's pointed in a specific direction; but since that
-direction might be \textit{truth}, it isn't a bad thing
-for an agent to have an inductive bias. It's valuable
-and necessary. This distinguishes inductive
-``bias'' quite clearly from the
-other kinds of bias.}
-
-{
- 2. A sad coincidence: Leonard Nimoy, the actor who played Spock,
-passed away just a few days before the release of this book. Though we
-cite his character as a classic example of fake
-``Hollywood rationality,'' we mean
-no disrespect to Nimoy's memory.}
-
-{
- 3. Timothy D. Wilson et al., ``Introspecting
-About Reasons Can Reduce Post-choice Satisfaction,''
-\textit{Personality and Social Psychology Bulletin} 19 (1993):
-331--331.}
-
-{
- 4. Jamin Brett Halberstadt and Gary M. Levine,
-``Effects of Reasons Analysis on the Accuracy of
-Predicting Basketball Games,'' \textit{Journal of
-Applied Social Psychology} 29, no. 3 (1999): 517--530.}
-
-{
- 5. Keith E. Stanovich and Richard F. West,
-``Individual Differences in Reasoning: Implications
-for the Rationality Debate?,'' \textit{Behavioral and
-Brain Sciences} 23, no. 5 (2000): 645--665,
-http://journals.cambridge.org/abstract\_S0140525X00003435.}
-
-{
- 6. Timothy D. Wilson, David B. Centerbar, and Nancy Brekke,
-``Mental Contamination and the Debiasing
-Problem,'' in \textit{Heuristics and Biases: The
-Psychology of Intuitive Judgment}, ed. Thomas Gilovich, Dale Griffin,
-and Daniel Kahneman (Cambridge University Press, 2002).}
-
-{
- 7. Amos Tversky and Daniel Kahneman,
-``Extensional Versus Intuitive Reasoning: The
-Conjunction Fallacy in Probability Judgment,''
-\textit{Psychological Review} 90, no. 4 (1983): 293--315,
-doi:10.1037/0033-295X.90.4.293.}
-
-{
- 8. Richards J. Heuer, \textit{Psychology of Intelligence Analysis}
-(Center for the Study of Intelligence, Central Intelligence Agency,
-1999).}
-
-{
- 9. Wayne Weiten, \textit{Psychology: Themes and Variations,
-Briefer Version, Eighth Edition} (Cengage Learning, 2010).}
-
-{
- 10. Raymond S. Nickerson, ``Confirmation Bias: A
-Ubiquitous Phenomenon in Many Guises,''
-\textit{Review of General Psychology} 2, no. 2 (1998): 175.}
-
-{
- 11. \textit{Probability neglect} is another cognitive bias. In the
-months and years following the September 11 attacks, many people chose
-to drive long distances rather than fly. Hijacking
-wasn't \textit{likely}, but it now felt like it was on
-the table; the mere possibility of hijacking hugely impacted decisions.
-By relying on black-and-white reasoning (cars and planes are either
-``safe'' or
-``unsafe,'' full stop), people
-actually put themselves in much more danger. Where they should have
-weighed the probability of dying on a cross-country car trip against
-the probability of dying on a cross-country flight---the former is
-hundreds of times more likely---they instead relied on their general
-feeling of worry and anxiety (the affect heuristic). We can see the
-same pattern of behavior in children who, hearing arguments for and
-against the safety of seat belts, hop back and forth between thinking
-seat belts are a completely good idea or a completely bad one, instead
-of trying to compare the strengths of the pro and con
-considerations.\textsuperscript{21}}
-
-{
- Some more examples of biases are: the \textit{peak/end rule}
-(evaluating remembered events based on their most intense moment, and
-how they ended); \textit{anchoring} (basing decisions on recently
-encountered information, even when it's
-irrelevant)\textsuperscript{22} and \textit{self-anchoring} (using
-yourself as a model for others' likely characteristics,
-without giving enough thought to ways you're
-atypical);\textsuperscript{23} and \textit{status quo bias}
-(excessively favoring what's normal and expected over
-what's new and different).\textsuperscript{24}}
-
-{
- 12. Katherine Hansen et al., ``People Claim
-Objectivity After Knowingly Using Biased
-Strategies,'' \textit{Personality and Social
-Psychology Bulletin} 40, no. 6 (2014): 691--699.}
-
-{
- 13. Similarly, Pronin writes of gender bias blindness:}
-
-{
- In one study, participants considered a male and a female
-candidate for a police-chief job and then assessed whether being
-``streetwise'' or
-``formally educated'' was more
-important for the job. The result was that participants favored
-whichever background they were told the male candidate possessed (e.g.,
-if told he was ``streetwise,'' they
-viewed that as more important). Participants were completely blind to
-this gender bias; indeed, the more objective they believed they had
-been, the more bias they actually showed.\textsuperscript{25}}
-
-{
- Even when we know about biases, Pronin notes, we remain
-``naive realists'' about our own
-beliefs. We reliably fall back into treating our beliefs as
-distortion-free representations of how things actually
-are.\textsuperscript{26}}
-
-{
- 14. In a survey of 76 people waiting in airports, individuals
-rated themselves much less susceptible to cognitive biases on average
-than a typical person in the airport. In particular, people think of
-themselves as unusually unbiased when the bias is socially undesirable
-or has difficult-to-notice consequences.\textsuperscript{27} Other
-studies find that people with personal ties to an issue see those ties
-as enhancing their insight and objectivity; but when they see
-\textit{other people} exhibiting the \textit{same} ties, they infer
-that those people are overly attached and biased.}
-
-{
- 15. Joyce Ehrlinger, Thomas Gilovich, and Lee Ross,
-``Peering Into the Bias Blind Spot:
-People's Assessments of Bias in Themselves and
-Others,'' \textit{Personality and Social Psychology
-Bulletin} 31, no. 5 (2005): 680--692.}
-
-{
- 16. Richard F. West, Russell J. Meserve, and Keith E. Stanovich,
-``Cognitive Sophistication Does Not Attenuate the Bias
-Blind Spot,'' \textit{Journal of Personality and
-Social Psychology} 103, no. 3 (2012): 506.}
-
-{
- 17. \ldots Not to be confused with people who think
-they're unusually intelligent, thoughtful, etc. because
-of the illusory superiority bias.}
-
-{
- 18. Michael J. Liersch and Craig R. M. McKenzie,
-``Duration Neglect by Numbers and Its Elimination by
-Graphs,'' \textit{Organizational Behavior and Human
-Decision Processes} 108, no. 2 (2009): 303--314.}
-
-{
- 19. Sebastian Serfas, \textit{Cognitive Biases in the Capital
-Investment Context: Theoretical Considerations and Empirical
-Experiments on Violations of Normative Rationality} (Springer, 2010).}
-
-{
- 20. Zhuangzi and Burton Watson, \textit{The Complete Works of
-Zhuangzi} (Columbia University Press, 1968).}
-
-{
- 21. Cass R. Sunstein, ``Probability Neglect:
-Emotions, Worst Cases, and Law,'' \textit{Yale Law
-Journal} (2002): 61--107.}
-
-{
- 22. Dan Ariely, \textit{Predictably Irrational: The Hidden Forces
-That Shape Our Decisions} (HarperCollins, 2008).}
-
-{
- 23. Boaz Keysar and Dale J. Barr,
-``Self-Anchoring in Conversation: Why Language Users
-Do Not Do What They
-`Should,''' in
-\textit{Heuristics and Biases: The Psychology of Intuitive Judgment},
-ed. Thomas Gilovich, Dale Griffin, and Daniel Kahneman (New York:
-Cambridge University Press, 2002), 150--166, doi:10.2277/0521796792.}
-
-{
- 24. Scott Eidelman and Christian S. Crandall,
-``Bias in Favor of the Status Quo,''
-\textit{Social and Personality Psychology Compass} 6, no. 3 (2012):
-270--281.}
-
-{
- 25. Eric Luis Uhlmann and Geoffrey L. Cohen,
-```I think it, therefore
-it's true': Effects of Self-perceived
-Objectivity on Hiring Discrimination,''
-\textit{Organizational Behavior and Human Decision Processes} 104, no.
-2 (2007): 207--223.}
-
-{
- 26. Emily Pronin, ``How We See Ourselves and How
-We See Others,'' \textit{Science} 320 (2008):
-1177--1180,
-http://psych.princeton.edu/psychology/research/pronin/pubs/2008\%20Self\%20and\%20Other.pdf.}
-
-{
- 27. Emily Pronin, Daniel Y. Lin, and Lee Ross,
-``The Bias Blind Spot: Perceptions of Bias in Self
-versus Others,'' \textit{Personality and Social
-Psychology Bulletin} 28, no. 3 (2002): 369--381.}
 
 \input{map_and_territory.tex}
 \input{change_mind.tex}
@@ -2440,3 +2389,4 @@ Zhuangzi}. Columbia University Press, 1968.}
 \clearpage
 \bigskip
 \end{document}
+
