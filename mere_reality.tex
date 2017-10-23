@@ -1397,107 +1397,83 @@ volume of phase space, and develop it forward in time using standard
 physics, the total volume of the phase space is conserved.}
 
 {
- For example, let there be two systems, X and Y, where X has 8
-possible states, Y has 4 possible states, and the joint system (X,Y)
+ For example, let there be two systems, $X$ and $Y$, where $X$ has 8
+possible states, $Y$ has 4 possible states, and the joint system $(X,Y)$
 has 32 possible states.}
 
 {
  The development of the joint system over time can be described as
 a rule that maps initial points onto future points. For example, the
-system could start out in X\textsubscript{7}Y\textsubscript{2}, then
+system could start out in $X_{7}Y_{2}$, then
 develop (under some set of physical laws) into the state
-X\textsubscript{3}Y\textsubscript{3} a minute later. Which is to say:
-if X started in state X\textsubscript{7}, and Y started in state
-Y\textsubscript{2}, and we watched it for 1 minute, we would see X go
-to X\textsubscript{3} and Y go to Y\textsubscript{3}. Such are the laws
+$X_{3}Y_{3}$ a minute later. Which is to say:
+if $X$ started in state $X_{7}$, and $Y$ started in state
+$Y_{2}$, and we watched it for 1 minute, we would see $X$ go
+to $X_{3}$ and $Y$ go to $Y_{3}$. Such are the laws
 of physics.}
 
 {
- Next, let's carve out a subspace S of the joint
-system state. The space S will be the subspace bounded by X being in
-state X\textsubscript{1} and Y being in states Y\textsubscript{1}
-through Y\textsubscript{4}. So the total volume of S is 4 states.}
+ Next, let's carve out a subspace $S$ of the joint
+system state. The space $S$ will be the subspace bounded by $X$ being in
+state $X_{1}$ and $Y$ being in states $Y_{1}$
+through $Y_{4}$. So the total volume of $S$ is 4 states.}
 
 {
  And let's suppose that, under the laws of physics
-governing (X,Y), the states initially in S behave as follows:}
-
-{\centering
- X\textsubscript{1}Y\textsubscript{1} $\rightarrow $
-X\textsubscript{2}Y\textsubscript{1}
-\par}
+governing $(X,Y)$, the states initially in S behave as follows:}
 
 
-\bigskip
-
-{\centering
- X\textsubscript{1}Y\textsubscript{2} $\rightarrow $
-X\textsubscript{4}Y\textsubscript{1}
-\par}
-
-
-\bigskip
-
-{\centering
- X\textsubscript{1}Y\textsubscript{3} $\rightarrow $
-X\textsubscript{6}Y\textsubscript{1}
-\par}
-
-
-\bigskip
-
-{\centering
- X\textsubscript{1}Y\textsubscript{4} $\rightarrow $
-X\textsubscript{8}Y\textsubscript{1}.
-\par}
-
-
-\bigskip
+\begin{align*}
+ X_{1}Y_{1} &\rightarrow X_{2}Y_{1} \\
+ X_{1}Y_{2} &\rightarrow X_{4}Y_{1} \\
+ X_{1}Y_{3} &\rightarrow X_{6}Y_{1} \\
+ X_{1}Y_{4} &\rightarrow X_{8}Y_{1}.
+\end{align*}
 
 {
  That, in a nutshell, is how a refrigerator works.}
 
 {
- The X subsystem began in a narrow region of state space---the
-single state X\textsubscript{1}, in fact---and Y began distributed over
-a wider region of space, states Y\textsubscript{1} through
-Y\textsubscript{4}. By interacting with each other, Y went into a
-narrow region, and X ended up in a wide region; \textit{but the total
+ The $X$ subsystem began in a narrow region of state space---the
+single state $X_{1}$, in fact---and $Y$ began distributed over
+a wider region of space, states $Y_{1}$ through
+$Y_{4}$. By interacting with each other, $Y$ went into a
+narrow region, and $X$ ended up in a wide region; \textit{but the total
 phase space volume was conserved.} Four initial states mapped to four
 end states.}
 
 {
  Clearly, so long as total phase space volume is conserved by
-physics over time, you can't squeeze Y harder than X
+physics over time, you can't squeeze $Y$ harder than $X$
 expands, or vice versa---for every subsystem you squeeze into a
 narrower region of state space, some other subsystem has to expand into
 a wider region of state space.}
 
 {
  Now let's say that we're
-\textit{uncertain} about the joint system (X,Y), and our
+\textit{uncertain} about the joint system $(X,Y)$, and our
 \textit{uncertainty} is described by an equiprobable distribution over
-S. That is, we're pretty sure X is in state
-X\textsubscript{1}, but Y is equally likely to be in any of the states
-Y\textsubscript{1} through Y\textsubscript{4}. If we shut our eyes for
+$S$. That is, we're pretty sure $X$ is in state
+$X_{1}$, but $Y$ is equally likely to be in any of the states
+$Y_{1}$ through $Y_{4}$. If we shut our eyes for
 a minute and then open them again, we will expect to see Y in state
-Y\textsubscript{1}, but X might be in any of the states
-X\textsubscript{2} through X\textsubscript{8}. Actually, X can only be
-in \textit{some} of the states X\textsubscript{2} through
-X\textsubscript{8}, but it would be too costly to think out exactly
+$Y_{1}$, but $X$ might be in any of the states
+$X_{2}$ through $X_{8}$. Actually, $X$ can only be
+in \textit{some} of the states $X_{2}$ through
+$X_{8}$, but it would be too costly to think out exactly
 which states these might be, so we'll just say
-X\textsubscript{2} through X\textsubscript{8}.}
+$X_{2}$ through $X_{8}$.}
 
 {
- If you consider the Shannon entropy of our uncertainty about X and
-Y as individual systems, X began with 0 bits of entropy because it had
-a single definite state, and Y began with 2 bits of entropy because it
+ If you consider the Shannon entropy of our uncertainty about $X$ and
+$Y$ as individual systems, $X$ began with 0 bits of entropy because it had
+a single definite state, and $Y$ began with 2 bits of entropy because it
 was equally likely to be in any of 4 possible states.
-(There's no mutual information between X and Y.) A bit
-of physics occurred, and lo, the entropy of Y went to 0, but the
-entropy of X went to log\textsubscript{2}(7) = 2.8 bits. So entropy was
+(There's no mutual information between $X$ and $Y$.) A bit
+of physics occurred, and lo, the entropy of $Y$ went to 0, but the
+entropy of $X$ went to $log_{2}(7) = 2.8$ bits. So entropy was
 transferred from one system to another, and decreased \textit{within}
-the Y subsystem; but due to the cost of bookkeeping, we
+the $Y$ subsystem; but due to the cost of bookkeeping, we
 didn't bother to track some information, and hence
 (from our perspective) the overall entropy increased.}
 
@@ -1505,37 +1481,12 @@ didn't bother to track some information, and hence
  Suppose there was a physical process that mapped past states onto
 future states like this:}
 
-{\centering
- X\textsubscript{2}Y\textsubscript{1} $\rightarrow $
-X\textsubscript{2}Y\textsubscript{1}
-\par}
-
-
-\bigskip
-
-{\centering
- X\textsubscript{2}Y\textsubscript{2} $\rightarrow $
-X\textsubscript{2}Y\textsubscript{1}
-\par}
-
-
-\bigskip
-
-{\centering
- X\textsubscript{2}Y\textsubscript{3} $\rightarrow $
-X\textsubscript{2}Y\textsubscript{1}
-\par}
-
-
-\bigskip
-
-{\centering
- X\textsubscript{2}Y\textsubscript{4} $\rightarrow $
-X\textsubscript{2}Y\textsubscript{1}.
-\par}
-
-
-\bigskip
+\begin{align*}
+ X_{2}Y_{1} &\rightarrow X_{2}Y_{1} \\
+ X_{2}Y_{2} &\rightarrow X_{2}Y_{1} \\
+ X_{2}Y_{3} &\rightarrow X_{2}Y_{1} \\
+ X_{2}Y_{4} &\rightarrow X_{2}Y_{1}.
+\end{align*}
 
 {
  Then you could have a physical process that would actually
@@ -1672,61 +1623,36 @@ out of it and leave behind an ice cube.}
 
 {
  This doesn't violate Liouville's
-Theorem, because if Y is the water, and \textit{you} are
-Maxwell's Demon (denoted M), the physical process
+Theorem, because if $Y$ is the water, and \textit{you} are
+Maxwell's Demon (denoted $M$), the physical process
 behaves as:}
 
-{\centering
- M\textsubscript{1}Y\textsubscript{1} $\rightarrow $
-M\textsubscript{1}Y\textsubscript{1}
-\par}
-
-
-\bigskip
-
-{\centering
- M\textsubscript{2}Y\textsubscript{2} $\rightarrow $
-M\textsubscript{2}Y\textsubscript{1}
-\par}
-
-
-\bigskip
-
-{\centering
- M\textsubscript{3}Y\textsubscript{3} $\rightarrow $
-M\textsubscript{3}Y\textsubscript{1}
-\par}
-
-
-\bigskip
-
-{\centering
- M\textsubscript{4}Y\textsubscript{4} $\rightarrow $
-M\textsubscript{4}Y\textsubscript{1}.
-\par}
-
-
-\bigskip
+\begin{align*}
+ M_{1}Y_{1} &\rightarrow M_{1}Y_{1}  \\
+ M_{2}Y_{2} &\rightarrow M_{2}Y_{1} \\
+ M_{3}Y_{3} &\rightarrow M_{3}Y_{1} \\
+ M_{4}Y_{4} &\rightarrow M_{4}Y_{1}.
+\end{align*}
 
 {
  Because Maxwell's demon \textit{knows} the exact
-state of Y, this is mutual information between M and Y. The mutual
-information decreases the joint entropy of (M,Y): we have H(M,Y) = H(M)
-+ H(Y) - I(M;Y). The demon M has 2 bits of entropy, Y has two bits of
-entropy, and their mutual information is 2 bits, so (M,Y) has a total
+state of $Y$, this is mutual information between $M$ and $Y$. The mutual
+information decreases the joint entropy of $(M,Y)$: we have $H(M,Y) = H(M)
++ H(Y) - I(M;Y)$. The demon $M$ has 2 bits of entropy, $Y$ has two bits of
+entropy, and their mutual information is 2 bits, so $(M,Y)$ has a total
 of 2 + 2 - 2 = 2 bits of entropy. The physical process just transforms
 the ``coldness'' (negative entropy,
 or negentropy) of the mutual information to make the actual water
-cold---afterward, M has 2 bits of entropy, Y has 0 bits of entropy, and
+cold---afterward, $M$ has 2 bits of entropy, $Y$ has 0 bits of entropy, and
 the mutual information is 0. Nothing wrong with that!}
 
 {
  And don't tell me that knowledge is
 ``subjective.'' Knowledge has to be
 represented in a brain, and that makes it as physical as anything else.
-For M to physically represent an accurate picture of the state of Y, it
-must be that M's physical state correlates with the
-state of Y. You can take thermodynamic advantage of
+For $M$ to physically represent an accurate picture of the state of $Y$, it
+must be that $M$'s physical state correlates with the
+state of $Y$. You can take thermodynamic advantage of
 that---it's called a Szilárd engine.}
 
 {
@@ -3397,7 +3323,7 @@ of the probability assigned to the real state of affairs.}
 {
  So if snow is white, my belief ``70\%:
 `snow is white''' will
-score -0.51 bits: log\textsubscript{2}(0.7) = -0.51.}
+score -0.51 bits: $log_{2}(0.7) = -0.51$.}
 
 {
  But what if snow is not white, as I have conceded a 30\%
@@ -7994,19 +7920,19 @@ meant.}
 {
  Because of my reading in mathematical logic, what instantly comes
 into my mind is logical possibility. If you have a collection of
-statements like {\textbackslash}{\textquotesingle}7b(A $\Rightarrow $
-B),(B $\Rightarrow $ C),(C $\Rightarrow
-${\textlnot}A){\textbackslash}{\textquotesingle}7d, then the compound
+statements like $\{(A \Rightarrow 
+B),(B \Rightarrow  C),(C \Rightarrow
+\lnot A)\}$, then the compound
 belief is \textit{logically possible} if it has a
 \textit{model}{}---which, in the simple case above, reduces to finding
 a value assignment to
-{\textbackslash}{\textquotesingle}7bA,B,C{\textbackslash}{\textquotesingle}7d
-that makes all of the statements (A $\Rightarrow $ B), (B $\Rightarrow
-$ C), and (C $\Rightarrow ${\textlnot}A) true. In this case, A = B = C
-= 0 works, as does {\textbackslash}{\textquotesingle}7bA = 0,B = C =
-1{\textbackslash}{\textquotesingle}7d or
-{\textbackslash}{\textquotesingle}7bA = B = 0,C =
-1{\textbackslash}{\textquotesingle}7d.}
+$\{A,B,C\}$
+that makes all of the statements $(A \Rightarrow  B)$, $(B \Rightarrow
+ C)$, and $(C \Rightarrow \lnot A)$ true. In this case, $A = B = C
+= 0$ works, as does $\{A = 0,B = C =
+1\}$ or
+$\{A = B = 0,C =
+1\}$.}
 
 {
  Something will \textit{seem} possible---will seem
@@ -8015,8 +7941,8 @@ $ C), and (C $\Rightarrow ${\textlnot}A) true. In this case, A = B = C
 the collection of statements without \textit{seeing} a contradiction.
 But it is, in general, a very hard problem to see contradictions
 \textit{or} to find a full specific model! If you limit yourself to
-simple Boolean propositions of the form ((A or B or C) and (B or
-{\textlnot}C or D) and (D or {\textlnot}A or {\textlnot}C){\dots}),
+simple Boolean propositions of the form (($A$ or $B$ or $C$) and ($B$ or
+$\lnot C$ or $D$) and ($D$ or $\lnot A$ or $\lnot C$){\dots}),
 conjunctions of disjunctions of three variables, then this is a very
 famous problem called 3-SAT, which is one of the first problems ever to
 be proven NP-complete.}
@@ -8243,6 +8169,7 @@ explanation in our world as in the zombie world.}
  As the most formidable advocate of zombie-ism, David Chalmers,
 writes:\footnote{Chalmers, \textit{The Conscious Mind}.\comment{1}}}
 
+\begin{quotation}
 {
  Think of my zombie twin in the universe next door. He talks about
 conscious experience all the time---in fact, he seems obsessed by it.
@@ -8269,15 +8196,18 @@ of his claims obviously does not depend on the existence of
 consciousness, as there is no consciousness in his world. It follows
 that the explanation of my claims is also independent of the existence
 of consciousness.}
+\end{quotation}
 
 {
  Chalmers is not arguing \textit{against} zombies; those are his
 actual beliefs!}
 
+\begin{quotation}
 {
  This paradoxical situation is at once delightful and disturbing.
 It is not obviously fatal to the nonreductive position, but it is at
 least something that we need to come to grips with \ldots}
+\end{quotation}
 
 {
  I would seriously nominate this as the largest bullet ever bitten
@@ -8590,6 +8520,7 @@ great detail in his book. Okay, so Chalmers has solidly proven that he
 is not justified in believing in epiphenomenal consciousness, right?
 No. Chalmers writes:}
 
+\begin{quotation}
 {
  Conscious experience lies at the center of our epistemic universe;
 we have access to it \textit{directly.} This raises the question: what
@@ -8613,6 +8544,7 @@ justified in the belief, not whether my \textit{brain} is justified in
 the belief, and if property dualism is correct than there is more to me
 than my brain.}
 
+\end{quotation}
 {
  So---if I've got this thesis
 right---there's a core you, above and beyond your
@@ -8781,40 +8713,68 @@ prior probability, by the conjunction rule of probability and
 Occam's Razor. It is therefore dominated by at least
 two theories that postulate fewer miracles, namely:}
 
+\begin{itemize}
+\item
 {
- Substance dualism: There is a stuff of consciousness which is not
+  Substance dualism:
+    \begin{itemize}
+    \item
+There is a stuff of consciousness which is not
 yet understood, an extraordinary super-physical stuff that
 \textit{visibly affects} our world; and this stuff is what makes us
-talk about consciousness. }
+talk about consciousness.
+\end{itemize}
+}
 
+\item
 {
-  Not-quite-faith-based reductionism: That-which-we-name
+  Not-quite-faith-based reductionism:
+  \begin{itemize}
+    \item
+  That-which-we-name
 ``consciousness'' happens
 \textit{within} physics, in a way not yet understood, just like what
 happened the last three thousand times humanity ran into something
-mysterious. Your intuition that no material substance can possibly add
+mysterious.
+\item
+Your intuition that no material substance can possibly add
 up to consciousness is incorrect. If you \textit{actually} knew
 \textit{exactly} why you talk about consciousness, this would give you
 new insights, of a form you can't now anticipate; and
 afterward you would realize that your arguments about normal physics
-having no room for consciousness were flawed. }
+having no room for consciousness were flawed.
+\end{itemize}
+}
+
+\end{itemize}
 
 {
  Compare to:}
 
+\begin{itemize}
+  \item
 {
- Epiphenomenal property dualism: Matter has additional
+  Epiphenomenal property dualism:
+\begin{itemize}
+\item  Matter has additional
 consciousness-properties which are not yet understood. These properties
 are epiphenomenal with respect to ordinarily observable physics---they
-make no difference to the motion of particles. \textit{Separately,}
+make no difference to the motion of particles.
+\item
+  \textit{Separately,}
 there exists a not-yet-understood reason \textit{within normal physics}
 why philosophers talk about consciousness and invent theories of dual
-properties. \textit{Miraculously,} when philosophers talk about
+properties.
+\item
+  \textit{Miraculously,} when philosophers talk about
 consciousness, the bridging laws of \textit{our} world are exactly
 right to make this talk about consciousness correct, even though it
 arises from a malfunction (drawing of logically unwarranted
 conclusions) in the causally closed cognitive system that types
-philosophy papers. }
+philosophy papers.
+\end{itemize}
+}
+\end{itemize}
 
 {
  I know I'm speaking from limited experience, here.
@@ -8897,11 +8857,13 @@ tie up a loose end I spotted the next day.}
 {
  \textbf{(A)} Richard Chappell writes:}
 
+\begin{quotation}
 {
  A terminological note (to avoid unnecessary confusion): what you
 call ``conceivable,'' others of us
 would merely call ``\textit{apparently}
 conceivable.''}
+\end{quotation}
 
 {
  The gap between ``I don't see a
@@ -8927,10 +8889,14 @@ logical proof. Note the size of the gap between the information you can
 get by closing your eyes and imagining zombies, and the information you
 need to carry the argument for epiphenomenalism.}
 
+\begin{quotation}
+
 {
  That is, your view would be characterized as a form of Type-A
 materialism, the view that zombies are not even (genuinely)
 conceivable, let alone metaphysically possible.}
+
+\end{quotation}
 
 {
  Type-A materialism is a large bundle; you
@@ -8952,6 +8918,7 @@ it cannot possibly have any solution, and (3) is being
 \textit{discussed} in a fashion that has a great big dependence on the
 not-fully-understood ad-hoc architecture of human cognition.}
 
+\begin{quotation}
 {
  (1) You haven't, so far as I can tell, identified
 any \textit{logical contradiction} in the description of the zombie
@@ -8960,12 +8927,14 @@ it's kind of strange. But there are many bizarre
 possible worlds out there. That's no reason to posit an
 implicit contradiction. So it's still completely
 mysterious to me what this alleged contradiction is supposed to be.}
+\end{quotation}
 
 {
  Okay, I'll spell it out from a materialist
 standpoint:}
 
-{
+\begin{enumerate}
+\item{
  The zombie world, by definition, contains all parts of our world
 that are within the closure of the ``caused
 by'' or ``effect
@@ -8973,36 +8942,37 @@ of'' relation of any observable phenomenon. In
 particular, it contains the \textit{cause of} my visibly saying,
 ``I think therefore I am.''}
 
-{
+\item{
  When I focus my inward awareness on my inward awareness, I shortly
 thereafter experience my internal narrative saying ``I
 am focusing my inward awareness on my inward
 awareness,'' and can, if I choose, say so out loud.}
 
-{
+\item{
  Intuitively, it sure seems like my inward awareness is causing my
 internal narrative to say certain things, and that my internal
 narrative can cause my lips to say certain things.}
 
-{
+\item{
  The word ``consciousness,'' if
 it has any meaning at all, refers to that-which-is or that-which-causes
 or that-which-makes-me-say-I-have inward awareness.}
 
-{
+\item{
  From (3) and (4) it would follow that if the zombie world is
 closed with respect to the causes of my saying ``I
 think therefore I am,'' the zombie world contains
 that which we refer to as
 ``consciousness.''}
 
-{
+\item{
  By definition, the zombie world does not contain consciousness.}
 
-{
+\item{
  (3) seems to me to have a rather high probability of being
 empirically true. Therefore I evaluate a high empirical probability
 that the zombie world is logically impossible.}
+\end{enumerate}
 
 {
  You can save the Zombie World by letting the cause of my internal
@@ -9044,6 +9014,7 @@ without moving any atoms. What it would mean to eliminate
 ``consciousness'' from a world,
 rather than consciousness, I will not speculate.}
 
+\begin{quotation}
 {
  (2) It's misleading to say it's
 ``miraculous'' (on the property
@@ -9052,6 +9023,7 @@ world. There's a natural law which guarantees this,
 after all. So it's no more miraculous than any other
 logically contingent nomic necessity (e.g. the constants in our
 physical laws).}
+\end{quotation}
 
 {
  It is the natural law itself that is
@@ -9079,6 +9051,7 @@ substance of Christ's flesh while possessing the exact
 appearance and outward behavior of a cracker, there's
 just a natural law which guarantees this, you know.}
 
+\begin{quotation}
 {
  That is, Zombie (or ``Outer'')
 Chalmers doesn't actually conclude \textit{anything},
@@ -9086,6 +9059,7 @@ because his utterances are meaningless. A fortiori, he
 doesn't conclude anything unwarrantedly.
 He's just making noises; these are no more susceptible
 to epistemic assessment than the chirps of a bird.}
+\end{quotation}
 
 {
  Looking at this from an AI-design standpoint, it seems to me like
@@ -9138,19 +9112,21 @@ Outer Chalmers.}
 
 {
  \textbf{(B)} In yesterday's text, I left out an
-assumption when I wrote:}
+ assumption when I wrote:}
+
+\begin{quotation}
 
 {
  If a self-modifying AI looks at a part of itself that concludes
-``B'' on condition A---a part of
-itself that writes ``B'' to memory
-whenever condition A is true---and the AI inspects this part,
+``$B$'' on condition $A$---a part of
+itself that writes ``$B$'' to memory
+whenever condition $A$ is true---and the AI inspects this part,
 determines how it (causally) operates in the context of the larger
 universe, and the AI decides that this part systematically tends to
 write false data to memory, then the AI has found what appears to be a
 bug, and the AI will self-modify not to write
-``B'' to the belief pool under
-condition A.}
+``$B$'' to the belief pool under
+condition $A$.}
 
 {
  \ldots}
@@ -9164,6 +9140,8 @@ of how it operates as a causal system, hence with a testable theory of
 how that causal system produces systematically accurate beliefs on the
 way to achieving its goals.}
 
+\end{quotation}
+
 {
  Actually, you need an additional assumption to the above, which is
 that a ``good AI design'' (the kind
@@ -9171,13 +9149,13 @@ I was thinking of, anyway) judges its own rationality in a modular way;
 it enforces global rationality by enforcing local rationality. If there
 is a piece that, relative to its context, is locally systematically
 unreliable---for some possible beliefs
-``B\textsubscript{i}'' and
-conditions A\textsubscript{i}, it adds some
-``B\textsubscript{i}'' to the belief
-pool under local condition A\textsubscript{i}, where reflection by the
-system indicates that B\textsubscript{i} is not true (or in the case of
+``$B_{i}$'' and
+conditions $A_{i}$, it adds some
+``$B_{i}$'' to the belief
+pool under local condition $A_{i}$, where reflection by the
+system indicates that $B_{i}$ is not true (or in the case of
 probabilistic beliefs, not accurate) when the local condition
-A\textsubscript{i} is true---then this is a bug. This kind of
+$A_{i}$ is true---then this is a bug. This kind of
 modularity is \textit{a} way to make the problem tractable, and
 it's how I currently think about the first-generation
 AI design. [Edit 2013: The actual notion I had in mind here has now
@@ -9230,6 +9208,8 @@ valid.]}
 {
  \textbf{(C)} An anonymous poster wrote:}
 
+\begin{quotation}
+
 {
  A sidepoint, this, but I believe your etymology for
 ``n'shama'' is
@@ -9238,6 +9218,7 @@ wrong. It is related to the word for
 ``hear.'' The root for
 ``hear'' contains an ayin, which
 n'shama does not.}
+\end{quotation}
 
 {
  Now that's what I call a miraculously misleading
@@ -13528,15 +13509,15 @@ distinct items of clothing printed with this theorem, so it must be
 important. }
 
 {
- To review quickly, B here refers to an item of evidence,
-A\textsubscript{i} is some hypothesis under consideration, and the
-A\textsubscript{j} are competing, mutually exclusive hypotheses. The
-expression P(B{\textbar}A\textsubscript{i}) means
-``the probability of seeing B, if hypothesis
-A\textsubscript{i} is true'' and
-P(A\textsubscript{i}{\textbar}B) means ``the
-probability hypothesis A\textsubscript{i} is true, if we see
-B.''}
+ To review quickly, $B$ here refers to an item of evidence,
+$A_{i}$ is some hypothesis under consideration, and the
+$A_{j}$ are competing, mutually exclusive hypotheses. The
+expression $P(B|A_{i})$ means
+``the probability of seeing $B$, if hypothesis
+$A_{i}$ is true'' and
+$P(A_{i}|B)$ means ``the
+probability hypothesis $A_{i}$ is true, if we see
+$B$.''}
 
 {
  The mathematical phenomenon that I will call
@@ -13563,13 +13544,13 @@ no advice about what to expect.}
 
 {
  In terms of Bayes's Theorem, if there is at least
-some observation B that the hypothesis A\textsubscript{i}
-can't explain, i.e., P(B{\textbar}A\textsubscript{i})
+some observation $B$ that the hypothesis $A_{i}$
+can't explain, i.e., $P(B|A_{i})$
 is tiny, then the numerator
-P(B{\textbar}A\textsubscript{i})P(A\textsubscript{i}) will also be
+$P(B|A_{i})P(A_{i})$ will also be
 tiny, and likewise the posterior probability
-P(A\textsubscript{i}{\textbar}B). Updating on having seen the
-impossible result B has driven the probability of A\textsubscript{i}
+$P(A_{i}|B)$. Updating on having seen the
+impossible result $B$ has driven the probability of $A_{i}$
 down to nearly zero. A theory that refuses to make itself vulnerable in
 this way will need to spread its probability widely, so that it has no
 holes; it will not be able to strongly concentrate probability into a
@@ -13606,14 +13587,16 @@ that, on the hypothesis that decoherent quantum mechanics governs the
 universe, we should definitely \textit{not expect} to see.}
 
 {
- So there do exist observations B whose
-P(B{\textbar}A\textsubscript{deco}) is infinitesimal, which would drive
-P(A\textsubscript{deco}{\textbar}B) down to an infinitesimal.}
+ So there do exist observations $B$ whose
+$P(B|A_{deco})$ is infinitesimal, which would drive
+$P(A_{deco}|B)$ down to an infinitesimal.}
 
+\begin{quote}
 {
  But that's just because decoherent quantum
 mechanics is still quantum mechanics! What about the decoherence part,
 per se, versus the collapse postulate?}
+\end{quote}
 
 {
  We're getting there. The point is that I just
@@ -13644,9 +13627,11 @@ plus the Born probability rule---you would still have sharp
 expectations of the universe. You would not live in a magical world
 where anything was probable.}
 
+\begin{quote}
 {
  But you could say exactly the same thing about quantum mechanics
 \textit{without} (macroscopic) decoherence.}
+\end{quote}
 
 {
  Well, yes! Someone walking around with the differential equation
@@ -13655,9 +13640,11 @@ postulate that obeys the Born probabilities and is triggered before
 superposition reaches macroscopic levels, still lives in a universe
 where apples fall down rather than up.}
 
+\begin{quote}
 {
  But where does decoherence make a \textit{new} prediction, one
-that lets us \textit{test} it?}
+ that lets us \textit{test} it?}
+\end{quote}
 
 {
  A ``new'' prediction relative
@@ -13679,22 +13666,20 @@ prediction'' by considering only one hypothesis in
 isolation.}
 
 {
- In Bayesian terms, you are looking for an item of evidence B that
+ In Bayesian terms, you are looking for an item of evidence $B$ that
 will produce evidence for one hypothesis over another, distinguishing
 between them, and the process of producing this evidence we could call
 a ``test.'' You are looking for an
-experimental result B such that}
+experimental result $B$ such that}
 
-{\centering
- P(B{\textbar}A\textsubscript{d}) ${\neq}$
-P(B{\textbar}A\textsubscript{c});
-\par}
-
+\begin{equation*}
+ P(B|A_{d}) \neq P(B|A_{c});
+\end{equation*}
 
 \bigskip
 
 {
- that is, some outcome B which has a different probability,
+ that is, some outcome $B$ which has a different probability,
 conditional on the decoherence hypothesis being true, versus its
 probability if the collapse hypothesis is true. Which in turn implies
 that the posterior odds for decoherence and collapse will become
@@ -13711,9 +13696,9 @@ different from the prior odds:}
 
 {
  This equation is symmetrical (assuming no probability is literally
-equal to 0). There isn't one A\textsubscript{j} labeled
+equal to 0). There isn't one $A_{j}$ labeled
 ``old hypothesis'' and another
-A\textsubscript{j} labeled ``new
+$A_{j}$ labeled ``new
 hypothesis.''}
 
 {
@@ -13749,6 +13734,7 @@ before collapse? Are we each bound to keep the theory we invented
 first? Will Reason have nothing to say about the issue, leaving no
 recourse to settle the argument but interstellar war?}
 
+\begin{quote}
 {
  But if we revoke the requirement to yield new predictions, we are
 left with scientific chaos. You can add arbitrary untestable
@@ -13759,6 +13745,7 @@ our current theories against every crackpot who proposes that electrons
 have a new property called
 ``scent,'' just like quarks have
 ``flavor''?}
+\end{quote}
 
 {
  Let it first be said that I quite agree that you should reject the
@@ -13842,11 +13829,13 @@ guide to practice, this is what it says: Reject \textit{useless}
 complications \textit{in general}, not just when they are
 \textit{new}.}
 
+\begin{quote}
 {
  Yes, and \textit{useless} is precisely what the many worlds of
 decoherence are! There are supposedly all these worlds alongside our
 own, and they don't \textit{do} anything to our world,
 but I'm supposed to believe in them anyway?}
+\end{quote}
 
 {
  No, according to decoherence, what you're supposed
@@ -13884,13 +13873,13 @@ wavefunction is not \textit{additional}, and it is not
 \textit{supposed} to be explaining the price of gold in London; it is
 just a deductive consequence of the wavefunction's
 evolution. If the evidence of many particular cases gives you cause to
-believe that X $\rightarrow $ Y is a general law, and the evidence of
-some particular case gives you cause to believe X, then you should have
-P(Y) ${\geq}$ P(X and (X $\rightarrow $ Y)).}
+believe that $X \rightarrow  Y$ is a general law, and the evidence of
+some particular case gives you cause to believe $X$, then you should have
+$P(Y) \geq P(X \, \mathrm{and} \, (X \rightarrow Y))$.}
 
 {
- Or to look at it another way, if P(Y{\textbar}X) ${\approx}$ 1,
-then P(X and Y) ${\approx}$ P(X).}
+ Or to look at it another way, if $P(Y|X) \approx 1$,
+then $P(X \, \mathrm{and} \, Y) \approx P(X)$.}
 
 {
  Which is to say, believing extra details doesn't
@@ -13927,8 +13916,8 @@ simply a logical consequence of those general laws that constitute the
 substance of the theory.}
 
 {
- If A $\Rightarrow $ B then {\textlnot}B $\Rightarrow
-${\textlnot}A. To deny the existence of superposed worlds is
+ If $A \Rightarrow B$ then $\lnot B \Rightarrow
+ \lnot A$. To deny the existence of superposed worlds is
 necessarily to deny the universality of the quantum laws formulated to
 govern hydrogen atoms and every other examinable case; it is this
 denial that seems to the decoherentists like the extra and untestable
@@ -20824,17 +20813,17 @@ invariances.}
 outcomes: green-green, green-blue, green-red, blue-green, blue-blue,
 blue-red, red-green, red-blue, and red-red. Suppose that green wins,
 and then blue wins. The experimenter would assign the first score based
-on our probability assignments for P(green\textsubscript{1}) and the
+on our probability assignments for $P(green_{1})$ and the
 second score based on
-P(blue\textsubscript{2}{\textbar}green\textsubscript{1}).\footnote{Don't remember how to read P(A{\textbar}B)? See
+$P(blue_{2}|green_{1})$.\footnote{Don't remember how to read $P(A|B)$? See
 An Intuitive Explanation of Bayesian Reasoning.\comment{4}}
 We would make two predictions, and get two scores. Our first prediction
 was the probability we assigned to the color that won on the first
 round, green. Our second prediction was our probability that blue would
 win on the second round, \textit{given} that green won on the first
 round. Why do we need to write
-P(blue\textsubscript{2}{\textbar}green\textsubscript{1}) instead of
-just P(blue\textsubscript{2})? Because you might have a hypothesis
+$P(blue_{2}|green_{1})$ instead of
+just $P(blue_{2})$? Because you might have a hypothesis
 about the flashing light that says ``blue never
 follows green,'' or ``blue always
 follows green'' or ``blue follows
@@ -20846,43 +20835,43 @@ the button, using every scrap of information; but after the light
 flashes it is too late to change your bet.}
 
 {
- Suppose the actual outcome is green\textsubscript{1} followed by
-blue\textsubscript{2}. We require this invariance: I must get the same
+ Suppose the actual outcome is $green_{1}$ followed by
+$blue_{2}$. We require this invariance: I must get the same
 total score, regardless of whether:}
 
 {
  I am scored twice, first on my prediction for
-P(green\textsubscript{1}), and second on my prediction for
-P(blue\textsubscript{2}{\textbar}green\textsubscript{1}).}
+$P(green_{1})$, and second on my prediction for
+$P(blue_{2}|green_{1})$.}
 
 {
- I am scored once for my joint prediction P(green\textsubscript{1}
-and blue\textsubscript{2}).}
+ I am scored once for my joint prediction $P(green_{1}
+\, \mathrm{and} \, blue_{2})$.}
 
 {
- Suppose I assign a 60\% probability to green\textsubscript{1}, and
+ Suppose I assign a 60\% probability to $green_{1}$, and
 then the green light flashes. I must now produce probabilities for the
 colors on the second round. I assess the possibility
-blue\textsubscript{2}, and allocate it 25\% of my probability mass. Lo
+$blue_{2}$, and allocate it 25\% of my probability mass. Lo
 and behold, on the second round the light flashes blue. So on the first
 round my bet on the winning color was 60\%, and on the second round my
 bet on the winning color was 25\%. But I might also, at the start of
-the experiment and after assigning P(green\textsubscript{1}), imagine
+the experiment and after assigning $P(green_{1})$, imagine
 that the light first flashes green, imagine updating my theories based
 on that information, and then say what confidence I will give to blue
 on the next round if the first round is green. That is, I generate the
-probabilities P(green\textsubscript{1}) and
-P(blue\textsubscript{2}{\textbar}green\textsubscript{1}). By
+probabilities $P(green_{1})$ and
+$P(blue_{2}|green_{1})$. By
 multiplying these two probabilities together we would get the joint
-probability, P(green\textsubscript{1} and blue\textsubscript{2}) =
-15\%.}
+probability, $P(green_{1} \, \mathrm{and} \, blue_{2}) =
+15\%$.}
 
 {
  A double experiment has nine possible outcomes. If I generate nine
-probabilities for P(green\textsubscript{1}, green\textsubscript{2}),
-P(green\textsubscript{1}, blue\textsubscript{2}), \ldots~,
-P(red\textsubscript{1}, blue\textsubscript{2}), P(red\textsubscript{1},
-red\textsubscript{2}), the probability mass must sum to no more than
+probabilities for $P(green_{1}, green_{2})$,
+$P(green_{1}, blue_{2})$, \ldots~,
+$P(red_{1}, blue_{2})$, $P(red_{1},
+red_{2})$, the probability mass must sum to no more than
 one. I am giving predictions for nine mutually exclusive possibilities
 of a ``double experiment.''}
 
@@ -20893,11 +20882,11 @@ doesn't change regardless of whether we consider the
 double result as two predictions or one prediction. I can treat the
 sequence of two results as a single experiment,
 ``press the button twice,'' and be
-scored on my prediction for P(blue\textsubscript{2},
-green\textsubscript{1}) = 15\%. Or I can be scored once for my first
-prediction P(green\textsubscript{1}) = 60\%, then again on my
-prediction P(blue\textsubscript{2}{\textbar}green\textsubscript{1}) =
-25\%. We require the same \textit{total} score in either case, so that
+scored on my prediction for $P(blue_{2},
+green_{1}) = 15\%$. Or I can be scored once for my first
+prediction $P(green_{1}) = 60\%$, then again on my
+prediction $P(blue_{2}|green_{1}) =
+25\%$. We require the same \textit{total} score in either case, so that
 it doesn't matter how we slice up the experiments and
 the predictions---the \textit{total} score is always exactly the same.
 This is our invariance.}
@@ -20905,36 +20894,23 @@ This is our invariance.}
 {
  We have just required:}
 
-{\centering
- Score[P(green\textsubscript{1},blue\textsubscript{2})] =
-Score[P(green\textsubscript{1})] +
-Score[P(blue\textsubscript{2}{\textbar}green\textsubscript{1})].
-\par}
-
-
-\bigskip
+\begin{equation*}
+ \mathrm{Score}[P(green_{1},blue_{2})] = \mathrm{Score}[P(green_{1})] + \mathrm{Score}[P(blue_{2}|green_{1})].
+\end{equation*}
 
 {
  And we already know:}
 
-{\centering
- P(green\textsubscript{1},blue\textsubscript{2}) =
-P(green\textsubscript{1}) {\texttimes}
-P(blue\textsubscript{2}{\textbar}green\textsubscript{1}).
-\par}
-
-
-\bigskip
+\begin{equation*}
+ P(green_{1},blue_{2}) = P(green_{1}) \times P(blue_{2}|green_{1}).
+\end{equation*}
 
 {
  The only possible scoring rule is:}
 
-{\centering
- Score(P) = log(P).
-\par}
-
-
-\bigskip
+\begin{equation*}
+ \mathrm{Score}(P) = \log(P).
+\end{equation*}
 
 {
  The new scoring rule is that your score is the \textit{logarithm}
@@ -20981,15 +20957,13 @@ of 2, -1 bit is a factor of 1/2. A probability of 0.25 would score -2
 bits; a probability of 0.03 would score around -5 bits.}
 
 {
- If you arrive at a probability assessment P for each color, with
-P(red), P(blue), P(green), then your \textit{expected score} is:}
+ If you arrive at a probability assessment $P$ for each color, with
+$P(red)$, $P(blue)$, $P(green)$, then your \textit{expected score} is:}
 
-{\centering
- Score(P) = log(P)
-\par}
+\begin{equation*}
+ \mathrm{Score}(P) = \log(P)
+\end{equation*}
 
-
-\bigskip
 
 \begin{equation*}
   \mathrm{Expectation}(\mathrm{Score}) = \sum_{colors}P(\mathrm{color})\times\log(P(\mathrm{color})).
@@ -21004,28 +20978,28 @@ green. Let's think in base 2 for a moment, to make
 things simpler. Your expected score is:}
 
 {\centering
- Score(red) = $-$2 bits, flashes 25\% of the time,
+ $\mathrm{Score}(red) = -2$ bits, flashes 25\% of the time,
 \par}
 
 
 \bigskip
 
 {\centering
- Score(blue) = $-$1 bit, flashes 50\% of the time,
+$\mathrm{Score}(blue) = -1$ bit, flashes 50\% of the time,
 \par}
 
 
 \bigskip
 
 {\centering
- Score(green) = $-$2 bits, flashes 25\% of the time,
+$\mathrm{Score}(green) = -2$ bits, flashes 25\% of the time,
 \par}
 
 
 \bigskip
 
 {\centering
- Expectation(Score) = $-$1.5 bits.
+$\mathrm{Expectation}(\mathrm{Score}) = -1.5$ bits.
 \par}
 
 
