@@ -13875,11 +13875,11 @@ just a deductive consequence of the wavefunction's
 evolution. If the evidence of many particular cases gives you cause to
 believe that $X \rightarrow  Y$ is a general law, and the evidence of
 some particular case gives you cause to believe $X$, then you should have
-$P(Y) \geq P(X \, \mathrm{and} \, (X \rightarrow Y))$.}
+$P(Y) \geq P(X \text{ and } (X \rightarrow Y))$.}
 
 {
  Or to look at it another way, if $P(Y|X) \approx 1$,
-then $P(X \, \mathrm{and} \, Y) \approx P(X)$.}
+then $P(X \text{ and } Y) \approx P(X)$.}
 
 {
  Which is to say, believing extra details doesn't
@@ -20630,10 +20630,10 @@ expected payoff given that Payoff rule, it would be:}
 
 %putting \mathrm{Payoff} in causes lualatex to run out of memory
 \begin{equation*}
-  \mathrm{Expectation}(\mathrm{Payof}\mathrm{f}) = \sum_{colors} P(\mathrm{color})\times F(\mathrm{color}).
+  \text{Expectation}(\text{Payoff}) = \sum_{colors} P(\text{color})\times F(\text{color}).
 \end{equation*}
 %\begin{equation*}
-%  \mathrm{Expectation}(\mathrm{Payoff} = \sum_{colors} P(\mathrm{color})\times F(\mathrm{color}) .
+%  \text{Expectation}(\text{Payoff} = \sum_{colors} P(\text{color})\times F(\text{color}) .
 %\end{equation*}
 
 
@@ -20714,10 +20714,10 @@ would calculate:}
 
 
 \begin{equation*}
-  \mathrm{Expectation}(\mathrm{Payof}\mathrm{f}) = \sum_{colors} P(\mathrm{color}) F(\mathrm{color})
+  \text{Expectation}(\text{Payoff}) = \sum_{colors} P(\text{color}) F(\text{color})
 \end{equation*}
 %\begin{equation*}
-%  \mathrm{Expectation}(\mathrm{Payoff} = \sum_{colors} P(\mathrm{color}) F(\mathrm{color})
+%  \text{Expectation}(\text{Payoff} = \sum_{colors} P(\text{color}) F(\text{color})
 %\end{equation*}
 
 
@@ -20846,7 +20846,7 @@ $P(blue_{2}|green_{1})$.}
 
 {
  I am scored once for my joint prediction $P(green_{1}
-\, \mathrm{and} \, blue_{2})$.}
+\text{ and } blue_{2})$.}
 
 {
  Suppose I assign a 60\% probability to $green_{1}$, and
@@ -20863,7 +20863,7 @@ on the next round if the first round is green. That is, I generate the
 probabilities $P(green_{1})$ and
 $P(blue_{2}|green_{1})$. By
 multiplying these two probabilities together we would get the joint
-probability, $P(green_{1} \, \mathrm{and} \, blue_{2}) =
+probability, $P(green_{1} \text{ and } blue_{2}) =
 15\%$.}
 
 {
@@ -20895,7 +20895,7 @@ This is our invariance.}
  We have just required:}
 
 \begin{equation*}
- \mathrm{Score}[P(green_{1},blue_{2})] = \mathrm{Score}[P(green_{1})] + \mathrm{Score}[P(blue_{2}|green_{1})].
+ \text{Score}[P(green_{1},blue_{2})] = \text{Score}[P(green_{1})] + \text{Score}[P(blue_{2}|green_{1})].
 \end{equation*}
 
 {
@@ -20909,7 +20909,7 @@ This is our invariance.}
  The only possible scoring rule is:}
 
 \begin{equation*}
- \mathrm{Score}(P) = \log(P).
+ \text{Score}(P) = \log(P).
 \end{equation*}
 
 {
@@ -20961,12 +20961,12 @@ bits; a probability of 0.03 would score around -5 bits.}
 $P(red)$, $P(blue)$, $P(green)$, then your \textit{expected score} is:}
 
 \begin{equation*}
- \mathrm{Score}(P) = \log(P)
+ \text{Score}(P) = \log(P)
 \end{equation*}
 
 
 \begin{equation*}
-  \mathrm{Expectation}(\mathrm{Score}) = \sum_{colors}P(\mathrm{color})\times\log(P(\mathrm{color})).
+  \text{Expectation}(\text{Score}) = \sum_{colors}P(\text{color})\times\log(P(\text{color})).
 \end{equation*}
 
 
@@ -20977,33 +20977,12 @@ $P(red)$, $P(blue)$, $P(green)$, then your \textit{expected score} is:}
 green. Let's think in base 2 for a moment, to make
 things simpler. Your expected score is:}
 
-{\centering
- $\mathrm{Score}(red) = -2$ bits, flashes 25\% of the time,
-\par}
-
-
-\bigskip
-
-{\centering
-$\mathrm{Score}(blue) = -1$ bit, flashes 50\% of the time,
-\par}
-
-
-\bigskip
-
-{\centering
-$\mathrm{Score}(green) = -2$ bits, flashes 25\% of the time,
-\par}
-
-
-\bigskip
-
-{\centering
-$\mathrm{Expectation}(\mathrm{Score}) = -1.5$ bits.
-\par}
-
-
-\bigskip
+\begin{align*}
+ \text{Score}(red) &= -2 \text{ bits, flashes 25\% of the time,}\\
+ \text{Score}(blue) &= -1 \text{ bit, flashes 50\% of the time,}\\
+ \text{Score}(green) &= -2 \text{ bits, flashes 25\% of the time,} \\
+ \text{Expectation}(\text{Score}) &= -1.5 \text{ bits.}
+\end{align*}
 
 {
  Contrast our Bayesian scoring rule with the ordinary or colloquial
