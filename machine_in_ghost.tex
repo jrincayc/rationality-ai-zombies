@@ -11744,9 +11744,9 @@ concepts.}
 \mysectionnn{Interlude An Intuitive Explanation of Bayes's Theorem}
 
 {
-\ \textit{ }\textbf{\textit{Editor's
+\textbf{\textit{Editor's
 Note:}}\textit{ This is an abridgement of the
-}\textit{original}\textit{ version of this essay, which contained many
+ original\footnote{\url{http://yudkowsky.net/rational/bayes}} version of this essay, which contained many
 interactive elements.}}
 
 {
@@ -11808,6 +11808,7 @@ you will see Bayesian problems in your dreams.}
  Here's a story problem about a situation that
 doctors often encounter:}
 
+\begin{quote}
 {
  1\% of women at age forty who participate in routine screening
 have breast cancer. 80\% of women with breast cancer will get positive
@@ -11815,6 +11816,7 @@ mammographies. 9.6\% of women without breast cancer will also get
 positive mammographies. A woman in this age group had a positive
 mammography in a routine screening. What is the probability that she
 actually has breast cancer?}
+\end{quote}
 
 {
  What do you think the answer is? If you haven't
@@ -11850,6 +11852,7 @@ to be between 70\% and 80\%, which is wildly incorrect.}
  Here's an alternate version of the problem on
 which doctors fare somewhat better:}
 
+\begin{quote}
 {
  10 out of 1,000 women at age forty who participate in routine
 screening have breast cancer. 800 out of 1,000 women with breast cancer
@@ -11857,12 +11860,14 @@ will get positive mammographies. 96 out of 1,000 women without breast
 cancer will also get positive mammographies. If 1,000 women in this age
 group undergo a routine screening, about what fraction of women with
 positive mammographies will actually have breast cancer?}
+\end{quote}
 
 {
  And finally, here's the problem on which doctors
 fare best of all, with 46\%---nearly half---arriving at the correct
 answer:}
 
+\begin{quote}
 {
  100 out of 10,000 women at age forty who participate in routine
 screening have breast cancer. 80 of every 100 women with breast cancer
@@ -11870,6 +11875,7 @@ will get a positive mammography. 950 out of 9,900 women without breast
 cancer will also get a positive mammography. If 10,000 women in this
 age group undergo a routine screening, about what fraction of women
 with positive mammographies will actually have breast cancer?}
+\end{quote}
 
 {
  The correct answer is 7.8\%, obtained as follows: Out of 10,000
@@ -11885,36 +11891,41 @@ mammographies, 80 will have cancer. Expressed as a proportion, this is
  To put it another way, before the mammography screening, the
 10,000 women can be divided into two groups:}
 
-{
+\begin{itemize}
+\item {
  Group 1: 100 women \textit{with} breast cancer.}
 
-{
+\item {
  Group 2: 9,900 women \textit{without} breast cancer.}
+\end{itemize}
 
 {
  Summing these two groups gives a total of 10,000 patients,
 confirming that none have been lost in the math. After the mammography,
 the women can be divided into four groups:}
 
-{
- Group A: 80 women \textit{with} breast cancer and a
+
+\begin{itemize}
+\item{
+ Group $A$: 80 women \textit{with} breast cancer and a
 \textit{positive} mammography.}
 
-{
- Group B: 20 women \textit{with} breast cancer and a
+\item{
+ Group $B$: 20 women \textit{with} breast cancer and a
 \textit{negative} mammography.}
 
-{
- Group C: 950 women \textit{without} breast cancer and a
+\item{
+ Group $C$: 950 women \textit{without} breast cancer and a
 \textit{positive} mammography.}
 
-{
- Group D: 8,950 women \textit{without} breast cancer and a
-\textit{negative} mammography.}
+\item {
+ Group $D$: 8,950 women \textit{without} breast cancer and a
+ \textit{negative} mammography.}
+\end{itemize}
 
 {
- The sum of groups A and B, the groups with breast cancer,
-corresponds to group 1; and the sum of groups C and D, the groups
+ The sum of groups $A$ and $B$, the groups with breast cancer,
+corresponds to group 1; and the sum of groups $C$ and $D$, the groups
 without breast cancer, corresponds to group 2. If you administer a
 mammography to 10,000 patients, then out of the 1,030 with positive
 mammographies, eighty of those positive-mammography patients will have
@@ -11992,11 +12003,13 @@ a woman with breast cancer has a positive
 mammography''; they are as unlike as apples and
 cheese.}
 
+\begin{quote}
 {
  \textbf{Q. Why did the Bayesian reasoner cross the road?}}
 
 {
- A. You need more information to answer this question.}
+  A. You need more information to answer this question.}
+\end{quote}
 
 {
  Suppose that a barrel contains many small plastic eggs. Some eggs
@@ -12010,33 +12023,13 @@ to do it in your head, and I would suggest trying to do so.}
 {
  A more compact way of specifying the problem:}
 
-{\centering
- P(pearl) = 40\%
-\par}
+\begin{align*}
+ P(\text{pearl}) &= 40\% \\
+ P(\text{blue}|\text{pearl}) &= 30\% \\
+ P(\text{blue}|\lnot\text{pearl}) &= 10\% \\
+ P(\text{pearl}|\text{blue}) &= ?
+\end{align*}
 
-
-\bigskip
-
-{\centering
- P(blue{\textbar}pearl) = 30\%
-\par}
-
-
-\bigskip
-
-{\centering
- P(blue{\textbar}{\textlnot}pearl) = 10\%
-\par}
-
-
-\bigskip
-
-{\centering
- P(pearl{\textbar}blue) = ?
-\par}
-
-
-\bigskip
 
 {
  The symbol ``{\textlnot}'' is
@@ -12045,21 +12038,21 @@ shorthand for ``not,'' so
 pearl.''}
 
 {
- The notation P(blue{\textbar}pearl) is shorthand for
+ The notation $P(\text{blue}|\text{pearl})$ is shorthand for
 ``the probability of blue given
 pearl'' or ``the probability that an
 egg is painted blue, given that the egg contains a
 pearl.'' The item on the right side is what you
 \textit{already know} or the \textit{premise}, and the item on the left
 side is the \textit{implication} or \textit{conclusion}. If we have
-P(blue{\textbar}pearl) = 30\%, and we \textit{already know} that some
+$P(\text{blue}|\text{pearl}) = 30\%$, and we \textit{already know} that some
 egg contains a pearl, then we can \textit{conclude} there is a 30\%
 chance that the egg is painted blue. Thus, the final fact
 we're looking for---``the chance that
 a blue egg contains a pearl'' or
 ``the probability that an egg contains a pearl, if we
 know the egg is painted blue''---reads
-P(pearl{\textbar}blue).}
+$P(\text{pearl}|\text{blue})$.}
 
 {
  40\% of the eggs contain pearls, and 60\% of the eggs contain
@@ -12143,6 +12136,7 @@ Bayesian reasoning rises to around half. A big improvement, but not big
 enough when you're talking about real doctors and real
 patients.}
 
+\begin{quote}
 {
  \textbf{Q. How can I find the priors for a problem?}\newline
  A. Many commonly used priors are listed in the \textit{Handbook of
@@ -12174,6 +12168,7 @@ available on Kazaa?}\newline
  A. There's a small, cluttered antique shop in a back
 alley of San Francisco's Chinatown.
 \textit{Don't ask about the bronze rat.}}
+\end{quote}
 
 {
  Actually, priors are true or false just like the final
@@ -12189,26 +12184,26 @@ epidemiological study on the prevalence of breast cancer in some
 specific demographic.}
 
 {
- The probability P(A,B) is the same as P(B,A), but P(A{\textbar}B)
-is not the same thing as P(B{\textbar}A), and P(A,B) is completely
-different from P(A{\textbar}B). It's a common confusion
+ The probability $P(A,B)$ is the same as $P(B,A)$, but $P(A|B)$
+is not the same thing as $P(B|A)$, and $P(A,B)$ is completely
+different from $P(A|B)$. It's a common confusion
 to mix up some or all of these quantities.}
 
 {
  To get acquainted with all the relationships between them,
 we'll play ``follow the degrees of
-freedom.'' For example, the two quantities P(cancer)
-and P({\textlnot}cancer) have one degree of freedom between them,
-because of the general law P(A) + P({\textlnot}A) = 1. If you know that
-P({\textlnot}cancer) = 0.99, you can obtain P(cancer) = 1 -
-P({\textlnot}cancer) = 0.01.}
+freedom.'' For example, the two quantities $P(\text{cancer})$
+and $P(\lnot\text{cancer})$ have one degree of freedom between them,
+because of the general law $P(A) + P(\lnot A) = 1$. If you know that
+$P(\lnot\text{cancer}) = 0.99$, you can obtain $P(\text{cancer}) = 1 -
+P(\lnot\text{cancer}) = 0.01$.}
 
 {
- The quantities P(positive{\textbar}cancer) and
-P({\textlnot}positive{\textbar}cancer) also have only one degree of
+ The quantities $P(\text{positive}|\text{cancer})$ and
+$P(\lnot\text{positive}|\text{cancer})$ also have only one degree of
 freedom between them; either a woman with breast cancer gets a positive
 mammography or she doesn't. On the other hand,
-P(positive{\textbar}cancer) and P(positive{\textbar}{\textlnot}cancer)
+$P(\text{positive}|\text{cancer})$ and $P(\text{positive}|\lnot\text{cancer})$
 have \textit{two} degrees of freedom. You can have a mammography test
 that returns positive for 80\% of cancer patients and 9.6\% of healthy
 patients, or that returns positive for 70\% of cancer patients and 2\%
@@ -12221,17 +12216,14 @@ independent; one cannot be obtained from the other in any way, and so
 they have two degrees of freedom between them.}
 
 {
- What about P(positive, cancer), P(positive{\textbar}cancer), and
-P(cancer)? Here we have three quantities; how many degrees of freedom
+ What about $P(\text{positive}, \text{cancer})$, $P(\text{positive}|\text{cancer})$, and
+$P(\text{cancer})$? Here we have three quantities; how many degrees of freedom
 are there? In this case the equation that must hold is}
 
-{\centering
- P(positive, cancer) = P(positive{\textbar}cancer) {\texttimes}
-P(cancer).
-\par}
-
-
-\bigskip
+\begin{equation*}
+ P(\text{positive}, \text{cancer}) = P(\text{positive}|\text{cancer}) \times
+P(\text{cancer}).
+\end{equation*}
 
 {
  This equality reduces the degrees of freedom by one. If we know
@@ -12244,8 +12236,8 @@ multiplying.}
  Similarly, if we know the number of patients with breast cancer
 and positive mammographies, and also the number of patients with breast
 cancer, we can estimate the chance that a woman with breast cancer gets
-a positive mammography by dividing: P(positive{\textbar}cancer) =
-P(positive, cancer)$/$P(cancer). In fact, this is exactly how such
+a positive mammography by dividing: $P(\text{positive}|\text{cancer}) =
+P(\text{positive}, \text{cancer})/P(\text{cancer})$. In fact, this is exactly how such
 medical diagnostic tests are calibrated; you do a study on 8,520 women
 with breast cancer and see that there are 6,816 (or thereabouts) women
 with breast cancer and positive mammographies, then divide 6,816 by
@@ -12255,27 +12247,24 @@ instead of the other way around, your calculations will start doing
 strange things, such as insisting that 125\% of women with breast
 cancer and positive mammographies have breast cancer. This is a common
 mistake in carrying out Bayesian arithmetic, in my experience.) And
-finally, if you know P(positive, cancer) and
-P(positive{\textbar}cancer), you can deduce how many cancer patients
+finally, if you know $P(\text{positive}, \text{cancer})$ and
+$P(\text{positive}|\text{cancer})$, you can deduce how many cancer patients
 there must have been originally. There are two degrees of freedom
 shared out among the three quantities; if we know any two, we can
 deduce the third.}
 
 {
- How about P(positive), P(positive, cancer), and
-P(positive,{\textlnot}cancer)? Again there are only two degrees of
+ How about $P(\text{positive})$, $P(\text{positive}, \text{cancer})$, and
+$P(\text{positive},\lnot\text{cancer})$? Again there are only two degrees of
 freedom among these three variables. The equation occupying the extra
 degree of freedom is}
 
-{\centering
- P(positive) = P(positive, cancer) + P(positive,{\textlnot}cancer).
-\par}
-
-
-\bigskip
+\begin{equation*}
+ P(\text{positive}) = P(\text{positive}, \text{cancer}) + P(\text{positive},\lnot\text{cancer}).
+\end{equation*}
 
 {
- This is how P(positive) is computed to begin with; we figure out
+ This is how $P(\text{positive})$ is computed to begin with; we figure out
 the number of women with breast cancer who have positive mammographies,
 and the number of women without breast cancer who have positive
 mammographies, then add them together to get the total number of women
@@ -12287,26 +12276,26 @@ number of those women who had positive mammographies \textit{and}
 breast cancer, you would also know the number of women with positive
 mammographies and \textit{no} breast cancer---either a woman with a
 positive mammography has breast cancer or she doesn't.
-In general, P(A,B) + P(A,{\textlnot}B) = P(A). Symmetrically, P(A,B) +
-P({\textlnot}A,B) = P(B).}
+In general, $P(A,B) + P(A,\lnot B) = P(A)$. Symmetrically, $P(A,B) +
+P(\lnot A,B) = P(B)$.}
 
 {
- What about P(positive, cancer), P(positive,{\textlnot}cancer),
-P({\textlnot}positive, cancer), and
-P({\textlnot}positive,{\textlnot}cancer)? You might at first be tempted
+ What about $P(\text{positive}, \text{cancer})$, $P(\text{positive},\lnot\text{cancer})$,
+$P(\lnot\text{positive}, \text{cancer})$, and
+$P(\lnot\text{positive},\lnot\text{cancer})$? You might at first be tempted
 to think that there are only two degrees of freedom for these four
 quantities---that you can, for example, get
-P(positive,{\textlnot}cancer) by multiplying P(positive) {\texttimes}
-P({\textlnot}cancer), and thus that all four quantities can be found
-given only the two quantities P(positive) and P(cancer). This is not
-the case! P(positive,{\textlnot}cancer) = P(positive) {\texttimes}
-P({\textlnot}cancer) only if the two probabilities are
+$P(\text{positive},\lnot\text{cancer})$ by multiplying $P(\text{positive}) \times
+P(\lnot\text{cancer})$, and thus that all four quantities can be found
+given only the two quantities $P(\text{positive})$ and $P(\text{cancer})$. This is not
+the case! $P(\text{positive},\lnot\text{cancer}) = P(\text{positive}) \times
+P(\lnot\text{cancer})$ only if the two probabilities are
 \textit{statistically independent}{}---if the chance that a woman has
 breast cancer has no bearing on whether she has a positive mammography.
 This amounts to requiring that the two conditional probabilities be
 equal to each other---a requirement which would eliminate one degree of
-freedom. If you remember that these four quantities are the groups A,
-B, C, and D, you can look over those four groups and realize that, in
+freedom. If you remember that these four quantities are the groups $A$,
+$B$, $C$, and $D$, you can look over those four groups and realize that, in
 theory, you can put any number of people into the four groups. If you
 start with a group of 80 women with breast cancer and positive
 mammographies, there's no reason why you
@@ -12316,34 +12305,24 @@ breast cancer and negative mammographies, and so on. So now it seems
 like the four quantities have four degrees of freedom. And they would,
 except that in expressing them as \textit{probabilities}, we need to
 normalize them to \textit{fractions} of the complete group, which adds
-the constraint that P(positive,
-cancer)+P(positive,{\textlnot}cancer)+P({\textlnot}positive,
-cancer)+P({\textlnot}positive,{\textlnot}cancer) = 1. This equation
+the constraint that $P(\text{positive},
+\text{cancer})+P(\text{positive},\lnot\text{cancer})+P(\lnot\text{positive},
+\text{cancer})+P(\lnot\text{positive},\lnot\text{cancer}) = 1$. This equation
 takes up one degree of freedom, leaving three degrees of freedom among
 the four quantities. If you specify the \textit{fractions} of women in
-groups A, B, and D, you can deduce the fraction of women in group C.}
+groups $A$, $B$, and $D$, you can deduce the fraction of women in group $C$.}
 
 {
- Given the four groups A, B, C, and D, it is very straightforward
+ Given the four groups $A$, $B$, $C$, and $D$, it is very straightforward
 to compute everything else:}
 
-{\centering
- P(cancer) = (A + B) / (A + B + C + D)
-\par}
-
-
-\bigskip
-
-{\centering
- P({\textlnot}positive{\textbar}cancer) = B / (A + B),
-\par}
-
-
-\bigskip
+\begin{align*}
+ P(\text{cancer}) &= \frac{A + B}{A + B + C + D} \\
+ P(\lnot\text{positive}|\text{cancer}) &= \frac{B}{A + B},
+\end{align*}
 
 {
- and so on. Since
-{\textbackslash}{\textquotesingle}7bA,B,C,D{\textbackslash}{\textquotesingle}7d
+ and so on. Since $\{A,B,C,D\}$
 contains three degrees of freedom, it follows that the entire set of
 probabilities relating cancer rates to test results contains only three
 degrees of freedom. Remember that in our problems we always needed
@@ -12399,10 +12378,10 @@ probability. If we do this, we find that the result comes out to 60\%.}
 {
  Suppose that the prior prevalence of breast cancer in a
 demographic is 1\%. Suppose that we, as doctors, have a repertoire of
-three independent tests for breast cancer. Our first test, test A, a
+three independent tests for breast cancer. Our first test, test $A$, a
 mammography, has a likelihood ratio of 80\%/9.6\% = 8.33. The second
-test, test B, has a likelihood ratio of 18.0 (for example, from 90\%
-versus 5\%); and the third test, test C, has a likelihood ratio of 3.5
+test, test $B$, has a likelihood ratio of 18.0 (for example, from 90\%
+versus 5\%); and the third test, test $C$, has a likelihood ratio of 3.5
 (which could be from 70\% versus 20\%, or from 35\% versus 10\%; it
 makes no difference). Suppose a patient gets a positive result on all
 three tests. What is the probability the patient has breast cancer?}
@@ -12418,49 +12397,28 @@ women do not have breast cancer. So if we rewrite the
 {
  And the likelihood ratios of the three tests A, B, and C are:}
 
-{\centering
- 8.33:1 = 25:3
-\par}
-
-
-\bigskip
-
-{\centering
- 18.0:1 = 18:1
-\par}
-
-
-\bigskip
-
-{\centering
- 3.5:1 = 7.5:2.
-\par}
-
-
-\bigskip
+\begin{align*}
+ 8.33:1 &= 25:3\\
+ 18.0:1 &= 18:1\\
+ 3.5:1 &= 7.5:2.
+\end{align*}
 
 {
  The \textit{odds} for women with breast cancer who score positive
 on all three tests, versus women without breast cancer who score
 positive on all three tests, will equal:}
 
-{\centering
- 1 {\texttimes} 25 {\texttimes} 18 {\texttimes} 7 : 99 {\texttimes}
-3 {\texttimes} 1 {\texttimes} 2 = 3150 : 594.
-\par}
-
-
-\bigskip
+\begin{equation*}
+ 1 \times 25 \times 18 \times 7 : 99 \times 3 \times 1 \times 2 = 3150 : 594.
+\end{equation*}
 
 {
  To recover the probability from the odds, we just write:}
 
-{\centering
+\begin{equation*}
  3150 / (3150 + 594) = 84\%.
-\par}
+\end{equation*}
 
-
-\bigskip
 
 {
  This always works regardless of how the odds ratios are written;
@@ -12488,22 +12446,16 @@ The sound of a bird singing might carry 1,000 times less energy than an
 alarm clock, and hence would be 30 decibels softer. To get the number
 of decibels, you take the logarithm base 10 and multiply by 10:}
 
-{\centering
- decibels = 10log\textsubscript{10}(intensity)
-\par}
-
-
-\bigskip
+\begin{equation*}
+  \text{decibels} = 10\log_{10}(\text{intensity})
+\end{equation*}
 
 {
  or}
 
-{\centering
- intensity = $10^{decibels/10}$.
-\par}
-
-
-\bigskip
+\begin{equation*}
+  \text{intensity} = 10^{\text{decibels}/10}.
+\end{equation*}
 
 {
  Suppose we start with a prior probability of 1\% that a woman has
@@ -12512,33 +12464,12 @@ administer three tests of likelihood ratios 25:3, 18:1, and 7:2. You
 \textit{could} multiply those numbers \ldots or you could just add their
 logarithms:}
 
-{\centering
- 10log\textsubscript{10}(1/99) ${\approx}$ -20
-\par}
-
-
-\bigskip
-
-{\centering
- 10log\textsubscript{10}(25/3) ${\approx}$ 9
-\par}
-
-
-\bigskip
-
-{\centering
- 10log\textsubscript{10}(18/1) ${\approx}$ 13
-\par}
-
-
-\bigskip
-
-{\centering
- 10log\textsubscript{10}(7/2) ${\approx}$ 5.
-\par}
-
-
-\bigskip
+\begin{align*}
+ 10\log_{10}(1/99) &\approx -20 \\
+ 10\log_{10}(25/3) &\approx 9 \\
+ 10\log_{10}(18/1) &\approx 13 \\
+ 10\log_{10}(7/2) &\approx 5.
+\end{align*}
 
 {
  It starts out as fairly unlikely that a woman has breast
@@ -12549,6 +12480,7 @@ that the prior credibility of -20 decibels goes to a posterior
 credibility of 7 decibels. So the odds go from 1:99 to 5:1, and the
 probability goes from 1\% to around 83\%.}
 
+\begin{quote}
 {
  You are a mechanic for gizmos. When a gizmo stops working, it is
 due to a blocked hose 30\% of the time. If a gizmo's
@@ -12558,65 +12490,52 @@ there is only a 5\% chance that prodding the gizmo will produce sparks.
 A customer brings you a malfunctioning gizmo. You prod the gizmo and
 find that it produces sparks. What is the probability that a
 spark-producing gizmo has a blocked hose?}
+\end{quote}
 
 {
  What is the sequence of arithmetical operations that you performed
 to solve this problem?}
 
-{\centering
- (45\% {\texttimes} 30\%) / (45\% {\texttimes} 30\% + 5\%
-{\texttimes} 70\%)
-\par}
-
-
-\bigskip
+\begin{equation*}
+ (45\% \times 30\%) / (45\% \times 30\% + 5\% \times 70\%)
+\end{equation*}
 
 {
  Similarly, to find the chance that a woman with positive
 mammography has breast cancer, we computed:}
 
 \begin{equation*}
-  \frac{P(\mathrm{positive}|\mathrm{cancer})\times P(\mathrm{cancer})}
+  \frac{P(\text{positive}|\text{cancer})\times P(\text{cancer})}
        {\left(\begin{array}{rcl}
-           P(\mathrm{positive}|\mathrm{cancer}) & \times & P(\mathrm{cancer}) \\
-           +\, P(\mathrm{positive}|\lnot \mathrm{cancer}) & \times & P(\lnot \mathrm{cancer}) \\
+           P(\text{positive}|\text{cancer}) & \times & P(\text{cancer}) \\
+           +\, P(\text{positive}|\lnot \text{cancer}) & \times & P(\lnot \text{cancer}) \\
          \end{array}
          \right)}
 \end{equation*}
 
 
-\bigskip
+{
+ which is}
+
+\begin{equation*}
+  \frac{P(\text{positive},\text{cancer})}
+  {P(\text{positive},\text{cancer}) + P(\text{positive},\lnot\text{cancer})}
+\end{equation*}
 
 {
  which is}
 
 \begin{equation*}
-  \frac{P(\mathrm{positive},\mathrm{cancer})}
-  {P(\mathrm{positive},\mathrm{cancer}) + P(\mathrm{positive},\lnot\mathrm{cancer})}
+  P(\text{positive},\text{cancer}) / P(\text{positive})
 \end{equation*}
 
 
-\bigskip
-
 {
  which is}
 
-{\centering
- P(positive,cancer) / P(positive)
-\par}
-
-
-\bigskip
-
-{
- which is}
-
-{\centering
- P(cancer{\textbar}positive).
-\par}
-
-
-\bigskip
+\begin{equation*}
+  P(\text{cancer}|\text{positive}).
+\end{equation*}
 
 {
  The fully general form of this calculation is known as
@@ -12625,11 +12544,7 @@ mammography has breast cancer, we computed:}
 
 {\centering
 \mygraphics{images/img227.jpg}
- 
 \par}
-
-
-\bigskip
 
 \begin{equation*}
   P(A|X) = \frac{P(X|A) \times P(A)}
@@ -12637,15 +12552,14 @@ mammography has breast cancer, we computed:}
 \end{equation*}
 
 
-\bigskip
 
 {
- When there is some phenomenon A that we want to investigate, and
-an observation X that is evidence about A---for example, in the
-previous example, A is breast cancer and X is a positive
+ When there is some phenomenon $A$ that we want to investigate, and
+an observation $X$ that is evidence about $A$---for example, in the
+previous example, $A$ is breast cancer and $X$ is a positive
 mammography---Bayes's Theorem tells us how we should
-\textit{update} our probability of A, given the \textit{new evidence}
-X.}
+\textit{update} our probability of $A$, given the \textit{new evidence}
+$X$.}
 
 {
  By this point, Bayes's Theorem may seem blatantly
@@ -12675,10 +12589,10 @@ Theorem.}
 Theorem, you may hear cognitive psychologists saying that people
 \textit{do not take prior frequencies sufficiently into account},
 meaning that when people approach a problem where
-there's some evidence X indicating that condition A
-might hold true, they tend to judge A's likelihood
-solely by how well the evidence X seems to match A, without taking into
-account the prior frequency of A. If you think, for example, that under
+there's some evidence $X$ indicating that condition $A$
+might hold true, they tend to judge $A$'s likelihood
+solely by how well the evidence $X$ seems to match $A$, without taking into
+account the prior frequency of $A$. If you think, for example, that under
 the mammography example, the woman's chance of having
 breast cancer is in the range of 70\%--80\%, then this kind of
 reasoning is insensitive to the prior frequency given in the problem;
@@ -12689,31 +12603,31 @@ that humans need to bear in mind to partially compensate for our
 built-in inadequacies.}
 
 {
- A related error is to pay too much attention to P(X{\textbar}A)
-and not enough to P(X{\textbar}{\textlnot}A) when determining how much
-evidence X is for A. The degree to which a result X is \textit{evidence
-for A} depends not only on the strength of the statement
-\textit{we'd expect to see result X if A were true},
+ A related error is to pay too much attention to $P(X|A)$
+and not enough to $P(X|\lnot A)$ when determining how much
+evidence $X$ is for $A$. The degree to which a result $X$ is \textit{evidence
+for $A$} depends not only on the strength of the statement
+\textit{we'd expect to see result $X$ if $A$ were true},
 but also on the strength of the statement \textit{we
 }\textbf{\textit{wouldn't}}\textit{ expect to see
-result X if A weren't true.} For example, if it is
+result $X$ if $A$ weren't true.} For example, if it is
 raining, this very strongly implies the grass is
-wet---P(wetgrass{\textbar}rain) ${\approx}$ 1---but seeing that the
+wet---$P(\text{wetgrass}|\text{rain}) \approx 1$---but seeing that the
 grass is wet doesn't necessarily mean that it has just
 rained; perhaps the sprinkler was turned on, or you're
 looking at the early morning dew. Since
-P(wetgrass{\textbar}{\textlnot}rain) is substantially greater than
-zero, P(rain{\textbar}wetgrass) is substantially less than one. On the
+$P(\text{wetgrass}|\lnot\text{rain})$ is substantially greater than
+zero, $P(\text{rain}|\text{wetgrass})$ is substantially less than one. On the
 other hand, if the grass was \textit{never} wet when it
 wasn't raining, then knowing that the grass was wet
 would \textit{always} show that it was raining,
-P(rain{\textbar}wetgrass) ${\approx}$ 1, even if
-P(wetgrass{\textbar}rain) = 50\%; that is, even if the grass only got
+$P(\text{rain}|\text{wetgrass}) \approx 1$, even if
+$P(\text{wetgrass}|\text{rain}) = 50\%$; that is, even if the grass only got
 wet 50\% of the times it rained. Evidence is always the result of the
 \textit{differential} between the two conditional probabilities.
 \textit{Strong} evidence is not the product of a very high probability
-that A leads to X, but the product of a very \textit{low} probability
-that \textit{not}{}-A could have led to X.}
+that $A$ leads to $X$, but the product of a very \textit{low} probability
+that \textit{not}{}-$A$ could have led to $X$.}
 
 {
  The \textit{Bayesian revolution in the sciences} is fueled, not
@@ -12737,15 +12651,15 @@ Karl Popper's \textit{falsificationism}{}---this is the
 old philosophy that the Bayesian revolution is currently dethroning.
 Karl Popper's idea that theories can be definitely
 falsified, but never definitely confirmed, is yet another special case
-of the Bayesian rules; if P(X{\textbar}A) ${\approx}$ 1---if the theory
-makes a definite prediction---then observing {\textlnot}X very strongly
-falsifies A. On the other hand, if P(X{\textbar}A) ${\approx}$ 1, and
-we observe X, this doesn't definitely confirm the
-theory; there might be some other condition B such that P(X{\textbar}B)
-${\approx}$ 1, in which case observing X doesn't favor
-A over B. For observing X to definitely confirm A, we would have to
-know, not that P(X{\textbar}A) ${\approx}$ 1, but that
-P(X{\textbar}{\textlnot}A) ${\approx}$ 0, which is something that we
+of the Bayesian rules; if $P(X|A) \approx 1$---if the theory
+makes a definite prediction---then observing $\lnot X$ very strongly
+falsifies $A$. On the other hand, if $P(X|A) \approx 1$, and
+we observe $X$, this doesn't definitely confirm the
+theory; there might be some other condition $B$ such that $P(X|B)
+\approx 1$, in which case observing $X$ doesn't favor
+$A$ over $B$. For observing $X$ to definitely confirm $A$, we would have to
+know, not that $P(X|A) \approx 1$, but that
+$P(X|\lnot A) \approx 0$, which is something that we
 can't know because we can't range over
 all possible alternative explanations. For example, when
 Einstein's theory of General Relativity toppled
@@ -12755,14 +12669,14 @@ just a special case of Einstein's predictions.}
 
 {
  You can even formalize Popper's philosophy
-mathematically. The likelihood ratio for X, the quantity
-P(X{\textbar}A)/P(X{\textbar}{\textlnot}A), determines how much
-observing X slides the probability for A; the likelihood ratio is what
-says \textit{how strong} X is as evidence. Well, in your theory A, you
-can predict X with probability 1, if you like; but you
+mathematically. The likelihood ratio for $X$, the quantity
+$P(X|A)/P(X|\lnot A)$, determines how much
+observing $X$ slides the probability for $A$; the likelihood ratio is what
+says \textit{how strong} $X$ is as evidence. Well, in your theory $A$, you
+can predict $X$ with probability 1, if you like; but you
 can't control the denominator of the likelihood ratio,
-P(X{\textbar}{\textlnot}A)---there will always be some alternative
-theories that also predict X, and while we go with the simplest theory
+$P(X|\lnot A)$---there will always be some alternative
+theories that also predict $X$, and while we go with the simplest theory
 that fits the current evidence, you may someday encounter some evidence
 that an alternative theory predicts but your theory does not.
 That's the hidden gotcha that toppled
@@ -12772,31 +12686,31 @@ there's a limit on how high the likelihood ratio goes
 for \textit{confirmatory} evidence.}
 
 {
- On the other hand, if you encounter some piece of evidence Y that
+ On the other hand, if you encounter some piece of evidence $Y$ that
 is definitely \textit{not} predicted by your theory, this is
 \textit{enormously} strong evidence against your theory. If
-P(Y{\textbar}A) is infinitesimal, then the likelihood ratio will also
-be infinitesimal. For example, if P(Y{\textbar}A) is 0.0001\%, and
-P(Y{\textbar}{\textlnot}A) is 1\%, then the likelihood ratio
-P(Y{\textbar}A)/P(Y{\textbar}{\textlnot}A) will be 1:10,000.
+$P(Y|A)$ is infinitesimal, then the likelihood ratio will also
+be infinitesimal. For example, if $P(Y|A)$ is 0.0001\%, and
+$P(Y|\lnot A)$ is 1\%, then the likelihood ratio
+$P(Y|A)/P(Y|\lnot A)$ will be 1:10,000.
 That's -40 decibels of evidence! Or, flipping the
-likelihood ratio, if P(Y{\textbar}A) is \textit{very small}, then
-P(Y{\textbar}{\textlnot}A)/P(Y{\textbar}A) will be very large, meaning
-that observing Y greatly favors {\textlnot}A over A. Falsification is
+likelihood ratio, if $P(Y|A)$ is \textit{very small}, then
+$P(Y|\lnot A)/P(Y|A)$ will be very large, meaning
+that observing $Y$ greatly favors $\lnot A$ over $A$. Falsification is
 much stronger than confirmation. This is a consequence of the earlier
 point that \textit{very strong} evidence is not the product of a very
-high probability that A leads to X, but the product of a very
-\textit{low} probability that \textit{not-A} could have led to X. This
+high probability that $A$ leads to $X$, but the product of a very
+\textit{low} probability that \textit{not-A} could have led to $X$. This
 is the precise Bayesian rule that underlies the heuristic value of
 Popper's falsificationism.}
 
 {
  Similarly, Popper's dictum that an idea must be
 falsifiable can be interpreted as a manifestation of the Bayesian
-conservation-of-probability rule; if a result X is positive evidence
-for the theory, then the result {\textlnot}X would have disconfirmed
-the theory to some extent. If you try to interpret both X and
-{\textlnot}X as ``confirming'' the
+conservation-of-probability rule; if a result $X$ is positive evidence
+for the theory, then the result $\lnot X$ would have disconfirmed
+the theory to some extent. If you try to interpret both $X$ and
+$\lnot X$ as ``confirming'' the
 theory, the Bayesian rules say this is impossible! To increase the
 probability of a theory you \textit{must} expose it to tests that can
 potentially decrease its probability; this is not just a rule for
@@ -12825,31 +12739,27 @@ can explicitly discuss its components.}
 \end{equation*}
 
 
-
-\bigskip
-
 {
- We'll start with P(A{\textbar}X). If you ever find
-yourself getting confused about what's A and
-what's X in Bayes's Theorem, start with
-P(A{\textbar}X) on the left side of the equation;
+ We'll start with $P(A|X)$. If you ever find
+yourself getting confused about what's $A$ and
+what's $X$ in Bayes's Theorem, start with
+$P(A|X)$ on the left side of the equation;
 that's the simplest part to interpret. In
-P(A{\textbar}X), A is the thing we want to know about. X is how
-we're observing it; X is the evidence
-we're using to make inferences about A. Remember that
-for every expression P(Q{\textbar}P), we want to know about the
-probability for Q given P, the degree to which P implies Q---a more
-sensible notation, which it is now too late to adopt, would be P(Q
-$\leftarrow $ P).}
+$P(A|X)$, $A$ is the thing we want to know about. $X$ is how
+we're observing it; $X$ is the evidence
+we're using to make inferences about $A$. Remember that
+for every expression $P(Q|P)$, we want to know about the
+probability for $Q$ given $P$, the degree to which $P$ implies $Q$---a more
+sensible notation, which it is now too late to adopt, would be $P(Q \leftarrow P)$.}
 
 {
- P(Q{\textbar}P) is closely related to P(Q,P), but they are not
-identical. Expressed as a probability or a fraction, P(Q,P) is the
-proportion of things that have property Q and property P among all
+ $P(Q|P)$ is closely related to $P(Q,P)$, but they are not
+identical. Expressed as a probability or a fraction, $P(Q,P)$ is the
+proportion of things that have property $Q$ and property $P$ among all
 things; e.g., the proportion of ``women with breast
 cancer and a positive mammography'' within the group
 of all women. If the total number of women is 10,000, and 80 women have
-breast cancer and a positive mammography, then P(Q,P) is 80/10,000 =
+breast cancer and a positive mammography, then $P(Q,P)$ is 80/10,000 =
 0.8\%. You might say that the absolute quantity, 80, is being
 normalized to a probability relative to the group of all women. Or to
 make it clearer, suppose that there's a group of 641
@@ -12857,40 +12767,40 @@ women with breast cancer and a positive mammography within a total
 sample group of 89,031 women. Six hundred and forty-one is the absolute
 quantity. If you pick out a random woman from the entire sample, then
 the probability you'll pick a woman with breast cancer
-and a positive mammography is P(Q,P), or 0.72\% (in this example).}
+and a positive mammography is $P(Q,P)$, or 0.72\% (in this example).}
 
 {
- On the other hand, P(Q{\textbar}P) is the proportion of things
-that have property Q and property P among \textit{all things that have
+ On the other hand, $P(Q|P)$ is the proportion of things
+that have property $Q$ and property $P$ among \textit{all things that have
 P}; e.g., the proportion of women with breast cancer and a positive
 mammography within the group of \textit{all women with positive
 mammographies}. If there are 641 women with breast cancer and positive
 mammographies, 7,915 women with positive mammographies, and 89,031
-women, then P(Q,P) is the probability of getting one of those 641 women
+women, then $P(Q,P)$ is the probability of getting one of those 641 women
 if you're picking at random from the entire group of
-89,031, while P(Q{\textbar}P) is the probability of getting one of
+89,031, while $P(Q|P)$ is the probability of getting one of
 those 641 women if you're picking at random from the
 smaller group of 7,915.}
 
 {
- In a sense, P(Q{\textbar}P) really means P(Q,P{\textbar}P), but
-specifying the extra P all the time would be redundant. You already
-\textit{know} it has property P, so the property you're
-\textit{investigating} is Q---even though you're
-looking at the size of group (Q,P) within group P, not the size of
-group Q within group P (which would be nonsense). This is what it means
+ In a sense, $P(Q|P)$ really means $P(Q,P|P)$, but
+specifying the extra $P$ all the time would be redundant. You already
+\textit{know} it has property $P$, so the property you're
+\textit{investigating} is $Q$---even though you're
+looking at the size of group $(Q,P)$ within group $P$, not the size of
+group $Q$ within group $P$ (which would be nonsense). This is what it means
 to take the property on the right-hand side as \textit{given}; it means
 you know you're working only within the group of things
-that have property P. When you constrict your focus of attention to see
+that have property $P$. When you constrict your focus of attention to see
 only this smaller group, many other probabilities change. If
-you're taking P as \textit{given}, then P(Q,P) equals
-just P(Q)---at least, \textit{relative to the group P}. The
-\textit{old} P(Q), the frequency of ``things that have
-property Q within the entire sample,'' is revised to
-the new frequency of ``things that have property Q
+you're taking $P$ as \textit{given}, then $P(Q,P)$ equals
+just $P(Q)$---at least, \textit{relative to the group $P$}. The
+\textit{old} $P(Q)$, the frequency of ``things that have
+property $Q$ within the entire sample,'' is revised to
+the new frequency of ``things that have property $Q$
 within the subsample of things that have property
-P.'' If P is \textit{given}, if P is our entire
-world, then looking for (Q,P) is the same as looking for just Q.}
+$P$.'' If $P$ is \textit{given}, if $P$ is our entire
+world, then looking for $(Q,P)$ is the same as looking for just $Q$.}
 
 {
  If you constrict your focus of attention to only the population of
@@ -12899,21 +12809,21 @@ probability that an egg contains a pearl'' becomes a
 different number; this proportion is different for the population of
 blue eggs than the population of all eggs. The \textit{given}, the
 property that constricts our focus of attention, is always on the
-\textit{right} side of P(Q{\textbar}P); the P becomes our world, the
+\textit{right} side of $P(Q|P)$; the $P$ becomes our world, the
 entire thing we see, and on the other side of the
-``given'' P always has probability
-1---that is what it means to take P as given. So P(Q{\textbar}P) means
+``given'' $P$ always has probability
+1---that is what it means to take $P$ as given. So $P(Q|P)$ means
 ``If P has probability 1, what is the probability of
-Q?'' or ``If we constrict our
-attention to only things or events where P is true, what is the
-probability of Q?'' The statement Q, on the other
+$Q$?'' or ``If we constrict our
+attention to only things or events where $P$ is true, what is the
+probability of $Q$?'' The statement $Q$, on the other
 side of the given, is \textit{not} certain---its probability may be
 10\% or 90\% or any other number. So when you use
 Bayes's Theorem, and you write the part on the left
-side as P(A{\textbar}X)---how to \textit{update} the probability of A
-after seeing X, the new probability of A \textit{given} that we know X,
-the degree to which X \textit{implies} A---you can tell that X is
-always the \textit{observation} or the \textit{evidence}, and A is the
+side as $P(A|X)$---how to \textit{update} the probability of $A$
+after seeing $X$, the new probability of $A$ \textit{given} that we know $X$,
+the degree to which $X$ \textit{implies} $A$---you can tell that $X$ is
+always the \textit{observation} or the \textit{evidence}, and $A$ is the
 property being investigated, the thing you want to know about.}
 
 {
@@ -12929,14 +12839,11 @@ the left side through these steps:}
 \end{align*}
 
 
-
-\bigskip
-
 {
  Once the derivation is finished, all the implications on the right
-side of the equation are of the form P(X{\textbar}A) or
-P(X{\textbar}{\textlnot}A), while the implication on the left side is
-P(A{\textbar}X). The symmetry arises because the elementary
+side of the equation are of the form $P(X|A)$ or
+$P(X|\lnot A)$, while the implication on the left side is
+$P(A|X)$. The symmetry arises because the elementary
 \textit{causal relations} are generally implications from facts to
 observations, e.g., from breast cancer to positive mammography. The
 elementary \textit{steps in reasoning} are generally implications from
@@ -12945,12 +12852,12 @@ cancer. The left side of Bayes's Theorem is an
 elementary \textit{inferential} step from the observation of positive
 mammography to the conclusion of an increased probability of breast
 cancer. Implication is written right-to-left, so we write
-P(cancer{\textbar}positive) on the left side of the equation. The right
+$P(\text{cancer}|\text{positive})$ on the left side of the equation. The right
 side of Bayes's Theorem describes the elementary
 \textit{causal} steps---for example, from breast cancer to a positive
 mammography---and so the implications on the right side of
 Bayes's Theorem take the form
-P(positive{\textbar}cancer) or P(positive{\textbar}{\textlnot}cancer).}
+$P(\text{positive}|\text{cancer})$ or $P(\text{positive}|\lnot \text{cancer})$.}
 
 {
  And that's Bayes's Theorem.
