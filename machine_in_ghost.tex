@@ -4446,35 +4446,43 @@ them.}
  An ideal Bayesian decision system can be set up using only four
 elements:}
 
-{
-  Outcomes : type Outcome[] list of possible outcomes
-{\textbackslash}{\textquotesingle}7bsister lives, sister
-dies{\textbackslash}{\textquotesingle}7d }
+\begin{itemize}
+\item  \texttt{Outcomes : type Outcome[]}
+  \begin{itemize}
+    \item list of possible outcomes
+    \item \{sister lives, sister dies\}
+  \end{itemize}
 
-{
-  Actions : type Action[] list of possible actions
-{\textbackslash}{\textquotesingle}7badminister penicillin,
-don't administer
-penicillin{\textbackslash}{\textquotesingle}7d }
+\item \texttt{Actions : type Action[]}
+  \begin{itemize}
+    \item list of possible actions
+    \item \{administer penicillin, don't administer penicillin\}
+  \end{itemize}
 
-{
-  Utility\_function : type Outcome -{\textgreater} Utility utility
-function that maps each outcome onto a utility (a utility being
-representable as a real number between negative and positive infinity)
-{\textbackslash}{\textquotesingle}7bsister lives $\rightarrow $ 1,
-sister dies $\rightarrow $ 0{\textbackslash}{\textquotesingle}7d }
+\item \texttt{Utility\_function : type Outcome -{\textgreater} Utility}
+  \begin{itemize}
+    \item utility
+      function that maps each outcome onto a utility
+    \item (a utility being
+      representable as a real number between negative and positive infinity)
+    \item \{sister lives $\rightarrow $ 1,
+      sister dies $\rightarrow $ 0\}
+  \end{itemize}
 
-{
-  Conditional\_probability\_function :\newline
- type Action -{\textgreater} (Outcome -{\textgreater} Probability)
-conditional probability function that maps each action onto a
-probability distribution over outcomes (a probability being
-representable as a real number between 0 and 1)
-{\textbackslash}{\textquotesingle}7badminister penicillin $\rightarrow
+\item \texttt{Conditional\_probability\_function :\newline
+  type Action -{\textgreater} (Outcome -{\textgreater} Probability)}
+  \begin{itemize}
+    \item conditional probability function that maps each action onto a
+      probability distribution over outcomes
+    \item (a probability being
+      representable as a real number between 0 and 1)
+    \item \{administer penicillin $\rightarrow
 $ (sister lives $\rightarrow $ 0.9, sister dies $\rightarrow $ 0.1),
 don't administer penicillin $\rightarrow $ (sister
 lives $\rightarrow $ 0.3, sister dies $\rightarrow $
-0.7){\textbackslash}{\textquotesingle}7d }
+0.7)\}
+  \end{itemize}
+\end{itemize}
 
 {
  If you can't read the type system directly,
@@ -4485,22 +4493,25 @@ helps to set up distinct mental objects.}
 {
  And the decision system itself?}
 
-{
-  Expected\_Utility : Action A -{\textgreater}\newline
- (Sum O in Outcomes: Utility(O) * Probability(O{\textbar}A)) The
-``expected utility'' of an action
+\begin{itemize}
+\item \texttt{ Expected\_Utility : Action A -{\textgreater}\newline
+  (Sum O in Outcomes: Utility(O) * Probability(O{\textbar}A))}
+  \begin{itemize}
+    \item  The``expected utility'' of an action
 equals the sum, over all outcomes, of the utility of that outcome times
 the conditional probability of that outcome given that action.
-{\textbackslash}{\textquotesingle}7bEU(administer penicillin) = 0.9,
+\item \{EU(administer penicillin) = 0.9,
 EU(don't administer penicillin) =
-0.3{\textbackslash}{\textquotesingle}7d }
+0.3\}
+  \end{itemize}
 
-{
-  Choose :\newline
- -{\textgreater} (Argmax A in Actions: Expected\_Utility(A)) Pick an
-action whose ``expected utility'' is
-maximal. {\textbackslash}{\textquotesingle}7breturn: administer
-penicillin{\textbackslash}{\textquotesingle}7d }
+\item \texttt{ Choose :\newline
+  -{\textgreater} (Argmax A in Actions: Expected\_Utility(A))}
+  \begin{itemize}
+  \item  Pick an action whose ``expected utility'' is maximal.
+  \item \{return: administer penicillin\}
+  \end{itemize}
+\end{itemize}
 
 {
  For every action, calculate the conditional probability of all the
@@ -4554,7 +4565,7 @@ importance} she attached to that decision.''}
 {
  So you say,}
 
-{
+\texttt{
  TYPE ERROR: No constructor found for Expected\_Utility
 -{\textgreater} Utility.}
 
@@ -4589,13 +4600,13 @@ Expected Utilities over Actions: ``The feeling of
 \textit{importance} she attached to that
 \textit{decision}.'' This is a drastic jump that
 \textit{should} make us leap out of our chairs in indignation. Trying
-to convert an Expected\_Utility into a Utility would cause an outright
+to convert an \texttt{Expected\_Utility} into a \texttt{Utility} would cause an outright
 error in our programming language. But in English it all sounds the
 same.}
 
 {
  The choices of our simple decision system are those with highest
-Expected\_Utility, but this doesn't say anything
+\texttt{Expected\_Utility}, but this doesn't say anything
 whatsoever about \textit{where it steers the future.} It
 doesn't say anything about the utilities the decider
 assigns, or which real-world outcomes are likely to happen as a result.
@@ -4604,7 +4615,7 @@ mind's function as an engine.}
 
 {
  The physical cause of a physical action is a cognitive state, in
-our ideal decider an Expected\_Utility, and this expected utility is
+our ideal decider an \texttt{Expected\_Utility}, and this expected utility is
 calculated by evaluating a utility function over imagined consequences.
 To save your son's life, you must imagine the event of
 your son's life being saved, and this imagination is
@@ -4631,14 +4642,14 @@ into the system, and formerly clear distinctions become harder to see.}
 
 {
  So now let's look at some complications. Clearly
-the Utility function (mapping Outcomes onto Utilities) is meant to
+the \texttt{Utility} function (mapping \texttt{Outcomes} onto \texttt{Utilities}) is meant to
 formalize what I earlier referred to as ``terminal
 values,'' values not contingent upon their
 consequences. What about the case where saving your
 sister's life leads to Earth's
 destruction by a black hole? In our formalism, we've
-flattened out this possibility. Outcomes don't lead to
-Outcomes, only Actions lead to Outcomes. Your sister recovering from
+flattened out this possibility. \texttt{Outcomes} don't lead to
+\texttt{Outcomes}, only \texttt{Actions} lead to \texttt{Outcomes}. Your sister recovering from
 pneumonia \textit{followed by} the Earth being devoured by a black hole
 would be flattened into a single ``possible
 outcome.''}
@@ -4650,10 +4661,10 @@ they've vanished entirely! You see, in this formalism,
 actions lead directly to outcomes with no intervening events.
 There's no notion of throwing a rock that flies through
 the air and knocks an apple off a branch so that it falls to the
-ground. Throwing the rock is the Action, and it leads straight to the
-Outcome of the apple lying on the ground---according to the conditional
-probability function that turns an Action directly into a Probability
-distribution over Outcomes.}
+ground. Throwing the rock is the \texttt{Action}, and it leads straight to the
+\texttt{Outcome} of the apple lying on the ground---according to the conditional
+probability function that turns an \texttt{Action} directly into a \texttt{Probability}
+distribution over \texttt{Outcomes}.}
 
 {
  In order to \textit{actually compute} the conditional probability
@@ -4664,15 +4675,15 @@ that events lead to other events.}
 
 {
  And then the instrumental values would start coming back. If the
-causal network was sufficiently regular, you could find a state B that
-tended to lead to C regardless of how you achieved B. Then if you
-wanted to achieve C for some reason, you could plan efficiently by
-first working out a B that led to C, and then an A that led to B. This
+causal network was sufficiently regular, you could find a state $B$ that
+tended to lead to $C$ regardless of how you achieved $B$. Then if you
+wanted to achieve $C$ for some reason, you could plan efficiently by
+first working out a $B$ that led to $C$, and then an $A$ that led to $B$. This
 would be the phenomenon of ``instrumental
-value''---B would have
+value''---$B$ would have
 ``instrumental value'' because it
-led to C. The state C itself might be terminally valued---a term in the
-utility function over the total outcome. Or C might just be an
+led to $C$. The state $C$ itself might be terminally valued---a term in the
+utility function over the total outcome. Or $C$ might just be an
 instrumental value, a node that was not directly valued by the utility
 function.}
 
@@ -4683,8 +4694,8 @@ this kind of regularity does not exist.}
 
 {
  Suppose, for example, that there's some particular
-value of B that doesn't lead to C. Would you choose an
-A which led to that B? Or never mind the abstract philosophy: If you
+value of $B$ that doesn't lead to $C$. Would you choose an
+$A$ which led to that $B$? Or never mind the abstract philosophy: If you
 wanted to go to the supermarket to get chocolate, and you wanted to
 drive to the supermarket, and you needed to get into your car, would
 you gain entry by ripping off the car door with a steam shovel? (No.)
@@ -4701,9 +4712,9 @@ convenient shortcut in computation.}
  But if you complicate the formalism before you understand the
 simple version, then you may start thinking that instrumental values
 have some strange life of their own, even in a normative sense. That,
-once you say B is usually good because it leads to C,
-you've committed yourself to always try for B even in
-the absence of C. People make this kind of mistake in abstract
+once you say $B$ is usually good because it leads to $C$,
+you've committed yourself to always try for $B$ even in
+the absence of $C$. People make this kind of mistake in abstract
 philosophy, even though they would never, in real life, rip open their
 car door with a steam shovel. You may start thinking that
 there's no way to develop a consequentialist that
@@ -4774,8 +4785,8 @@ terminal value unto them, or another instrumental value \ldots}
  We can't print out our complete network of values
 derived from other values. We probably don't even store
 the whole history of how values got there. By considering the right
-moral dilemmas, ``Would you do X if
-Y,'' we can often figure out where our values came
+moral dilemmas, ``Would you do $X$ if
+$Y$,'' we can often figure out where our values came
 from. But even this project itself is full of pitfalls; misleading
 dilemmas and gappy philosophical arguments. We don't
 know what our own values are, or where they came from, and
@@ -9626,8 +9637,8 @@ magnetism'' does not belong on the list.}
  Once upon a time it was thought that the word
 ``fish'' included dolphins. Now you
 could play the oh-so-clever arguer, and say, ``The
-list: {\textbackslash}{\textquotesingle}7bSalmon, guppies, sharks,
-dolphins, trout{\textbackslash}{\textquotesingle}7d is just a
+list: \{Salmon, guppies, sharks,
+dolphins, trout\} is just a
 list---you can't say that a list is \textit{wrong.} I
 can prove in set theory that this list exists. So my definition of
 \textit{fish}, which is simply this extensional list, cannot possibly
