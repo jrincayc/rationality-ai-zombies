@@ -922,16 +922,16 @@ new complex adaptation. Complexity can also accrete incrementally,
 starting from a single mutation.}
 
 {
- First comes some gene A which is simple, but at least a
-\textit{little} useful on its own, so that A increases to universality
-in the gene pool. Now along comes gene B, which is only useful in the
-presence of A, but A is reliably present in the gene pool, so
-there's a reliable selection pressure in favor of B.
-Now a modified version of A\textsuperscript{*} arises, which depends on
-B, but doesn't break B's dependency on
-A$/$A\textsuperscript{*}. Then along comes C, which depends on
-A\textsuperscript{*} and B, and B\textsuperscript{*}, which depends on
-A\textsuperscript{*} and C. Soon you've got
+ First comes some gene $A$ which is simple, but at least a
+\textit{little} useful on its own, so that $A$ increases to universality
+in the gene pool. Now along comes gene $B$, which is only useful in the
+presence of $A$, but $A$ is reliably present in the gene pool, so
+there's a reliable selection pressure in favor of $B$.
+Now a modified version of $A^{*}$ arises, which depends on
+$B$, but doesn't break $B$'s dependency on
+$A/A^{*}$. Then along comes $C$, which depends on
+$A^{*}$ and $B$, and $B^{*}$, which depends on
+$A^{*}$ and $C$. Soon you've got
 ``irreducibly complex'' machinery
 that breaks if you take out any single piece.}
 
@@ -962,8 +962,8 @@ information and replicate itself, although RNA is less durable and
 copies less accurately. And RNA also shares the ability of proteins to
 fold up into chemically active shapes, though it's not
 as versatile as the amino acid chains of proteins. Almost certainly,
-RNA is the single A which predates the mutually dependent
-A\textsuperscript{*} and B.}
+RNA is the single $A$ which predates the mutually dependent
+$A^{*}$ and $B$.}
 
 {
  It's just as important to note that RNA does the
@@ -1165,24 +1165,24 @@ getting there eventually. (This is going to be a running theme.)}
 
 {
  \textit{Complex} adaptations take a \textit{very} long time to
-evolve. First comes allele A, which is advantageous of itself, and
+evolve. First comes allele $A$, which is advantageous of itself, and
 requires a thousand generations to fixate in the gene pool.
-\textit{Only} then can another allele B, which depends on A, begin
+\textit{Only} then can another allele $B$, which depends on $A$, begin
 rising to fixation. A fur coat is not a strong advantage unless the
 environment has a \textit{statistically reliable} tendency to throw
 cold weather at you. Well, genes form part of the environment of other
-genes, and if B depends on A, then B will not have a strong advantage
-unless A is \textit{reliably} present in the genetic environment.}
+genes, and if $B$ depends on $A$, then $B$ will not have a strong advantage
+unless $A$ is \textit{reliably} present in the genetic environment.}
 
 {
- Let's say that B confers a 5\% advantage in the
-presence of A, no advantage otherwise. Then while A is still at 1\%
-frequency in the population, B only confers its advantage 1 out of 100
-times, so the average fitness advantage of B is 0.05\%, and
-B's probability of fixation is 0.1\%. With a complex
-adaptation, \textit{first} A has to evolve over a thousand generations,
-\textit{then} B has to evolve over another thousand generations,
-\textit{then} A\textsuperscript{*} evolves over another thousand
+ Let's say that $B$ confers a 5\% advantage in the
+presence of $A$, no advantage otherwise. Then while $A$ is still at 1\%
+frequency in the population, $B$ only confers its advantage 1 out of 100
+times, so the average fitness advantage of $B$ is 0.05\%, and
+$B$'s probability of fixation is 0.1\%. With a complex
+adaptation, \textit{first} $A$ has to evolve over a thousand generations,
+\textit{then} $B$ has to evolve over another thousand generations,
+\textit{then} $A^{*}$ evolves over another thousand
 generations \ldots and several million years later,
 you've got a new complex adaptation.}
 
@@ -1315,12 +1315,10 @@ reasoning. \textit{How much} selection pressure?}
 in evolutionary biology, I would pick Price's Equation,
 which in its simplest formulation reads:}
 
-{\centering
- ${\triangle}$cov(v\textsubscript{i}, z\textsubscript{i})
-\par}
+\begin{equation*}
+  \triangle \cov(v_{i}, z_{i})
+\end{equation*}
 
-
-\bigskip
 
 {\centering
  change in average characteristic = covariance(relative fitness,
@@ -1878,9 +1876,9 @@ restraining gene can survive against this pressure, is if the benefits
 of restraint preferentially go to restrainers.}
 
 {
- Specifically, the requirement is C$/$B {\textless}
-F\textsubscript{ST} where C is the cost of altruism to the donor, B is
-the benefit of altruism to the recipient, and F\textsubscript{ST} is
+ Specifically, the requirement is $C/B <
+F_{ST}$ where $C$ is the cost of altruism to the donor, $B$ is
+the benefit of altruism to the recipient, and $F_{ST}$ is
 the spatial structure of the population: the average
 \textit{relatedness} between a randomly selected organism and its
 randomly selected neighbor, where a
@@ -9667,37 +9665,27 @@ this may be a good time to read An Intuitive Explanation of
 Bayes's Theorem.) }
 
 {
- Suppose you have a system X that's equally likely
+ Suppose you have a system $X$ that's equally likely
 to be in any of 8 possible states:}
 
-{\centering
- {\textbackslash}{\textquotesingle}7bX\textsubscript{1},
-X\textsubscript{2}, X\textsubscript{3}, X\textsubscript{4},
-X\textsubscript{5}, X\textsubscript{6}, X\textsubscript{7},
-X\textsubscript{8}{\textbackslash}{\textquotesingle}7d.
-\par}
-
-
-\bigskip
+\begin{equation*}
+\{X_{1},X_{2}, X_{3}, X_{4}, X_{5}, X_{6}, X_{7}, X_{8} \}.
+\end{equation*}
 
 {
  There's an extraordinarily ubiquitous
 quantity---in physics, mathematics, and even biology---called
-\textit{entropy}; and the entropy of X is 3 bits. This means that, on
+\textit{entropy}; and the entropy of $X$ is 3 bits. This means that, on
 average, we'll have to ask 3 yes-or-no questions to
 find out X's value. For example, someone could tell us
 X's value using this code:}
 
-{\centering
- X\textsubscript{1} : 001\newline
- X\textsubscript{2} : 010\newline
- X\textsubscript{3} : 011\newline
- X\textsubscript{4} : 100\newline
- X\textsubscript{5} : 101\newline
- X\textsubscript{6} : 110\newline
- X\textsubscript{7} : 111\newline
- X\textsubscript{8} : 000.
-\par}
+\begin{equation*}
+  \begin{array}{llll}
+ X_{1} : 001 &  X_{2} : 010 &  X_{3} : 011 &  X_{4} : 100 \\
+ X_{5} : 101 &  X_{6} : 110 &  X_{7} : 111 &  X_{8} : 000.
+ \end{array}
+\end{equation*}
 
 
 \bigskip
@@ -9709,100 +9697,79 @@ X's value using this code:}
 ``Is the second symbol 1?'' and
 heard ``no,'' then asked
 ``Is the third symbol 1?'' and heard
-``no,'' I would know that X was in
+``no,'' I would know that $X$ was in
 state 4.}
 
 {
- Now suppose that the system Y has four possible states with the
+ Now suppose that the system $Y$ has four possible states with the
 following probabilities:}
 
-{\centering
- Y\textsubscript{1} : 1$/$2 (50\%)\newline
- Y\textsubscript{2} : 1$/$4 (25\%)\newline
- Y\textsubscript{3} : 1$/$8 (12.5\%)\newline
- Y\textsubscript{4} : 1$/$8 (12.5\%).
-\par}
+\begin{equation*}
+  \begin{array}{ll}
+ Y_{1} : 1/2 (50\%) &  Y_{2} : 1/4 (25\%)\\
+ Y_{3} : 1/8 (12.5\%) &  Y_{4} : 1/8 (12.5\%).
+  \end{array}
+\end{equation*}
 
-
-\bigskip
 
 {
- Then the entropy of Y would be 1.75 bits, meaning that we can find
+ Then the entropy of $Y$ would be 1.75 bits, meaning that we can find
 out its value by asking 1.75 yes-or-no questions.}
 
 {
  What does it mean to talk about asking one and three-fourths of a
-question? Imagine that we designate the states of Y using the following
+question? Imagine that we designate the states of $Y$ using the following
 code:}
 
-{\centering
- Y\textsubscript{1} : 1\newline
- Y\textsubscript{2} : 01\newline
- Y\textsubscript{3} : 001\newline
- Y\textsubscript{4} : 000.
-\par}
+\begin{equation*}
+  \begin{array}{llll}
+ Y_{1} : 1 &  Y_{2} : 01 &  Y_{3} : 001 &  Y_{4} : 000.
+  \end{array}
+\end{equation*}
 
-
-\bigskip
 
 {
  First you ask, ``Is the first symbol
 1?'' If the answer is
 ``yes,'' you're
-done: Y is in state 1. This happens half the time, so 50\% of the time,
-it takes 1 yes-or-no question to find out Y's state.}
+done: $Y$ is in state 1. This happens half the time, so 50\% of the time,
+it takes 1 yes-or-no question to find out $Y$'s state.}
 
 {
  Suppose that instead the answer is
 ``No.'' Then you ask,
 ``Is the second symbol 1?'' If the
 answer is ``yes,''
-you're done: Y is in state 2. The system Y is in state
-2 with probability 1/4, and each time Y is in state 2 we discover this
+you're done: $Y$ is in state 2. The system $Y$ is in state
+2 with probability 1/4, and each time $Y$ is in state 2 we discover this
 fact using two yes-or-no questions, so 25\% of the time it takes 2
-questions to discover Y's state.}
+questions to discover $Y$'s state.}
 
 {
  If the answer is ``No'' twice
 in a row, you ask ``Is the third symbol
 1?'' If ``yes,''
-you're done and Y is in state 3; if
+you're done and $Y$ is in state 3; if
 ``no,'' you're done
-and Y is in state 4. The 1/8 of the time that Y is in state 3, it takes
-three questions; and the 1/8 of the time that Y is in state 4, it takes
+and $Y$ is in state 4. The 1/8 of the time that $Y$ is in state 3, it takes
+three questions; and the 1/8 of the time that $Y$ is in state 4, it takes
 three questions.}
 
-{\centering
- (1/2 {\texttimes} 1) + (1/4 {\texttimes} 2) + (1/8 {\texttimes} 3)
-+ (1/8 {\texttimes} 3)
-\par}
-
-
-\bigskip
-
-{\centering
- = 0.5 + 0.5 + 0.375 + 0.375
-\par}
-
-
-\bigskip
-
-{\centering
- = 1.75.
-\par}
-
-
-\bigskip
+\begin{align*}
+ (&1/2 \times 1) + (1/4 \time 2) + (1/8 \times 3) + (1/8 \times 3) \\
+  &= 0.5 + 0.5 + 0.375 + 0.375 \\
+ &= 1.75.
+\end{align*}
 
 {
- The general formula for the entropy H(S) of a system S is the sum,
-over all S\textsubscript{i}, of
--P(S\textsubscript{i})log\textsubscript{2}(P(S\textsubscript{i})).}
+ The general formula for the entropy $H(S)$ of a system $S$ is the sum,
+over all $S_{i}$, of
+$-P(S_{i})\log_{2}(P(S_{i}))$.}
 
 {
- For example, the log (base 2) of 1/8 is -3. So -(1$/$8
-{\texttimes} -3) = 0.375 is the contribution of state
-S\textsubscript{4} to the total entropy: 1/8 of the time, we have to
+ For example, the log (base 2) of 1/8 is -3. So $-(1/8
+\times -3) = 0.375$ is the contribution of state
+$S_{4}$ to the total entropy: 1/8 of the time, we have to
 ask 3 questions.}
 
 {
@@ -9814,22 +9781,22 @@ coding'' for a simple method.)}
 
 {
  Now, you might ask: ``Why not use the code 10 for
-Y\textsubscript{4}, instead of 000? Wouldn't that let
+$Y_{4}$, instead of 000? Wouldn't that let
 us transmit messages more quickly?''}
 
 {
- But if you use the code 10 for Y\textsubscript{4}, then when
+ But if you use the code 10 for $Y_{4}$, then when
 someone answers ``Yes'' to the
 question ``Is the first symbol 1?,''
 you won't know yet whether the system state is
-Y\textsubscript{1} (1) or Y\textsubscript{4} (10). In fact, if you
+$Y_{1}$ (1) or $Y_{4}$ (10). In fact, if you
 change the code this way, the whole system falls apart---because if you
 hear ``1001,'' you
 don't know if it means
-``Y\textsubscript{4}, followed by
-Y\textsubscript{2}'' or
-``Y\textsubscript{1}, followed by
-Y\textsubscript{3}.''}
+``$Y_{4}$, followed by
+$Y_{2}$'' or
+``$Y_{1}$, followed by
+$Y_{3}$.''}
 
 {
  The moral is that \textit{short words are a conserved resource}.}
@@ -9853,9 +9820,9 @@ better or worse, wiser or more foolish. Even apart from considerations
 of common usage!}
 
 {
- I say all this, because the idea that ``You can X
+ I say all this, because the idea that ``You can $X$
 any way you like'' is a huge obstacle to learning how
-to X wisely. ``It's a free country; I
+to $X$ wisely. ``It's a free country; I
 have a right to my own opinion'' obstructs the art of
 finding truth. ``I can define a word any way I
 like'' obstructs the art of carving reality at its
@@ -9926,232 +9893,169 @@ instead of antidisestablishmentarianism other way around.}
 \mysection{Mutual Information, and Density in Thingspace}
 
 {
- Suppose you have a system X that can be in any of 8 states, which
+ Suppose you have a system $X$ that can be in any of 8 states, which
 are all equally probable (relative to your current state of knowledge),
-and a system Y that can be in any of 4 states, all equally probable. }
+and a system $Y$ that can be in any of 4 states, all equally probable. }
 
 {
- The entropy of X, as defined in the previous essay, is 3 bits;
+ The entropy of $X$, as defined in the previous essay, is 3 bits;
 we'll need to ask 3 yes-or-no questions to find out
-X's exact state. The entropy of Y is 2 bits; we have to
-ask 2 yes-or-no questions to find out Y's exact state.
+$X$'s exact state. The entropy of $Y$ is 2 bits; we have to
+ask 2 yes-or-no questions to find out $Y$'s exact state.
 This may seem obvious since $2^3 = 8$ and
 $2^2 = 4$, so 3 questions can distinguish 8
 possibilities and 2 questions can distinguish 4 possibilities; but
 remember that if the possibilities were not all equally likely, we
-could use a more clever code to discover Y's state
+could use a more clever code to discover $Y$'s state
 using e.g. 1.75 questions on average. In this case, though,
-X's \textit{probability mass} is \textit{evenly
-distributed} over all its possible states, and likewise Y, so we
+$X$'s \textit{probability mass} is \textit{evenly
+distributed} over all its possible states, and likewise $Y$, so we
 can't use any clever codes.}
 
 {
- What is the entropy of the combined system (X,Y)?}
+ What is the entropy of the combined system $(X,Y)$?}
 
 {
  You might be tempted to answer, ``It takes 3
-questions to find out X, and then 2 questions to find out Y, so it
-takes 5 questions total to find out the state of X and
-Y.''}
+questions to find out $X$, and then 2 questions to find out $Y$, so it
+takes 5 questions total to find out the state of $X$ and
+$Y$.''}
 
 {
  But what if the two variables are entangled, so that learning the
-state of Y tells us something about the state of X?}
+state of $Y$ tells us something about the state of $X$?}
 
 {
- In particular, let's suppose that X and Y are
+ In particular, let's suppose that $X$ and $Y$ are
 either both odd or both even.}
 
 {
  Now if we receive a 3-bit message (ask 3 questions) and learn that
-X is in state X\textsubscript{5}, we know that Y is in state
-Y\textsubscript{1} or state Y\textsubscript{3}, but not state
-Y\textsubscript{2} or state Y\textsubscript{4}. So the single
-additional question ``Is Y in state
-Y\textsubscript{3}?,'' answered
+$X$ is in state $X_{5}$, we know that $Y$ is in state
+$Y_{1}$ or state $Y_{3}$, but not state
+$Y_{2}$ or state $Y_{4}$. So the single
+additional question ``Is $Y$ in state
+$Y_{3}$?,'' answered
 ``No,'' tells us the entire state of
-(X,Y): X = X\textsubscript{5},Y = Y\textsubscript{1}. And we learned
+$(X,Y): X = X_{5},Y = Y_{1}$. And we learned
 this with a total of 4 questions.}
 
 {
- Conversely, if we learn that Y is in state Y\textsubscript{4}
+ Conversely, if we learn that $Y$ is in state $Y_{4}$
 using two questions, it will take us only an additional two questions
-to learn whether X is in state X\textsubscript{2}, X\textsubscript{4},
-X\textsubscript{6}, or X\textsubscript{8}. Again, four questions to
+to learn whether $X$ is in state $X_{2}$, $X_{4}$,
+$X_{6}$, or $X_{8}$. Again, four questions to
 learn the state of the joint system.}
 
 {
  The \textit{mutual information} of two variables is defined as the
 difference between the entropy of the joint system and the entropy of
-the independent systems: I(X;Y) = H(X) + H(Y) - H(X,Y).}
+the independent systems: $I(X;Y) = H(X) + H(Y) - H(X,Y)$.}
 
 {
  Here there is one bit of mutual information between the two
-systems: Learning X tells us one bit of information about Y (cuts down
+systems: Learning $X$ tells us one bit of information about $Y$ (cuts down
 the space of possibilities from 4 possibilities to 2, a factor-of-2
-decrease in the volume) and learning Y tells us one bit of information
-about X (cuts down the possibility space from 8 possibilities to 4).}
+decrease in the volume) and learning $Y$ tells us one bit of information
+about $X$ (cuts down the possibility space from 8 possibilities to 4).}
 
 {
  What about when probability mass is not evenly distributed? Last
-essay, for example, we discussed the case in which Y had the
+essay, for example, we discussed the case in which $Y$ had the
 probabilities 1/2, 1/4, 1/8, 1/8 for its four states. Let us take this
-to be our probability distribution over Y, considered
-independently---if we saw Y, without seeing anything else, this is what
-we'd expect to see. And suppose the variable Z has two
-states, Z\textsubscript{1} and Z\textsubscript{2}, with probabilities
+to be our probability distribution over $Y$, considered
+independently---if we saw $Y$, without seeing anything else, this is what
+we'd expect to see. And suppose the variable $Z$ has two
+states, $Z_{1}$ and $Z_{2}$, with probabilities
 3/8 and 5/8 respectively.}
 
 {
- Then if and only if the joint distribution of Y and Z is as
-follows, there is zero mutual information between Y and Z:}
+ Then if and only if the joint distribution of $Y$ and $Z$ is as
+follows, there is zero mutual information between $Y$ and $Z$:}
 
-{\centering
- Z\textsubscript{1}Y\textsubscript{1} : 3/16\newline
- Z\textsubscript{1}Y\textsubscript{2} : 3/32\newline
- Z\textsubscript{1}Y\textsubscript{3} : 3/64\newline
- Z\textsubscript{1}Y\textsubscript{4} : 3/64\newline
- Z\textsubscript{2}Y\textsubscript{1} : 5/16\newline
- Z\textsubscript{2}Y\textsubscript{2} : 5/32\newline
- Z\textsubscript{2}Y\textsubscript{3} : 5/64\newline
- Z\textsubscript{2}Y\textsubscript{4} : 5/64.
-\par}
-
-
-\bigskip
+\begin{equation*}
+  \begin{array}{llll}
+ Z_{1}Y_{1} : 3/16 & Z_{1}Y_{2} : 3/32 & Z_{1}Y_{3} : 3/64 & Z_{1}Y_{4} : 3/64 \\
+ Z_{2}Y_{1} : 5/16 & Z_{2}Y_{2} : 5/32 & Z_{2}Y_{3} : 5/64 & Z_{2}Y_{4} : 5/64.
+  \end{array}
+\end{equation*}
 
 {
  This distribution obeys the law}
 
-{\centering
+\begin{equation*}
  P(Y,Z) = P(Y)P(Z).
-\par}
+\end{equation*}
 
-
-\bigskip
 
 {
- For example, P(Z\textsubscript{1}Y\textsubscript{2}) =
-P(Z\textsubscript{1})P(Y\textsubscript{2}) = 3$/$8 {\texttimes} 1$/$4 =
-3$/$32. }
+ For example, $P(Z_{1}Y_{2}) =
+P(Z_{1})P(Y_{2}) = 3/8 \times 1/4 =
+3/32$. }
 
 {
  And observe that we can recover the marginal (independent)
 probabilities of Y and Z just by looking at the joint distribution:}
 
-{\centering
- P(Y\textsubscript{1}) = total probability of all the different
-ways Y\textsubscript{1} can happen
-\par}
-
-
-\bigskip
-
-{\centering
- = P (Z\textsubscript{1}Y\textsubscript{1}) +
-P(Z\textsubscript{2}Y\textsubscript{1})
-\par}
-
-
-\bigskip
-
-{\centering
- = 3/16 + 5/16
-\par}
-
-
-\bigskip
-
-{\centering
- = 1/2.
-\par}
-
-
-\bigskip
+\begin{align*}
+ P(Y_{1}) &= \text{total probability of all the different
+ways } Y_{1} \text{ can happen} \\
+ &= P (Z_{1}Y_{1}) + P(Z_{2}Y_{1}) \\
+ &= 3/16 + 5/16 \\
+ &= 1/2.
+\end{align*}
 
 {
  So, just by inspecting the joint distribution, we can determine
-whether the marginal variables Y and Z are independent; that is,
+whether the marginal variables $Y$ and $Z$ are independent; that is,
 whether the joint distribution factors into the product of the marginal
-distributions; whether, for all Y and Z, we have P(Y,Z) = P(Y)P(Z).}
+distributions; whether, for all $Y$ and $Z$, we have $P(Y,Z) = P(Y)P(Z)$.}
 
 {
  This last is significant because, by Bayes's
 Rule,}
 
-{\centering
- P(Z\textsubscript{j}Y\textsubscript{i}) =
-P(Y\textsubscript{i})P(Z\textsubscript{j})
-\par}
-
-
-\bigskip
-
-{\centering
- P(Z\textsubscript{j}Y\textsubscript{i})/P(Z\textsubscript{j}) =
-P(Y\textsubscript{i})
-\par}
-
-
-\bigskip
-
-{\centering
- P(Y\textsubscript{i}{\textbar}Z\textsubscript{j}) =
-P(Y\textsubscript{i}).
-\par}
-
-
-\bigskip
+\begin{align*}
+ P(Z_{j}Y_{i}) &= P(Y_{i})P(Z_{j}) \\
+ P(Z_{j}Y_{i})/P(Z_{j}) &= P(Y_{i}) \\
+ P(Y_{i}|Z_{j}) &= P(Y_{i}).
+\end{align*}
 
 {
- In English: ``After you learn Z\textsubscript{j},
-your belief about Y\textsubscript{i} is just what it was
+ In English: ``After you learn $Z_{j}$,
+your belief about $Y_{i}$ is just what it was
 before.''}
 
 {
- So when the distribution factorizes---when P(Y,Z) =
-P(Y)P(Z)---this is \textit{equivalent} to ``Learning
-about Y never tells us anything about Z or vice
+ So when the distribution factorizes---when $P(Y,Z) =
+P(Y)P(Z)$---this is \textit{equivalent} to ``Learning
+about $Y$ never tells us anything about $Z$ or vice
 versa.''}
 
 {
  From which you might suspect, correctly, that there is no mutual
-information between Y and Z. Where there is no mutual information,
+information between $Y$ and $Z$. Where there is no mutual information,
 there is no Bayesian evidence, and vice versa.}
 
 {
- Suppose that in the distribution (Y,Z) above, we treated each
-possible combination of Y and Z as a separate event---so that the
-distribution (Y,Z) would have a total of 8 possibilities, with the
+ Suppose that in the distribution $(Y,Z)$ above, we treated each
+possible combination of $Y$ and $Z$ as a separate event---so that the
+distribution $(Y,Z)$ would have a total of 8 possibilities, with the
 probabilities shown---and then we calculated the entropy of the
-distribution (Y,Z) the same way we would calculate the entropy of any
+distribution $(Y,Z)$ the same way we would calculate the entropy of any
 distribution:}
 
-{\centering
- P(Z\textsubscript{1}Y\textsubscript{1})log\textsubscript{2}(P(Z\textsubscript{1}Y\textsubscript{1}))
-+
-P(Z\textsubscript{1}Y\textsubscript{2})log\textsubscript{2}(P(Z\textsubscript{1}Y\textsubscript{2}))
-+
-P(Z\textsubscript{1}Y\textsubscript{3})log\textsubscript{2}(P(Z\textsubscript{1}Y\textsubscript{3}))
-+ \ldots + P
-(Z\textsubscript{2}Y\textsubscript{4})log\textsubscript{2}(P(Z\textsubscript{2}Y\textsubscript{4}))
-\par}
+\begin{align*}
+&P(Z_{1}Y_{1})\log_{2}(P(Z_{1}Y_{1}))+P(Z_{1}Y_{2})\log_{2}(P(Z_{1}Y_{2}))+\\
+&P(Z_{1}Y_{3})\log_{2}(P(Z_{1}Y_{3}))+ \ldots + P(Z_{2}Y_{4})\log_{2}(P(Z_{2}Y_{4}))\\
+  =&(3/16)\log_{2}(3/16) +(3/32)\log_{2}(3/32) + \\
+  &(3/64)\log_{2}(3/64) + \ldots + (5/64)\log_{2}(5/64).
+\end{align*}
 
-
-\bigskip
-
-{\centering
- =(3/16)log\textsubscript{2}(3/16) +
-(3/32)log\textsubscript{2}(3/32) + (3/64)log\textsubscript{2}(3/64) +
-\ldots + (5/64)log\textsubscript{2}(5/64).
-\par}
-
-
-\bigskip
 
 {
  You would end up with the same total you would get if you
-separately calculated the entropy of Y plus the entropy of Z. There is
+separately calculated the entropy of $Y$ plus the entropy of $Z$. There is
 no mutual information between the two variables, so our uncertainty
 about the joint system is not any less than our uncertainty about the
 two systems considered separately. (I am not showing the calculations,
@@ -10164,90 +10068,66 @@ this is true in general, but you are welcome to Google on
  What if the joint distribution doesn't factorize?
 For example:}
 
-{\centering
- Z\textsubscript{1}Y\textsubscript{1} : 12/64\newline
- Z\textsubscript{1}Y\textsubscript{2} : 8/64\newline
- Z\textsubscript{1}Y\textsubscript{3} : 1/64\newline
- Z\textsubscript{1}Y\textsubscript{4} : 3/64\newline
- Z\textsubscript{2}Y\textsubscript{1} : 20/64\newline
- Z\textsubscript{2}Y\textsubscript{2} : 8/64\newline
- Z\textsubscript{2}Y\textsubscript{3} : 7/64\newline
- Z\textsubscript{2}Y\textsubscript{4} : 5/64.
-\par}
+\begin{equation*}
+  \begin{array}{llll}
+ Z_{1}Y_{1} : 12/64 & Z_{1}Y_{2} : 8/64 & Z_{1}Y_{3} : 1/64 & Z_{1}Y_{4} : 3/64\\
+ Z_{2}Y_{1} : 20/64 & Z_{2}Y_{2} : 8/64 & Z_{2}Y_{3} : 7/64 & Z_{2}Y_{4} : 5/64.
+  \end{array}
+\end{equation*}
 
-
-\bigskip
 
 {
  If you add up the joint probabilities to get marginal
-probabilities, you should find that P(Y\textsubscript{1}) = 1$/$2,
-P(Z\textsubscript{1}) = 3$/$8, and so on---the marginal probabilities
+probabilities, you should find that $P(Y_{1}) = 1/2$,
+$P(Z_{1}) = 3/8$, and so on---the marginal probabilities
 are the same as before.}
 
 {
  But the joint probabilities do not always equal the product of the
 marginal probabilities. For example, the probability
-P(Z\textsubscript{1}Y\textsubscript{2}) equals 8/64, where
-P(Z\textsubscript{1})P(Y\textsubscript{2}) would equal 3$/$8
-{\texttimes} 1$/$4 = 6$/$64. That is, the probability of running into
-Z\textsubscript{1}Y\textsubscript{2} together is greater than
+$P(Z_{1}Y_{2})$ equals 8/64, where
+$P(Z_{1})P(Y_{2})$ would equal $3/8
+\times 1/4 = 6/64$. That is, the probability of running into
+$Z_{1}Y_{2}$ together is greater than
 you'd expect based on the probabilities of running into
-Z\textsubscript{1} or Y\textsubscript{2} separately.}
+$Z_{1}$ or $Y_{2}$ separately.}
 
 {
  Which in turn implies:}
 
-{\centering
- P(Z\textsubscript{1}Y\textsubscript{2}) {\textgreater}
-P(Z\textsubscript{1})P(Y\textsubscript{2})
-\par}
-
-
-\bigskip
-
-{\centering
- P(Z\textsubscript{1}Y\textsubscript{2})/P(Y\textsubscript{2})
-{\textgreater} P(Z\textsubscript{1})
-\par}
-
-
-\bigskip
-
-{\centering
- P(Z\textsubscript{1}{\textbar}Y\textsubscript{2}) {\textgreater}
-P(Z\textsubscript{1}).
-\par}
-
-
-\bigskip
+\begin{align*}
+ P(Z_{1}Y_{2}) &> P(Z_{1})P(Y_{2}) \\
+ P(Z_{1}Y_{2})/P(Y_{2}) &> P(Z_{1}) \\
+ P(Z_{1}|Y_{2}) &> P(Z_{1}).
+\end{align*}
 
 {
  Since there's an ``unusually
 high'' probability for
-P(Z\textsubscript{1}Y\textsubscript{2})---defined as a probability
+$P(Z_{1}Y_{2})$---defined as a probability
 higher than the marginal probabilities would indicate by default---it
-follows that observing Y\textsubscript{2} is evidence that increases
-the probability of Z\textsubscript{1}. And by a symmetrical argument,
-observing Z\textsubscript{1} must favor Y\textsubscript{2}.}
+follows that observing $Y_{2}$ is evidence that increases
+the probability of $Z_{1}$. And by a symmetrical argument,
+observing $Z_{1}$ must favor $Y_{2}$.}
 
 {
- As there are at least some values of Y that tell us about Z (and
+ As there are at least some values of $Y$ that tell us about $Z$ (and
 vice versa) there must be mutual information between the two variables;
 and so you will find---I am confident, though I haven't
-actually checked---that calculating the entropy of (Y,Z) yields less
-total uncertainty than the sum of the independent entropies of Y and Z.
-That is, H(Y,Z) = H(Y) + H(Z) - I(Y;Z), with all quantities necessarily
+actually checked---that calculating the entropy of $(Y,Z)$ yields less
+total uncertainty than the sum of the independent entropies of $Y$ and $Z$.
+That is, $H(Y,Z) = H(Y) + H(Z) - I(Y;Z)$, with all quantities necessarily
 positive.}
 
 {
  (I digress here to remark that the symmetry of the expression for
-the mutual information shows that Y \textit{must} tell us as much about
-Z, on average, as Z tells us about Y. I leave it as an exercise to the
+the mutual information shows that $Y$ \textit{must} tell us as much about
+$Z$, on average, as $Z$ tells us about $Y$. I leave it as an exercise to the
 reader to reconcile this with anything they were taught in logic class
-about how, if all ravens are black, being allowed to reason Raven(x)
-$\Rightarrow $ Black(x) doesn't mean
-you're allowed to reason Black(x) $\Rightarrow $
-Raven(x). How different seem the symmetrical probability flows of the
+about how, if all ravens are black, being allowed to reason Raven($x$)
+$\Rightarrow $ Black($x$) doesn't mean
+you're allowed to reason Black($x$) $\Rightarrow $
+Raven($x$). How different seem the symmetrical probability flows of the
 Bayesian, from the sharp lurches of logic---even though the latter is
 just a degenerate case of the former.)}
 
@@ -10261,14 +10141,11 @@ words?''}
 saw the technique of replacing a word with its definition---the example
 being given:}
 
-{
- All [mortal, {\textlnot}feathers, bipedal] are mortal.}
-
-{
- Socrates is a [mortal, {\textlnot}feathers, bipedal].}
-
-{
- Therefore, Socrates is mortal.}
+\begin{verse}
+ All [mortal, {\textlnot}feathers, bipedal] are mortal.\\
+ Socrates is a [mortal, {\textlnot}feathers, bipedal].\\
+ Therefore, Socrates is mortal.\\
+\end{verse}
 
 {
  Why, then, would you even want to have a word for
@@ -10289,10 +10166,10 @@ the marginal probabilities would lead you to expect.}
 
 {
  In efficient codes, word length corresponds to probability---so
-the code for Z\textsubscript{1}Y\textsubscript{2} will be just as long
-as the code for Z\textsubscript{1} plus the code for
-Y\textsubscript{2}, unless P(Z\textsubscript{1}Y\textsubscript{2})
-{\textgreater} P(Z\textsubscript{1})P(Y\textsubscript{2}), in which
+the code for $Z_{1}Y_{2}$ will be just as long
+as the code for $Z_{1}$ plus the code for
+$Y_{2}$, unless $P(Z_{1}Y_{2})
+> P(Z_{1})P(Y_{2})$, in which
 case the code for the word can be shorter than the codes for its
 parts.}
 
@@ -10331,17 +10208,19 @@ green-eyed black-haired people is more useful than just saying
 ``green-eyed black-haired person''
 precisely when:}
 
-{
+\begin{enumerate}
+  \item {
  Green-eyed people are more likely than average to be black-haired
 (and vice versa), meaning that we can probabilistically infer green
 eyes from black hair or vice versa; \textit{or}}
 
-{
+\item{
  Wiggins share other properties that can be inferred at
 greater-than-default probability. In this case we have to separately
 observe the green eyes and black hair; but then, after observing both
 these properties independently, we can probabilistically infer other
 properties (like a taste for ketchup).}
+\end{enumerate}
 
 {
  One may even consider the act of defining a word as a promise to
@@ -10399,8 +10278,8 @@ a candle to the size of Conceptspace.}
 {
  ``Concept,'' in machine
 learning, means a rule that includes or excludes examples. If you see
-the data {\textbackslash}{\textquotesingle}7b2:+, 3:-, 14:+, 23:-, 8:+,
-9:-{\textbackslash}{\textquotesingle}7d then you might guess that the
+the data \texttt{\{2:+, 3:-, 14:+, 23:-, 8:+,
+9:-\}} then you might guess that the
 concept was ``even numbers.'' There
 is a rather large literature (as one might expect) on how to learn
 concepts from data \ldots given random examples, given chosen examples
@@ -10412,33 +10291,23 @@ importantly, given different spaces of possible rules.}
 ``good days on which to play
 tennis.'' The possible attributes of Days are}
 
-{\centering
- Sky: {\textbackslash}{\textquotesingle}7bSunny, Cloudy,
-Rainy{\textbackslash}{\textquotesingle}7d\newline
- AirTemp: {\textbackslash}{\textquotesingle}7bWarm,
-Cold{\textbackslash}{\textquotesingle}7d\newline
- Humidity: {\textbackslash}{\textquotesingle}7bNormal,
-High{\textbackslash}{\textquotesingle}7d\newline
- Wind: {\textbackslash}{\textquotesingle}7bStrong,
-Weak{\textbackslash}{\textquotesingle}7d.
-\par}
-
-
-\bigskip
+\begin{verse}
+\texttt{ Sky: \{Sunny, Cloudy,Rainy\} }\\
+\texttt{ AirTemp: \{Warm,Cold\} }\\
+\texttt{ Humidity: \{Normal,High\} }\\
+\texttt{ Wind: \{Strong,Weak\}. }\\
+\end{verse}
 
 {
  We're then presented with the following data,
 where + indicates a positive example of the concept, and - indicates a
 negative classification:}
 
-{\centering
- + Sky: Sunny; AirTemp: Warm; Humidity: High; Wind: Strong.\newline
- - Sky: Rainy; AirTemp: Cold; Humidity: High; Wind: Strong.\newline
- + Sky: Sunny; AirTemp: Warm; Humidity: High; Wind: Weak.
-\par}
-
-
-\bigskip
+\begin{verse}
+\texttt{ + Sky: Sunny; AirTemp: Warm; Humidity: High; Wind: Strong. } \\
+\texttt{ - Sky: Rainy; AirTemp: Cold; Humidity: High; Wind: Strong. } \\
+\texttt{ + Sky: Sunny; AirTemp: Warm; Humidity: High; Wind: Weak. } \\
+\end{verse}
 
 {
  What should an algorithm infer from this?}
@@ -10447,22 +10316,18 @@ negative classification:}
  A machine learner might represent \textit{one} concept that fits
 this data as follows:}
 
-{\centering
- {\textbackslash}{\textquotesingle}7bSky: ?; AirTemp: Warm;
-Humidity: High; Wind: ?{\textbackslash}{\textquotesingle}7d.
-\par}
-
-
-\bigskip
+\begin{verse}
+  \texttt{ \{ Sky: ?; AirTemp: Warm; Humidity: High; Wind: ?\}. }\\
+\end{verse}
 
 {
  In this format, to determine whether this concept accepts or
-rejects an example, we compare element-by-element: ? accepts anything,
+rejects an example, we compare element-by-element: \texttt{?} accepts anything,
 but a specific value accepts only that specific value.}
 
 {
- So the concept above will accept only Days with AirTemp = Warm and
-Humidity = High, but the Sky and the Wind can take on any value. This
+ So the concept above will accept only \texttt{Days} with \texttt{AirTemp = Warm} and
+\texttt{Humidity = High}, but the \texttt{Sky} and the \texttt{Wind} can take on any value. This
 fits both the negative and the positive classifications in the data so
 far---though it isn't the \textit{only} concept that
 does so.}
@@ -10470,60 +10335,51 @@ does so.}
 {
  We can also simplify the above concept representation to}
 
-{\centering
- {\textbackslash}{\textquotesingle}7b?, Warm, High,
-?{\textbackslash}{\textquotesingle}7d.
-\par}
+\begin{verse}
+\texttt{ \{?, Warm, High, ?\}.}
+\end{verse}
 
-
-\bigskip
 
 {
  Without going into details, the classic algorithm would be:}
 
-{
+\begin{itemize}
+\item{
  Maintain the set of the most general hypotheses that fit the
 data---those that positively classify as many examples as possible,
 while still fitting the facts.}
 
-{
+\item{
  Maintain another set of the most specific hypotheses that fit the
 data---those that negatively classify as many examples as possible,
 while still fitting the facts.}
 
-{
+\item{
  Each time we see a new negative example, we strengthen all the
 most general hypotheses as little as possible, so that the new set is
 again as general as possible while fitting the facts.}
 
-{
+\item{
  Each time we see a new positive example, we relax all the most
 specific hypotheses as little as possible, so that the new set is again
 as specific as possible while fitting the facts.}
 
-{
+\item{
  We continue until we have only a single hypothesis left. This will
 be the answer \textit{if} the target concept was in our hypothesis
 space at all.}
+\end{itemize}
 
 {
  In the case above, the set of most general hypotheses would be}
 
-{\centering
- {\textbackslash}{\textquotesingle}7b{\textbackslash}{\textquotesingle}7b?,
-Warm, ?,
-?{\textbackslash}{\textquotesingle}7d,{\textbackslash}{\textquotesingle}7bSunny,
-?, ?,
-?{\textbackslash}{\textquotesingle}7d{\textbackslash}{\textquotesingle}7d,
-\par}
-
-
-\bigskip
+\begin{verse}
+\texttt{  \{\{?,Warm, ?,?\},\{Sunny,?, ?,?\}\},}\\
+\end{verse}
 
 {
  while the set of most specific hypotheses contains the single
-member {\textbackslash}{\textquotesingle}7bSunny, Warm, High,
-?{\textbackslash}{\textquotesingle}7d. }
+member \texttt{\{Sunny, Warm, High,?\}}. }
 
 {
  Any other concept you can find that fits the data will be strictly
@@ -10550,15 +10406,15 @@ to represent \textit{all possible} concepts, so that it can learn with
 the greatest possible flexibility?}
 
 {
- Days are composed of these four variables, one variable with 3
-values and three variables with 2 values. So there are 3 {\texttimes} 2
-{\texttimes} 2 {\texttimes} 2 = 24 possible Days that we could
+ \texttt{Day}s are composed of these four variables, one variable with 3
+values and three variables with 2 values. So there are $3 \times 2
+\times 2 \times 2 = 24$ possible \texttt{Day}s that we could
 encounter.}
 
 {
  The format given for representing Concepts allows us to require
 any of these values for a variable, or leave the variable open. So
-there are 4 {\texttimes} 3 {\texttimes} 3 {\texttimes} 3 = 108 concepts
+there are $4 \times 3 \times 3 \times 3 = 108$ concepts
 in that representation. For the most-general/most-specific algorithm to
 work, we need to start with the most specific hypothesis
 ``no example is ever positively
@@ -10567,8 +10423,8 @@ concepts.}
 
 {
  Is it suspicious that there are more possible concepts than
-possible Days? Surely not: After all, a concept can be viewed as a
-\textit{collection} of Days. A concept can be viewed as the set of days
+possible \texttt{Day}s? Surely not: After all, a concept can be viewed as a
+\textit{collection} of \texttt{Day}s. A concept can be viewed as the set of days
 that it classifies positively, or isomorphically, the set of days that
 it classifies negatively.}
 
@@ -10580,13 +10436,10 @@ $2^{24} = 16,777,216$.}
 {
  This complete space includes all the concepts we have discussed so
 far. But it also includes concepts like ``Positively
-classify only the examples {\textbackslash}{\textquotesingle}7bSunny,
-Warm, High, Strong{\textbackslash}{\textquotesingle}7d and
-{\textbackslash}{\textquotesingle}7bSunny, Warm, High,
-Weak{\textbackslash}{\textquotesingle}7d and reject everything
+classify only the examples \texttt{\{Sunny, Warm, High, Strong\}} and
+\texttt{\{Sunny, Warm, High, Weak\}} and reject everything
 else'' or ``Negatively classify only
-the example {\textbackslash}{\textquotesingle}7bRainy, Cold, High,
-Strong{\textbackslash}{\textquotesingle}7d and accept everything
+the example \texttt{\{Rainy, Cold, High,Strong\}} and accept everything
 else.'' It includes concepts with no compact
 representation, just a flat list of what is and isn't
 allowed.}
@@ -10598,19 +10451,18 @@ They can't learn concepts until they've
 seen every possible example in the instance space.}
 
 {
- If we add on more attributes to Days---like the Water temperature,
-or the Forecast for tomorrow---then the number of possible days will
+ If we add on more attributes to \texttt{Day}s---like the \texttt{Water} temperature,
+or the \texttt{Forecast} for tomorrow---then the number of possible days will
 grow exponentially in the number of attributes. But this
 isn't a problem with our restricted concept space,
 because you can narrow down a large space using a logarithmic number of
 examples.}
 
 {
- Let's say we add the Water:
-{\textbackslash}{\textquotesingle}7bWarm,
-Cold{\textbackslash}{\textquotesingle}7d attribute to days, which will
-make for 48 possible Days and 325 possible concepts.
-Let's say that each Day we see is, usually, classified
+  Let's say we add the \texttt{Water: \{Warm, Cold\}}
+  attribute to days, which will
+make for 48 possible \texttt{Day}s and 325 possible concepts.
+Let's say that each \texttt{Day} we see is, usually, classified
 positive by around half of the currently-plausible concepts, and
 classified negative by the other half. Then when we learn the actual
 classification of the example, it will cut the space of compatible
@@ -10619,7 +10471,7 @@ $(2^9 = 512)$ to narrow 325 possible concepts down to
 one.}
 
 {
- Even if Days had forty binary attributes, it should still only
+ Even if \texttt{Day}s had forty binary attributes, it should still only
 take a manageable amount of data to narrow down the possible concepts
 to one. Sixty-four examples, if each example is classified positive by
 half the remaining concepts. \textit{Assuming}, of course, that the
@@ -10674,19 +10526,21 @@ as well as extensions.}
 {
  In the last essay, I concluded:}
 
-{
+\begin{quote}
  The way to carve reality at its joints is to draw boundaries
-around concentrations of unusually high probability density.}
+ around concentrations of unusually high probability density.
+\end{quote}
 
 {
  I deliberately left out a key qualification in that (slightly
 edited) statement, because I couldn't explain it until
 now. A better statement would be:}
 
-{
+\begin{quote}
  The way to carve reality at its joints, is to draw \textit{simple}
 boundaries around concentrations of unusually high probability density
-in Thingspace.}
+in Thingspace.
+\end{quote}
 
 {
  Otherwise you would just gerrymander Thingspace. You would create
@@ -10756,157 +10610,134 @@ Wiffleheim of 1234 Norkle Rd as a suspect?''}
 \mysection{Conditional Independence, and Naive Bayes}
 
 {
- Previously I spoke of mutual information between X and Y, written
-I(X;Y), which is the difference between the entropy of the joint
-probability distribution, H(X,Y), and the entropies of the marginal
-distributions, H(X) + H(Y). }
+ Previously I spoke of mutual information between $X$ and $Y$, written
+$I(X;Y)$, which is the difference between the entropy of the joint
+probability distribution, $H(X,Y)$, and the entropies of the marginal
+distributions, $H(X) + H(Y)$. }
 
 {
- I gave the example of a variable X, having eight states,
-X\textsubscript{1} through X\textsubscript{8}, which are all equally
-probable if we have not yet encountered any evidence; and a variable Y,
-with states Y\textsubscript{1} through Y\textsubscript{4}, which are
+ I gave the example of a variable $X$, having eight states,
+$X_{1}$ through $X_{8}$, which are all equally
+probable if we have not yet encountered any evidence; and a variable $Y$,
+with states $Y_{1}$ through $Y_{4}$, which are
 all equally probable if we have not yet encountered any evidence. Then
-if we calculate the marginal entropies H(X) and H(Y), we will find that
-X has 3 bits of entropy, and Y has 2 bits.}
+if we calculate the marginal entropies $H(X)$ and $H(Y)$, we will find that
+$X$ has 3 bits of entropy, and $Y$ has 2 bits.}
 
 {
- However, we also know that X and Y are both even or both odd; and
+ However, we also know that $X$ and $Y$ are both even or both odd; and
 this is all we know about the relation between them. So for the joint
-distribution (X,Y) there are only 16 possible states, all equally
+distribution $(X,Y)$ there are only 16 possible states, all equally
 probable, for a joint entropy of 4 bits. This is a 1-bit entropy
-defect, compared to 5 bits of entropy if X and Y were independent. This
-entropy defect is the mutual information---the information that X tells
-us about Y, or vice versa, so that we are not as uncertain about one
+defect, compared to 5 bits of entropy if $X$ and $Y$ were independent. This
+entropy defect is the mutual information---the information that $X$ tells
+us about $Y$, or vice versa, so that we are not as uncertain about one
 after having learned the other.}
 
 {
- Suppose, however, that there exists a third variable Z. The
-variable Z has two states, ``even''
+ Suppose, however, that there exists a third variable $Z$. The
+variable $Z$ has two states, ``even''
 and ``odd,'' perfectly correlated to
-the evenness or oddness of (X,Y). In fact, we'll
-suppose that Z is just the question ``Are X and Y even
+the evenness or oddness of $(X,Y)$. In fact, we'll
+suppose that $Z$ is just the question ``Are $X$ and $Y$ even
 or odd?''}
 
 {
- If we have no evidence about X and Y, then Z itself necessarily
+ If we have no evidence about $X$ and $Y$, then $Z$ itself necessarily
 has 1 bit of entropy on the information given. There is 1 bit of mutual
-information between Z and X, and 1 bit of mutual information between Z
-and Y. And, as previously noted, 1 bit of mutual information between X
-and Y. So how much entropy for the whole system (X,Y,Z)? You might
+information between $Z$ and $X$, and 1 bit of mutual information between $Z$
+and $Y$. And, as previously noted, 1 bit of mutual information between $X$
+and $Y$. So how much entropy for the whole system $(X,Y,Z)$? You might
 naively expect that}
 
-{\centering
+\begin{equation*}
  H(X,Y,Z) = H(X) + H(Y) + H(Z) - I(X;Z) - I(Z;Y) - I(X;Y),
-\par}
-
-
-\bigskip
+\end{equation*}
 
 {
  but this turns out not to be the case. }
 
 {
- The joint system (X,Y,Z) only has 16 possible states---since Z is
+ The joint system $(X,Y,Z)$ only has 16 possible states---since $Z$ is
 just the question ``Are X and Y even or
-odd?''---so H(X,Y,Z) = 4 bits.}
+odd?''---so $H(X,Y,Z) = 4$ bits.}
 
 {
  But if you calculate the formula just given, you get}
 
-{\centering
- (3 + 2 + 1 - 1 - 1 - 1) bits = 3 bits = WRONG!
-\par}
+\begin{equation*}
+ (3 + 2 + 1 - 1 - 1 - 1) \text{ bits }= 3\text{ bits }=\text{ WRONG!}
+\end{equation*}
 
 
-\bigskip
 
 {
- Why? Because if you have the mutual information between X and Z,
-and the mutual information between Z and Y, that may include some of
+ Why? Because if you have the mutual information between $X$ and $Z$,
+and the mutual information between $Z$ and $Y$, that may include some of
 the \textit{same} mutual information that we'll
-calculate exists between X and Y. In this case, for example, knowing
-that X is even tells us that Z is even, and knowing that Z is even
-tells us that Y is even, but this is the same information that X would
-tell us about Y. We double-counted some of our knowledge, and so came
+calculate exists between $X$ and $Y$. In this case, for example, knowing
+that $X$ is even tells us that $Z$ is even, and knowing that $Z$ is even
+tells us that $Y$ is even, but this is the same information that $X$ would
+tell us about $Y$. We double-counted some of our knowledge, and so came
 up with too little entropy. }
 
 {
  The correct formula is (I believe):}
 
-{\centering
- H(X,Y,Z) = H(X) + H(Y) + H(Z) - I(X;Z) - I(Z;Y) -
-I(X;Y{\textbar}Z).
-\par}
+\begin{equation*}
+  H(X,Y,Z) = H(X) + H(Y) + H(Z) - I(X;Z) - I(Z;Y) - I(X;Y|Z).
+\end{equation*}
 
-
-\bigskip
 
 {
- Here the last term, I(X;Y {\textbar}Z), means,
-``the information that X tells us about Y, given that
-we already know Z.'' In this case, X
-doesn't tell us anything about Y, given that we already
-know Z, so the term comes out as zero---and the equation gives the
+ Here the last term, $I(X;Y |Z)$, means,
+``the information that $X$ tells us about $Y$, given that
+we already know $Z$.'' In this case, $X$
+doesn't tell us anything about $Y$, given that we already
+know $Z$, so the term comes out as zero---and the equation gives the
 correct answer. There, isn't that nice? }
 
 {
  ``No,'' you correctly reply,
 ``for you have not told me how to \textit{calculate}
-I(X;Y {\textbar}Z), only given me a verbal argument that it ought to be
+$I(X;Y|Z)$, only given me a verbal argument that it ought to be
 zero.''}
 
 {
- We calculate I(X;Y{\textbar}Z) just the way you would expect. We
-know I(X;Y) = H(X) + H(Y) - H(X,Y), so}
+ We calculate $I(X;Y|Z)$ just the way you would expect. We
+know $I(X;Y) = H(X) + H(Y) - H(X,Y)$, so}
 
-{\centering
- I(X;Y{\textbar}Z) = H(X{\textbar}Z) + H(Y{\textbar}Z) -
-H(X,Y{\textbar}Z).
-\par}
+\begin{equation*}
+  I(X;Y|Z) = H(X|Z) + H(Y|Z) - H(X,Y|Z).
+\end{equation*}
 
-
-\bigskip
 
 {
  And now, I suppose, you want to know how to calculate the
 conditional entropy? Well, the \textit{original} formula for the
 entropy is}
 
-{\centering
- H(S) =
-${\sum}$\textsubscript{i}{\textbackslash}{\textquotesingle}7b-P(S\textsubscript{i})
-{\texttimes}
-log\textsubscript{2}(P(S\textsubscript{i})){\textbackslash}{\textquotesingle}7d.
-\par}
+\begin{equation*}
+ H(S) = \sum_{i}{-P(S_{i}) \times \log_{2}(P(S_{i}))}.
+\end{equation*}
 
-
-\bigskip
 
 {
- If we then learned a new fact Z\textsubscript{0}, our remaining
-uncertainty about S would be}
+ If we then learned a new fact $Z_{0}$, our remaining
+uncertainty about $S$ would be}
 
-{\centering
- H(S{\textbar}Z0) =
-${\sum}$\textsubscript{i}{\textbackslash}{\textquotesingle}7b-P(S\textsubscript{i}{\textbar}Z\textsubscript{0})log\textsubscript{2}(P(S\textsubscript{i}{\textbar}Z\textsubscript{0})){\textbackslash}{\textquotesingle}7d.
-\par}
-
-
-\bigskip
+\begin{equation*}
+ H(S|Z_0) =\sum_{i}{-P(S_{i}|Z_{0})\log_{2}(P(S_{i}|Z_{0}))}.
+\end{equation*}
 
 {
- So if we're going to learn a new fact Z, but we
-don't know which Z yet, then, on average, we expect to
-be around this uncertain of S afterward:}
+ So if we're going to learn a new fact $Z$, but we
+don't know which $Z$ yet, then, on average, we expect to
+be around this uncertain of $S$ afterward:}
 
-{\centering
- H(S{\textbar}Z) =
-${\sum}$\textsubscript{j}{\textbackslash}{\textquotesingle}7bP(Z\textsubscript{j})${\sum}$\textsubscript{i}{\textbackslash}{\textquotesingle}7b-P(S\textsubscript{i}{\textbar}Z\textsubscript{j})log\textsubscript{2}(P(S\textsubscript{i}{\textbar}Z\textsubscript{j})){\textbackslash}{\textquotesingle}7d{\textbackslash}{\textquotesingle}7d
-\par}
-
-
-\bigskip
+\begin{equation*}
+ H(S|Z) =\sum_{j}\left(P(Z_{j})\sum_{i}{-P(S_{i}|Z_{j})\log_{2}(P(S_{i}|Z_{j}))}\right)
+\end{equation*}
 
 {
  And that's how one calculates conditional
@@ -10916,22 +10747,18 @@ information. }
 {
  There are \textit{all sorts} of ancillary theorems here, like}
 
-{\centering
- H(X{\textbar}Y) = H (X,Y) - H(Y)
-\par}
+\begin{equation*}
+ H(X|Y) = H (X,Y) - H(Y)
+\end{equation*}
 
-
-\bigskip
 
 {
  and}
 
-{\centering
- if I(X;Z) = 0 and I(Y;X{\textbar}Z) = 0 then I(X;Y) = 0,
-\par}
+\begin{equation*}
+\text{if }I(X;Z) = 0\text{ and }I(Y;X|Z) = 0\text{ then }I(X;Y) = 0,
+\end{equation*}
 
-
-\bigskip
 
 {
  but I'm not going to go into those. }
@@ -10950,101 +10777,48 @@ not. But first there are a couple more preliminaries.}
  You will remember---yes, you \textit{will} remember---that there
 is a duality between mutual information and Bayesian evidence. Mutual
 information is positive if and only if the probability of at least some
-joint events P(x,y) does not equal the product of the probabilities of
-the separate events P(x)P(y). This, in turn, is exactly equivalent to
-the condition that Bayesian evidence exists between x and y:}
+joint events $P(x,y)$ does not equal the product of the probabilities of
+the separate events $P(x)P(y)$. This, in turn, is exactly equivalent to
+the condition that Bayesian evidence exists between $x$ and $y$:}
 
-{\centering
- I(X;Y) {\textgreater} 0 $\Rightarrow $
-\par}
+\begin{align*}
+ I(X;Y) &> 0 \Rightarrow \\
+ P(x,y) &\neq P(x)P(y) \\
+ P(x,y) / P(y) &\neq P(x) \\
+ P(x|y) &\neq P(x).
+\end{align*}
 
-
-\bigskip
-
-{\centering
- P(x,y) ${\neq}$ P(x)P(y)
-\par}
-
-
-\bigskip
-
-{\centering
- P(x,y) / P(y) ${\neq}$ P(x)
-\par}
-
-
-\bigskip
-
-{\centering
- P(x{\textbar}y) ${\neq}$ P(x).
-\par}
-
-
-\bigskip
 
 {
- If you're conditioning on Z, you just adjust the
+ If you're conditioning on $Z$, you just adjust the
 whole derivation accordingly:}
 
-{\centering
- I(X;Y{\textbar}Z) {\textgreater} 0 $\Rightarrow $
-\par}
-
-
-\bigskip
-
-{\centering
- P(x,y{\textbar}z) ${\neq}$ P(x{\textbar}z)P(y{\textbar}z)
-\par}
-
-
-\bigskip
-
-{\centering
- P(x,y{\textbar}z) / P(y{\textbar}z) ${\neq}$ P (x{\textbar}z)
-\par}
-
-
-\bigskip
-
-{\centering
- (P(x,y,z)/P(z)) / (P(y,z)/P(z)) ${\neq}$ P(x{\textbar}z)
-\par}
-
-
-\bigskip
-
-{\centering
- P(x,y,z) / P(y,z) ${\neq}$ P(x{\textbar}z)
-\par}
-
-
-\bigskip
-
-{\centering
- P(x{\textbar}y,z) ${\neq}$ P(x{\textbar}z).
-\par}
-
-
-\bigskip
+\begin{align*}
+ I(X;Y|Z) &> 0 \Rightarrow \\
+ P(x,y|z) &\neq P(x|z)P(y|z) \\
+ P(x,y|z) / P(y|z) &\neq P (x|z) \\
+ (P(x,y,z)/P(z)) / (P(y,z)/P(z)) &\neq P(x|z) \\
+ P(x,y,z) / P(y,z) &\neq P(x|z) \\
+ P(x|y,z) &\neq P(x|z).
+\end{align*}
 
 {
- Which last line reads ``Even knowing Z, learning
-Y still changes our beliefs about X.''}
+ Which last line reads ``Even knowing $Z$, learning
+$Y$ still changes our beliefs about $X$.''}
 
 {
- Conversely, as in our original case of Z being
+ Conversely, as in our original case of $Z$ being
 ``even'' or
-``odd,'' Z screens off X from
-Y---that is, if we know that Z is
-``even,'' learning that Y is in
-state Y\textsubscript{4} tells us \textit{nothing more} about whether X
-is X\textsubscript{2}, X\textsubscript{4}, X\textsubscript{6}, or
-X\textsubscript{8}. Or if we know that Z is
-``odd,'' then learning that X is
-X\textsubscript{5} tells us nothing more about whether Y is
-Y\textsubscript{1} or Y\textsubscript{3}. Learning Z has rendered X and
-Y \textit{conditionally independent}.}
+``odd,'' $Z$ screens off $X$ from
+$Y$---that is, if we know that $Z$ is
+``even,'' learning that $Y$ is in
+state $Y_{4}$ tells us \textit{nothing more} about whether $X$
+is $X{2}$, $X_{4}$, $X_{6}$, or
+$X_{8}$. Or if we know that $Z$ is
+``odd,'' then learning that $X$ is
+$X_{5}$ tells us nothing more about whether $Y$ is
+$Y_{1}$ or $Y_{3}$. Learning $Z$ has rendered $X$ and
+$Y$ \textit{conditionally independent}.}
 
 {
  Conditional independence is a hugely important concept in
@@ -11058,23 +10832,23 @@ off other variables surrounding it, like a central body with
 tentacles.}
 
 {
- Let there be five variables U,V, W, X, and Y; and moreover,
+ Let there be five variables $U$,$V$, $W$, $X$, and $Y$; and moreover,
 suppose that for every pair of these variables, one variable is
-evidence about the other. If you select U and W, for example, then
-learning U = U\textsubscript{1} will tell you something you
-didn't know before about the probability that W =
-W\textsubscript{1}.}
+evidence about the other. If you select $U$ and $W$, for example, then
+learning $U = U_{1}$ will tell you something you
+didn't know before about the probability that $W =
+W_{1}$.}
 
 {
  An unmanageable inferential mess? Evidence gone wild? Not
 necessarily.}
 
 {
- Maybe U is ``Speaks a
-language,'' V is ``Two arms and ten
-digits,'' W is ``Wears
-clothes,'' X is ``Poisonable by
-hemlock,'' and Y is ``Red
+ Maybe $U$ is ``Speaks a
+language,'' $V$ is ``Two arms and ten
+digits,'' $W$ is ``Wears
+clothes,'' $X$ is ``Poisonable by
+hemlock,'' and $Y$ is ``Red
 blood.'' Now if you encounter a thing-in-the-world,
 that might be an apple and might be a rock, and you learn that this
 thing speaks Chinese, you are liable to assess a much higher
@@ -11106,38 +10880,17 @@ as soon as we learn just one variable, as the case of Nude Nellie
 shows. So is it an unmanageable inferential inconvenience?}
 
 {
- Fear not! For there may be some \textit{sixth} variable Z, which,
+ Fear not! For there may be some \textit{sixth} variable $Z$, which,
 if we knew it, really \textit{would} screen off every pair of variables
-from each other. There may be some variable Z---even if we have to
-\textit{construct} Z rather than observing it directly---such that:}
+from each other. There may be some variable $Z$---even if we have to
+\textit{construct} $Z$ rather than observing it directly---such that:}
 
-{\centering
- P(U{\textbar}V,W,X,Y,Z) = P(U{\textbar}Z)
-\par}
-
-
-\bigskip
-
-{\centering
- P(V{\textbar}U,W,X,Y,Z) = P(V{\textbar}Z)
-\par}
-
-
-\bigskip
-
-{\centering
- P(W{\textbar}U,V,X,Y,Z) = P(W{\textbar}Z)
-\par}
-
-
-\bigskip
-
-{\centering
- {\dots}
-\par}
-
-
-\bigskip
+\begin{align*}
+ P(U|V,W,X,Y,Z) &= P(U|Z) \\
+ P(V|U,W,X,Y,Z) &= P(V|Z) \\
+ P(W|U,V,X,Y,Z) &= P(W|Z) \\
+ &\vdots
+\end{align*}
 
 {
  Perhaps, \textit{given that} a thing is
@@ -11163,10 +10916,10 @@ about the central class to predict anything we haven't
 seen yet, like vulnerability to hemlock.}
 
 {
- Any observations of U,V, W, X, and Y just act as evidence for the
-central class variable Z, and then we use the posterior distribution on
-Z to make any predictions that need making about unobserved variables
-in U,V, W, X, and Y.}
+ Any observations of $U$,$V$, $W$, $X$, and $Y$ just act as evidence for the
+central class variable $Z$, and then we use the posterior distribution on
+$Z$ to make any predictions that need making about unobserved variables
+in $U$,$V$, $W$, $X$, and $Y$.}
 
 {
  Sound familiar? It should; see Figure 177.1.}
