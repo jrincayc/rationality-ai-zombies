@@ -14,11 +14,15 @@
 \usepackage{hyperref}
 \hypersetup{colorlinks=true, linkcolor=blue, citecolor=blue, filecolor=blue, urlcolor=blue, pdftitle=Rationality: From AI to Zombies, pdfauthor=, pdfsubject=, pdfkeywords=}
 \usepackage{graphicx}
+\usepackage{chngcntr}
 
 \renewcommand\thechapter{\Alph{chapter}}
 
 \newcounter{mysection}
 \renewcommand\thesection{\arabic{mysection}}
+
+%Per section figure numbering instead of per chapter.
+\counterwithin{figure}{section}
 
 \newcommand{\mysection}[1]{
   \stepcounter{mysection}
@@ -43,6 +47,26 @@
 %Used for graphics
 \newcommand{\mygraphics}[1]{
   \includegraphics[scale=0.25]{#1}
+}
+
+%No caption figure
+\newcommand{\myfigure}[2]{
+  \begin{figure}
+    \centering
+    \mygraphics{#1}
+    \caption{}
+    \label{#2}
+  \end{figure}
+}
+
+%Captioned figure
+\newcommand{\myfigurec}[3]{
+  \begin{figure}
+    \centering
+    \mygraphics{#1}
+    \caption{#3}
+    \label{#2}
+  \end{figure}
 }
 
 \newcommand{\myendsectiontext}{
