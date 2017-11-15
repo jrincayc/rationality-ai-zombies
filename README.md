@@ -7,7 +7,7 @@ Released under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unp
 CC BY-NC-SA 3.0
 
 This can be converted into a PDF by using:
-lualatex rationality_from_ai_to_zombies.tex
+touch version.tex; lualatex rationality_from_ai_to_zombies.tex
 
 There are various problems in the conversion from epub to tex, but if
 you need an editable version it is probably a useful starting point.
