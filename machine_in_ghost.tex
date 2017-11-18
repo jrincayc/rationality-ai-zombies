@@ -3868,7 +3868,8 @@ program, and it went something like this:}
 
 \begin{verbatim}
 10 Preheat oven to 350
-20 Combine all ingredients in a large mixing bowl
+20 Combine all ingredients in a\
+ large mixing bowl
 30 Mix until smooth
 \end{verbatim}
 
@@ -7962,7 +7963,8 @@ causing an event that \textit{matches the sound category}).}
   myBrain.FindConcept("sound") ==
    concept_AuditoryExperience
 
-  concept_AuditoryExperience.match(forest) == false.
+  concept_AuditoryExperience.match(forest)
+    == false.
 \end{verbatim}
 
 {
@@ -9968,9 +9970,9 @@ states, $Z_{1}$ and $Z_{2}$, with probabilities
 follows, there is zero mutual information between $Y$ and $Z$:}
 
 \begin{equation*}
-  \begin{array}{llll}
- Z_{1}Y_{1} : 3/16 & Z_{1}Y_{2} : 3/32 & Z_{1}Y_{3} : 3/64 & Z_{1}Y_{4} : 3/64 \\
- Z_{2}Y_{1} : 5/16 & Z_{2}Y_{2} : 5/32 & Z_{2}Y_{3} : 5/64 & Z_{2}Y_{4} : 5/64.
+  \begin{array}{ll}
+ Z_{1}Y_{1}:3/16 & Z_{1}Y_{2}:3/32 \\ Z_{1}Y_{3}:3/64 & Z_{1}Y_{4}:3/64 \\
+ Z_{2}Y_{1}:5/16 & Z_{2}Y_{2}:5/32 \\ Z_{2}Y_{3}:5/64 & Z_{2}Y_{4}:5/64.
   \end{array}
 \end{equation*}
 
@@ -10041,7 +10043,8 @@ distribution:}
 
 \begin{align*}
 &P(Z_{1}Y_{1})\log_{2}(P(Z_{1}Y_{1}))+P(Z_{1}Y_{2})\log_{2}(P(Z_{1}Y_{2}))+\\
-&P(Z_{1}Y_{3})\log_{2}(P(Z_{1}Y_{3}))+ \ldots + P(Z_{2}Y_{4})\log_{2}(P(Z_{2}Y_{4}))\\
+  &P(Z_{1}Y_{3})\log_{2}(P(Z_{1}Y_{3}))+ \ldots + \\
+  &P(Z_{2}Y_{4})\log_{2}(P(Z_{2}Y_{4}))\\
   =&(3/16)\log_{2}(3/16) +(3/32)\log_{2}(3/32) + \\
   &(3/64)\log_{2}(3/64) + \ldots + (5/64)\log_{2}(5/64).
 \end{align*}
@@ -10063,9 +10066,9 @@ this is true in general, but you are welcome to Google on
 For example:}
 
 \begin{equation*}
-  \begin{array}{llll}
- Z_{1}Y_{1} : 12/64 & Z_{1}Y_{2} : 8/64 & Z_{1}Y_{3} : 1/64 & Z_{1}Y_{4} : 3/64\\
- Z_{2}Y_{1} : 20/64 & Z_{2}Y_{2} : 8/64 & Z_{2}Y_{3} : 7/64 & Z_{2}Y_{4} : 5/64.
+  \begin{array}{ll}
+ Z_{1}Y_{1} : 12/64 & Z_{1}Y_{2} : 8/64 \\ Z_{1}Y_{3} : 1/64 & Z_{1}Y_{4} : 3/64\\
+ Z_{2}Y_{1} : 20/64 & Z_{2}Y_{2} : 8/64 \\ Z_{2}Y_{3} : 7/64 & Z_{2}Y_{4} : 5/64.
   \end{array}
 \end{equation*}
 
@@ -10644,9 +10647,10 @@ and $Y$. And, as previously noted, 1 bit of mutual information between $X$
 and $Y$. So how much entropy for the whole system $(X,Y,Z)$? You might
 naively expect that}
 
-\begin{equation*}
- H(X,Y,Z) = H(X) + H(Y) + H(Z) - I(X;Z) - I(Z;Y) - I(X;Y),
-\end{equation*}
+\begin{align*}
+  &H(X,Y,Z) = H(X) + H(Y) + H(Z)\\
+  &- I(X;Z) - I(Z;Y) - I(X;Y),
+\end{align*}
 
 {
  but this turns out not to be the case. }
@@ -10678,9 +10682,10 @@ up with too little entropy. }
 {
  The correct formula is (I believe):}
 
-\begin{equation*}
-  H(X,Y,Z) = H(X) + H(Y) + H(Z) - I(X;Z) - I(Z;Y) - I(X;Y|Z).
-\end{equation*}
+\begin{align*}
+  &H(X,Y,Z) = H(X) + H(Y) + H(Z)\\
+  &- I(X;Z) - I(Z;Y) - I(X;Y|Z).
+\end{align*}
 
 
 {
@@ -12264,9 +12269,10 @@ $P(\text{positive},\lnot\text{cancer})$? Again there are only two degrees of
 freedom among these three variables. The equation occupying the extra
 degree of freedom is}
 
-\begin{equation*}
- P(\text{positive}) = P(\text{positive}, \text{cancer}) + P(\text{positive},\lnot\text{cancer}).
-\end{equation*}
+\begin{align*}
+  &P(\text{positive}) = \\
+  &P(\text{positive}, \text{cancer}) + P(\text{positive},\lnot\text{cancer}).
+\end{align*}
 
 {
  This is how $P(\text{positive})$ is computed to begin with; we figure out
