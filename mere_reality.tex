@@ -3159,8 +3159,8 @@ text. So perhaps a better way to enforce type discipline would be with
 a visibly different encoding:}
 
 \begin{align*}
-\text{morning star} &= \text{evening star}\\
-13.15.18.14.9.14.7.0.19.20.1.18 &\neq 5.22.5.14.9.14.7.0.19.20.1.18.
+  \text{morning star} &= \text{evening star} \\
+  \text{\tiny{13.15.18.14.9.14.7.0.19.20.1.18}} &\neq \text{\tiny{5.22.5.14.9.14.7.0.19.20.1.18}}.
 \end{align*}
 
 {
@@ -20560,7 +20560,9 @@ average payoff of \$0.12 + \$0.10 + \$0.05 or \$0.27. That is:}
 \begin{align*}
  P(\text{color}) &= \text{play money assigned to that color}\\
  F(\text{color}) &= \text{frequency with which that color wins}\\
- \text{Payoff} &= P(\text{winner}) = \text{amount of play money allocated to winning
+ \text{Payoff} &= P(\text{winner}) \\
+ &= \text{amount of play money} \\
+   & \text{allocated to winning
 color.}
 \end{align*}
 
@@ -20593,8 +20595,9 @@ would calculate:}
   \text{Expectation}(\text{Payoff}) &= \sum_{\text{colors}} P(\text{color}) F(\text{color}) \\
   &= P(\text{blue}) \times F(\text{blue}) \\
   &+ P(\text{green}) \times F(\text{green}) \\
-  &+ P(\text{red}) \times F(\text{red})\\
-  &= \$0.40 \times 30\% + \$0.50 \times 20\% + \$0.10 \times 50\% \\
+  &+ P(\text{red}) \times F(\text{red}) \\
+  &= \$0.40 \times 30\% + \$0.50 \times 20\%\\
+  &+ \$0.10 \times 50\% \\
   &= \$0.12 + \$0.10 + \$0.05 \\
   &= \$0.27.
 \end{align*}
@@ -20742,9 +20745,10 @@ This is our invariance.}
 {
  We have just required:}
 
-\begin{equation*}
- \text{Score}[P(\text{green}_{1},\text{blue}_{2})] = \text{Score}[P(\text{green}_{1})] + \text{Score}[P(\text{blue}_{2}|\text{green}_{1})].
-\end{equation*}
+\begin{align*}
+  &\text{Score}[P(\text{green}_{1},\text{blue}_{2})] = \\
+  &\text{Score}[P(\text{green}_{1})] + \text{Score}[P(\text{blue}_{2}|\text{green}_{1})].
+\end{align*}
 
 {
  And we already know:}
