@@ -44,15 +44,6 @@
   \setcounter{footnote}{0}
 }
 
-%Used for graphics
-\newcommand{\mygraphics}[1]{
-  \includegraphics[scale=0.25]{#1}
-}
-
-%Used for graphics
-\newcommand{\mygraphicss}[2]{
-  \includegraphics[scale=#2]{#1}
-}
 
 %No caption figure
 \newcommand{\myfigure}[2]{
@@ -131,8 +122,31 @@
 \maketitle
 
 
-\mygraphics{images/img2.jpg}
+\makeatletter
+\if@twocolumn
+%TWO COLUMN
+%Used for graphics
+\newcommand{\mygraphics}[1]{
+  \includegraphics[scale=0.125]{#1}
+}
 
+\newcommand{\mygraphicss}[2]{
+  \scalebox{0.5}{\includegraphics[scale=#2]{#1}} FOZZ2
+}
+\else
+%ONE COLUMN
+%Used for graphics
+\newcommand{\mygraphics}[1]{
+  \includegraphics[scale=0.25]{#1}
+}
+
+\newcommand{\mygraphicss}[2]{
+  \includegraphics[scale=#2]{#1} FOZZ
+}
+\fi
+\makeatletter
+
+\mygraphics{images/img2.jpg}
 
 \begin{center}
 Eliezer Yudkowsky is a Research Fellow at the Machine
