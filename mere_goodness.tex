@@ -4175,6 +4175,7 @@ destroys some of substance $S$.}
  The payoff matrix is as follows:}
 
 \begin{center}
+  \whencolumns{
   \begin{tabular}{|c|c|c|}
     \hline
     &  1 :$C$ & 1 :$D$ \\
@@ -4185,7 +4186,21 @@ destroys some of substance $S$.}
     2 :$D$ & (+0 lives,  & (+1 billion lives, \\
     &  +3 paperclips) &  +1 paperclip) \\
     \hline
-  \end{tabular}
+  \end{tabular}}{
+    \small{
+   \begin{tabular}{|c|c|c|}
+     \hline
+    &  1:$C$ & 1:$D$ \\
+     \hline
+    2:$C$ & (+2 billion human lives, & (+3 billion lives,\\
+    &  +2 paperclips)  &  +0 paperclips)  \\
+     \hline
+    2:$D$ & (+0 lives,  & (+1 billion lives, \\
+     &  +3 paperclips) &  +1 paperclip) \\
+     \hline
+   \end{tabular}
+   }
+  }
 \end{center}
 
 {
@@ -6211,10 +6226,17 @@ U(\$24,000) > (33/34) \times U(\$27,000) +
 (1/34) \times U(\$0)
 \end{equation*}
 
+\whencolumns{
 \begin{equation*}
 0.34 \times U(\$24,000) + 0.66 \times U(\$0)
 < 0.33 \times U(\$27,000) + 0.67 \times U(\$0).
 \end{equation*}
+}{
+\begin{align*}
+&0.34 \times U(\$24,000) + 0.66 \times U(\$0) \\
+&< 0.33 \times U(\$27,000) + 0.67 \times U(\$0).
+\end{align*}
+}
 
 
 {
