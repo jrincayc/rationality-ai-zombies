@@ -121,6 +121,8 @@
 \begin{document}
 \maketitle
 
+%Use \whencolumns like:
+%\whencolumns{ONE COLUMN}{TWO COLUMN}
 
 \makeatletter
 \if@twocolumn
@@ -133,6 +135,11 @@
 \newcommand{\mygraphicss}[2]{
   \scalebox{0.5}{\includegraphics[scale=#2]{#1}} FOZZ2
 }
+
+\newcommand{\whencolumns}[2]{
+#2
+}
+
 \else
 %ONE COLUMN
 %Used for graphics
@@ -143,8 +150,13 @@
 \newcommand{\mygraphicss}[2]{
   \includegraphics[scale=#2]{#1} FOZZ
 }
+
+\newcommand{\whencolumns}[2]{
+#1
+}
+
 \fi
-\makeatletter
+\makeatother
 
 \mygraphics{images/img2.jpg}
 
