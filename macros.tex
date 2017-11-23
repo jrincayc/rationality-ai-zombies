@@ -1,0 +1,121 @@
+\renewcommand\thechapter{\Alph{chapter}}
+
+\newcounter{mysection}
+\renewcommand\thesection{\arabic{mysection}}
+
+%Per section figure numbering instead of per chapter.
+\counterwithin{figure}{section}
+
+\newcommand{\mysection}[1]{
+  \stepcounter{mysection}
+  \section{#1}
+  \setcounter{footnote}{0}
+}
+
+%Section with no number
+\newcommand{\mysectionnn}[1]{
+  \section*{#1}
+  \addcontentsline{toc}{section}{#1}
+  \setcounter{footnote}{0}
+}
+
+%Section with no number and short title
+\newcommand{\mysectiontwo}[2]{
+  \section*{#2}
+  \addcontentsline{toc}{section}{#1}
+  \setcounter{footnote}{0}
+}
+
+
+%No caption figure
+\newcommand{\myfigure}[2]{
+  \begin{figure}
+    \centering
+    \mygraphics{#1}
+    \caption{}
+    \label{#2}
+  \end{figure}
+}
+
+%Captioned figure
+\newcommand{\myfigurec}[3]{
+  \begin{figure}
+    \centering
+    \mygraphics{#1}
+    \caption{#3}
+    \label{#2}
+  \end{figure}
+}
+
+\newcommand{\hr}{
+  \begin{center}
+    \rule{0.5\textwidth}{0.5pt}
+  \end{center}
+}
+
+\newcommand{\myendsectiontext}{
+  {\centering
+ \ ~
+\par}
+
+{\centering
+ *
+\par}
+}
+
+%comma in a superscript
+\newcommand{\supercomma}{\textsuperscript{,}}
+
+%move the footnote counter back
+\newcommand{\footback}[1]{\addtocounter{footnote}{-#1}}
+
+%move the footnote counter +1
+\newcommand{\footnext}{\addtocounter{footnote}{1}}
+
+%\DeclareNewFootnote{A}
+%\DeclareNewFootnote{B}[alph]
+\newcommand{\comment}[1]{
+}
+
+
+%\newcommand\textsubscript[1]{\ensuremath{{}_{\text{#1}}}}
+% Outline numbering
+\setcounter{secnumdepth}{1}
+
+
+%Use \whencolumns like:
+%\whencolumns{ONE COLUMN}{TWO COLUMN}
+
+\makeatletter
+\if@twocolumn
+%TWO COLUMN
+%Used for graphics
+\newcommand{\mygraphics}[1]{
+  \includegraphics[scale=0.125]{#1}
+}
+
+\newcommand{\mygraphicss}[2]{
+  \scalebox{0.5}{\includegraphics[scale=#2]{#1}} FOZZ2
+}
+
+\newcommand{\whencolumns}[2]{
+#2
+}
+
+\else
+%ONE COLUMN
+%Used for graphics
+\newcommand{\mygraphics}[1]{
+  \includegraphics[scale=0.25]{#1}
+}
+
+\newcommand{\mygraphicss}[2]{
+  \includegraphics[scale=#2]{#1} FOZZ
+}
+
+\newcommand{\whencolumns}[2]{
+#1
+}
+
+\fi
+\makeatother
