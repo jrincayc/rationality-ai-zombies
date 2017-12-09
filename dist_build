@@ -1,0 +1,9 @@
+#!/bin/bash
+
+rm -f version.tex rationality_from_ai_to_zombies_2c.pdf  rationality_from_ai_to_zombies.pdf
+make
+rm rationality_from_ai_to_zombies.pdf
+make
+make rationality_from_ai_to_zombies_2c.pdf
+rm rationality_from_ai_to_zombies_2c.pdf
+make rationality_from_ai_to_zombies_2c.pdf
