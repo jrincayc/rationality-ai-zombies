@@ -44,7 +44,7 @@ Go to http://www.lulu.com and select Create -> Print Book
 
 Create an account if you need to.
 
-Choose either paperback 8.5x11in (~$12) or Hardcover 8.25x10.75in (~$31)
+Choose either paperback 8.5x11in (~ $12) or Hardcover 8.25x10.75in (~ $31)
 (If you put in 650 pages, it will tell you the exact price,
 black and white is generally fine, there are only a few color images
 inside, and they work fine in black and white.)
