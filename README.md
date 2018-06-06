@@ -65,14 +65,14 @@ Eliezer Yudkowsky
 And choose "Make available only to me" (note that the book is available under a
 Noncommercial license, you cannot sell it for profit.)
 
-Then upload rationality_from_ai_to_zombies_2c.pdf and make print-ready file.
+Then upload `rationality_from_ai_to_zombies_2c.pdf` and make print-ready file.
 
 Then ignore the warnings about low resolution images and small fonts and
 save and continue.
 
-Use the old cover designer.
-
-On Backgrounds & Pictures, upload cover_image.png as the front cover.
+Upload One-piece cover from `images/full_cover/full_cover.jpg` as the front
+cover. You may tweak the source image in `images/full_cover/full_cover.xcf.zip`
+using Gimp.
 
 For Text, for the Front Cover, unclick show title and show author.
 For the Spine, switch text size to 24, and add the author: Eliezer Yudkowsky
