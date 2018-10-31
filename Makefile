@@ -9,4 +9,4 @@ rationality_from_ai_to_zombies_2c.pdf : rationality_from_ai_to_zombies_2c.tex ma
 version.tex:
 	git describe > version.tex
 	echo >> version.tex
-	git log -1 --format='format:%H %aD' >> version.tex
+	git log -1 --format='format:%H \\%aD' >> version.tex
