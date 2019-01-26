@@ -8,6 +8,8 @@ https://intelligence.org/rationality-ai-zombies/
 Released under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported license.
 CC BY-NC-SA 3.0
 
+This is based on the 2015 edition of the book.
+
 ## Creating PDFs
 
 The release files are created by running the script dist_build
@@ -18,6 +20,9 @@ automatically).
 
 lualatex can be used directly to create the PDFs:
 touch version.tex; lualatex rationality_from_ai_to_zombies.tex
+
+The GIMP source for the full cover is at:
+https://github.com/jrincayc/rationality-ai-zombies/wiki/full_cover.xcf
 
 ## Creating Printed Versions
 
@@ -77,8 +82,8 @@ Save and Finish, and you can order it.
 
 ## History and Purpose of Project
 
-This project started with the epub version of Rationality: from AI to
-Zombies, and then used Calibre and Open Office to create a LaTeX
+This project started with the 2015 epub version of Rationality: from
+AI to Zombies, and then used Calibre and Open Office to create a LaTeX
 document.  Then, the resulting document was edited to recreate TeX
 elements like footnotes and chapters and small caps and equations.
 
@@ -89,3 +94,28 @@ request.
 If you need a editable version, this version works great.  If you want
 a printable version, the two column version is much more practical
 than the original single column PDF.
+
+## About Eliezer Yudkowsky:
+
+Eliezer Yudkowsky is a decision theorist and mathematician who works
+on foundational issues in Artificial General Intelligence (AGI), the
+theoretical study of domain-general problem-solving
+systems. Yudkowsky's work in AI has been a major driving force behind
+his exploration of the psychology of human rationality.
+
+Eliezer Yudkowsky is the author of many works including *Harry Potter
+and the Methods of Rationality* and the chapter “Cognitive Biases
+Potentially Affecting Judgement of Global Risks” in *Global
+Catastrophic Risks*. He is a research fellow and a co-founder of the
+Machine Intelligence Research Institute.
+
+## About the Book:
+
+Rationality from AI to Zombies is a book about getting our
+understanding of the world right, even when it might not be easy, or
+there is uncertainty, or we have bias. Containing a collection of two
+years of blog posts edited into a cohesive whole the book covers
+topics ranging from changing your mind and Bayesian reasoning, to
+philosophical zombies and implications of Artificial
+Intelligence. Included are practical methods of improving your
+rationality, inspirational essays and illustrative stories.
