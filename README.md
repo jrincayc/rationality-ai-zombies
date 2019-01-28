@@ -71,7 +71,8 @@ Then ignore the warnings about low resolution images and small fonts and
 save and continue.
 
 Upload One-piece cover from `images/full_cover/full_cover.jpg` as the front
-cover. You may tweak the source image in `images/full_cover/full_cover.xcf.zip`
+cover. You may tweak the source image in
+`https://github.com/jrincayc/rationality-ai-zombies/wiki/full_cover.xcf`
 using Gimp.
 
 For Text, for the Front Cover, unclick show title and show author.
