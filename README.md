@@ -21,9 +21,6 @@ automatically).
 lualatex can be used directly to create the PDFs:
 touch version.tex; lualatex rationality_from_ai_to_zombies.tex
 
-The GIMP source for the full cover is at:
-https://github.com/jrincayc/rationality-ai-zombies/wiki/full_cover.xcf
-
 ## Creating Printed Versions
 
 The first step is to create a PDF. This can be done with the dist_build or
@@ -43,14 +40,14 @@ First, download the newest version of: rationality_from_ai_to_zombies_2c.pdf
 from:
 https://github.com/jrincayc/rationality-ai-zombies/releases
 and the cover file:
-https://github.com/jrincayc/rationality-ai-zombies/raw/master/images/cover_image.png
+https://github.com/jrincayc/rationality-ai-zombies/raw/master/images/full_cover/full_cover.jpg
 
 Go to http://www.lulu.com and select Create -> Print Book
 
 Create an account if you need to.
 
 Choose either paperback 8.5x11in (~ $12) or Hardcover 8.25x10.75in (~ $31)
-(If you put in 650 pages, it will tell you the exact price,
+(If you put in 656 pages, it will tell you the exact price,
 black and white is generally fine, there are only a few color images
 inside, and they work fine in black and white.)
 
@@ -75,10 +72,6 @@ cover. You may tweak the source image in
 `https://github.com/jrincayc/rationality-ai-zombies/wiki/full_cover.xcf`
 using Gimp.
 
-For Text, for the Front Cover, unclick show title and show author.
-For the Spine, switch text size to 24, and add the author: Eliezer Yudkowsky
-Then make print-ready cover.
-
 Save and Finish, and you can order it.
 
 ## History and Purpose of Project
@@ -88,13 +81,13 @@ AI to Zombies, and then used Calibre and Open Office to create a LaTeX
 document.  Then, the resulting document was edited to recreate TeX
 elements like footnotes and chapters and small caps and equations.
 
-While the entire document has been proofread, there are likely still
-problems, if you find them, please either create an issue or a pull
+While the entire document has been proofread multiple times, there may still
+be mistakes, if you find them, please either create an issue or a pull
 request.
 
 If you need a editable version, this version works great.  If you want
-a printable version, the two column version is much more practical
-than the original single column PDF.
+a single volume printable version, the two column version is much more
+practical than the original single column PDF.
 
 ## About Eliezer Yudkowsky:
 
