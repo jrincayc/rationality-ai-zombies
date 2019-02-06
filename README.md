@@ -8,7 +8,8 @@ https://intelligence.org/rationality-ai-zombies/
 Released under the Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported license.
 CC BY-NC-SA 3.0
 
-This is based on the 2015 edition of the book.
+This is based on the 2015 edition of the book.  This does not yet
+incorporate the the changes in the multivolume 2018+ versions.
 
 ## Creating PDFs
 
