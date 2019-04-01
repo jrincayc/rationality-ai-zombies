@@ -33,6 +33,8 @@ This has fewer pages than the one column version, and has the same font size.
 
 The file images/cover_image.png can be used for the cover.
 
+The file images/back_cover.png can be used for a back cover.
+
 This is for 8 1/2 inch by 11 inch pages.
 
 ## Creating a Printed Version with Lulu
@@ -40,8 +42,10 @@ This is for 8 1/2 inch by 11 inch pages.
 First, download the newest version of: rationality_from_ai_to_zombies_2c.pdf
 from:
 https://github.com/jrincayc/rationality-ai-zombies/releases
-and the cover file:
-https://github.com/jrincayc/rationality-ai-zombies/raw/master/images/full_cover/full_cover.jpg
+and the cover files:
+https://github.com/jrincayc/rationality-ai-zombies/raw/master_lite/images/cover_image.png
+and
+https://github.com/jrincayc/rationality-ai-zombies/raw/master_lite/images/back_cover.png
 
 Go to http://www.lulu.com and select Create -> Print Book
 
@@ -68,10 +72,17 @@ Then upload `rationality_from_ai_to_zombies_2c.pdf` and make print-ready file.
 Then ignore the warnings about low resolution images and small fonts and
 save and continue.
 
-Upload One-piece cover from `images/full_cover/full_cover.jpg` as the front
-cover. You may tweak the source image in
-`https://github.com/jrincayc/rationality-ai-zombies/wiki/full_cover.xcf`
-using Gimp.
+Use the old cover designer.
+
+On Backgrounds & Pictures, upload cover_image.png as the front cover
+and back_cover.png as the back cover.
+
+For Text, for the Front Cover, unclick show title and show author.
+For the Spine, switch text size to 24, and add the author: Eliezer Yudkowsky
+Then make print-ready cover.
+
+Alternatively there are some one piece covers on the wiki that can be used:
+https://github.com/jrincayc/rationality-ai-zombies/wiki
 
 Save and Finish, and you can order it.
 
